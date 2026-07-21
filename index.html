@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sprite Checklist - Summer Season Panel</title>
+    <!-- Carga principal de html2canvas -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.41.0/html2canvas.min.js"></script>
+    <!-- Carga de respaldo por si el CDN principal falla -->
+    <script>
+        if (typeof html2canvas === 'undefined') {
+            document.write('<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.41.0/dist/html2canvas.min.js"><\/script>');
+        }
+    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800&display=swap');
         :root {
@@ -503,7 +510,7 @@
                 spirits: { water: "Вода", earth: "Земля", fire: "Огонь", fishy: "Рыбка", air: "Воздух", duck: "Утка", ghost: "Призрак", demon: "Демон", king: "Король", striker: "Страйкер", aura: "Аура", dream: "Сон", punk: "Панк", boss: "Босс", seven: "Семь", peanut: "Арахис", zp: "Нулевая Точка", grim: "Жнец", batman: "Бэтмен", vini: "Вини Мл.", pollo: "Полло", john: "Джон Уик" }
             },
             ja: {
-                title: "精霊チェックリスト", subTitle: "精霊、バリアント、レベル、ダスト、召喚状態を追跡します。", epicIdTitle: "Epic Games ID (任意)", epicIdPlaceholder: "Epic IDを入力...", lblSpriteDust: "精霊のダスト", lblDustReq: "必要ダスト", infoTitle: "情報:", keyLevel: "所持 / glass現在レベル", keyMastered: "マスター済み", keyMissing: "未所持", keyNeedsSummon: "要再召喚", keyUnavailable: "利用不可", raritiesTitle: "レア度:", rarityRare: "レア", rarityEpic: "エピック", rarityLegendary: "レジェンド", rarityMythic: "ミシック", barCollection: "コレクション進行度", barMastered: "マスター済み精霊", summonTableTitle: "召喚コスト参照表", costRareNorm: "レア 通常", costRareVar: "レア バリアント", costEpicNorm: "エピック 通常", costEpicVar: "エピック バリアント", costLegNorm: "レジェンド 通常", costLegVar: "レジェンド バリアント", costMythNorm: "ミシック 通常", costMythVar: "ミシック バリアント", optFilterAll: "🗂️ すべて表示", optFilterAvailable: "🔓 利用可能のみ", optFilterOwned: "✅ 所持のみ", optFilterMissing: "❌ 未所持のみ", optFilterUnavailable: "🔒 利用不可のみ", btnCopyText: "📋 リストをコピー", btnDownloadImg: "📸 画像をダウンロード", btnOwnedAll: "すべて所持", btnMasterAll: "すべてマスター", btnResetAll: "リセット", modalLevelTitle: "レベル / マスタリー", modalNeedsSummon: "再召喚が必要？", btnModalRemove: "精霊を削除", modalCloseHint: "枠外をクリックして閉じる", exportTitle: "スナップショットを保存", btnExportAll: "👁️ すべてエクスポート", btnExportOwned: "✅ 所持をエクスポート", btnExportMissing: "❌ 未所持をエクスポート", btnExportCancel: "キャンセル", levelWord: "レベル",
+                title: "精霊チェックリスト", subTitle: "精霊、バリアント、レベル、ダスト、召喚状態を追跡します。", epicIdTitle: "Epic Games ID (任意)", epicIdPlaceholder: "Epic IDを入力...", lblSpriteDust: "精霊のダスト", lblDustReq: "必要ダスト", infoTitle: "情報:", keyLevel: "所持 / 現在レベル", keyMastered: "マスター済み", keyMissing: "未所持", keyNeedsSummon: "要再召喚", keyUnavailable: "利用不可", raritiesTitle: "レア度:", rarityRare: "レア", rarityEpic: "エピック", rarityLegendary: "レジェンド", rarityMythic: "ミシック", barCollection: "コレクション進行度", barMastered: "マスター済み精霊", summonTableTitle: "召喚コスト参照表", costRareNorm: "レア 通常", costRareVar: "レア バリアント", costEpicNorm: "エピック 通常", costEpicVar: "エピック バリアント", costLegNorm: "レジェンド 通常", costLegVar: "レジェンド バリアント", costMythNorm: "ミシック 通常", costMythVar: "ミシック バリアント", optFilterAll: "🗂️ すべて表示", optFilterAvailable: "🔓 利用可能のみ", optFilterOwned: "✅ 所持のみ", optFilterMissing: "❌ 未所持のみ", optFilterUnavailable: "🔒 利用不可のみ", btnCopyText: "📋 リストをコピー", btnDownloadImg: "📸 画像をダウンロード", btnOwnedAll: "すべて所持", btnMasterAll: "すべてマスター", btnResetAll: "リセット", modalLevelTitle: "レベル / マスタリー", modalNeedsSummon: "再召喚が必要？", btnModalRemove: "精霊を削除", modalCloseHint: "枠外をクリックして閉じる", exportTitle: "スナップショットを保存", btnExportAll: "👁️ すべてエクスポート", btnExportOwned: "✅ 所持をエクスポート", btnExportMissing: "❌ 未所持をエクスポート", btnExportCancel: "キャンセル", levelWord: "レベル",
                 variants: { Normal: "ノーマル", Gold: "ゴールド", Gummy: "グミ", Galaxy: "ギャラクシー", Holo: "ホロ", Gem: "ジェム", Cube: "キューブ", Quack: "クワック" },
                 spirits: { water: "水", earth: "土", fire: "火", fishy: "魚", air: "風", duck: "アヒル", ghost: "ゴースト", demon: "悪魔", king: "キング", striker: "ストライカー", aura: "オーラ", dream: "夢", punk: "パンク", boss: "ボス", seven: "セブン", peanut: "ピーナッツ", zp: "ゼロポイント", grim: "死神", batman: "バットマン", vini: "ヴィニJr.", pollo: "ポージョ", john: "ジョン・ウィック" }
             },
@@ -1249,7 +1256,13 @@
         async function takeScreenshot(filterMode) {
             closeExportDialog();
 
-            // 1. Pantalla de carga completa para evitar parpadeos
+            // Verificación previa de seguridad por si la librería no ha terminado de cargar
+            if (typeof html2canvas === 'undefined') {
+                alert(currentLang === 'es' ? "La librería de captura aún se está cargando. Por favor, intenta de nuevo en un momento." : "The screenshot library is still loading. Please try again in a moment.");
+                return;
+            }
+
+            // 1. Pantalla de carga completa
             const loadingOverlay = document.createElement('div');
             loadingOverlay.id = 'screenshotLoadingOverlay';
             loadingOverlay.style.cssText = 'position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(15,23,42,0.85); backdrop-filter:blur(5px); display:flex; flex-direction:column; justify-content:center; align-items:center; color:white; font-family:Poppins,sans-serif; font-weight:bold; font-size:18px; z-index:1000000; gap:12px;';
@@ -1259,7 +1272,7 @@
             `;
             document.body.appendChild(loadingOverlay);
 
-            // 2. Contenedor de renderizado a opacidad total ubicado tras bambalinas
+            // 2. Contenedor de renderizado ubicado tras bambalinas
             const exportContainer = document.createElement('div');
             exportContainer.style.cssText = 'position:fixed; top:0; left:0; width:1280px; background:linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #a1c4fd 100%); padding:30px; font-family:Poppins,sans-serif; color:#2d3748; box-sizing:border-box; z-index:999999; opacity:1; overflow:visible;';
 
