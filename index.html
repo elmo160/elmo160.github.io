@@ -156,7 +156,7 @@
         }
         .slot-box:not(.blocked):not(.unavailable):not(.invisible-space):hover { transform: scale(1.04); z-index: 2; border-color: #2b6cb0; }
         
-        /* PLAQUITA / BADGE DE VARIANTES (GUARDADA BASE) */
+        /* PLAQUITA / BADGE DE VARIANTES */
         .variant-tag {
             position: absolute;
             top: 3px;
@@ -296,7 +296,7 @@
             box-sizing: border-box;
         }
 
-        /* ESTILO ORIGINAL RESTAURADO PARA LEVEL (ESQUINA INFERIOR IZQUIERDA) */
+        /* ESTILO ORIGINAL PARA LEVEL (ESQUINA INFERIOR IZQUIERDA) */
         .level-badge-normal { 
             bottom: 0px !important; 
             left: 0px !important; 
@@ -315,19 +315,24 @@
             letter-spacing: normal !important;
         }
 
-        /* ESTILO PÍLDORA CENTRADA PARA MISSING Y NEED SUMMON (CON AUTO-REDUCCIÓN DE LETRA) */
+        /* ESTILO PÍLDORA PERFECTAMENTE CENTRADA PARA CAPTURAS Y WEB (SIN TRANSFORM TRANSLATE) */
         .level-badge-missing, .level-badge-summon {
             bottom: 3px !important; 
-            left: 50% !important; 
-            transform: translateX(-50%) !important; 
+            left: 0 !important;
+            right: 0 !important;
+            margin: 0 auto !important;
+            width: fit-content !important;
+            max-width: 92% !important;
+            transform: none !important; 
             font-weight: 800 !important;
             border: 1.5px solid #ffffff !important;
             border-radius: 10px !important;
             box-shadow: 0 2px 5px rgba(0,0,0,0.4) !important;
             clip-path: none !important;
-            max-width: 96% !important;
             text-align: center !important;
             overflow: hidden !important;
+            white-space: nowrap !important;
+            display: block !important;
         }
 
         .level-badge-missing {
@@ -427,7 +432,6 @@
                 <div class="key-item"><div class="level-sample" id="sampleLvlBadge">Level X</div> <span id="txtKeyLevel">Owned / Current Level</span></div>
                 <div class="key-item"><img src="crown.webp" alt="👑" class="icon-small"> <span id="txtKeyMastered">Mastered Sprite</span></div>
                 <div class="key-item"><img src="red.webp" alt="❌" class="icon-small"> <span id="txtKeyMissing">Missing</span></div>
-                <!-- Imagen de polvo para Need Summon en Info -->
                 <div class="key-item"><img src="dust.webp" alt="✨" class="icon-small"> <span id="txtKeyNeedsSummon">Needs Summon / Lost</span></div>
                 
                 <div class="key-item">
@@ -1141,7 +1145,7 @@
             saveToLocalStorage();
         }
 
-        // Función para auto-ajustar letra y espaciado según la longitud de la palabra
+        // Auto-ajusta el tamaño de letra de la plaquita según la cantidad de caracteres
         function adjustBadgeFontSize(badge, text) {
             const len = text ? text.length : 0;
             if (len <= 8) {
@@ -1193,7 +1197,6 @@
 
             const badge = slotElement.querySelector('.level-badge');
             if (badge) {
-                // Reset de clases y estilos inline de badge
                 badge.className = "level-badge";
                 badge.style.borderBottom = '';
                 badge.style.color = '';
@@ -1203,19 +1206,16 @@
                 badge.style.padding = '';
 
                 if (!isOwned && !isBlocked) {
-                    // Estado MISSING estilo Píldora
                     badge.classList.add('level-badge-missing');
                     const missingText = t.keyMissing ? t.keyMissing.split('/')[0].trim() : "Missing";
                     badge.innerText = missingText;
                     adjustBadgeFontSize(badge, missingText);
                 } else if (isOwned && isSummon && !isBlocked) {
-                    // Estado NEED SUMMON estilo Píldora
                     badge.classList.add('level-badge-summon');
                     const summonText = t.keyNeedsSummon ? t.keyNeedsSummon.split('/')[0].trim() : "Need Summon";
                     badge.innerText = summonText;
                     adjustBadgeFontSize(badge, summonText);
                 } else {
-                    // Estado NORMAL OBTENIDO (Level 1..5) - Restaurado esquina inferior izquierda original
                     badge.classList.add('level-badge-normal');
                     const levelPrefix = t.levelWord || "Level";
                     badge.innerText = `${levelPrefix} ${currentLvl}`;
@@ -1483,8 +1483,10 @@
             const legendSummon = t.keyNeedsSummon || "Needs Summon";
             const lvlWord = t.levelWord || "Level";
 
-            // Nombre dinámico para la etiqueta del snapshot
-            let filterLabelText = (t.filters && t.filters[filterMode]) ? t.filters[filterMode] : filterMode;
+            // Para 'all', mostramos siempre la etiqueta "ALL MY COLLECTION" / "TODA MI COLECCIÓN"
+            let filterLabelText = (filterMode === 'all') 
+                ? ((t.filters && t.filters['all']) ? t.filters['all'] : "All My Collection")
+                : ((t.filters && t.filters[filterMode]) ? t.filters[filterMode] : filterMode);
 
             // Colores dinámicos para la etiqueta del filtro según la selección
             const filterGradients = {
@@ -1572,7 +1574,8 @@
 
                     slot.classList.remove('hide-completely', 'invisible-space');
                     
-                    if (filterMode === 'available') {
+                    // Si el filtro de captura es 'available' O 'all', muestra la lista limpia ("available")
+                    if (filterMode === 'available' || filterMode === 'all') {
                         if (isUnavailable || isBlocked) slot.classList.add('invisible-space');
                         else hasVisibleSlot = true;
                     } else if (filterMode === 'owned') {
@@ -1586,8 +1589,6 @@
                     } else if (filterMode === 'unavailable') {
                         if (isBlocked) hasVisibleSlot = true;
                         else slot.classList.add('hide-completely');
-                    } else if (filterMode === 'all') {
-                        hasVisibleSlot = true;
                     }
                 });
                 
