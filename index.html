@@ -761,11 +761,17 @@
         const ALL_VARIANTS = ["Normal", "Gold", "Gummy", "Galaxy", "Holo", "Cube", "Gem", "Quack"];
         
         const SUMMON_COSTS = {
-            "rare_normal": 100, "rare_variant": 4000,
-            "epic_normal": 3000, "epic_variant": 6000,
-            "legendary_normal": 5000, "legendary_variant": 10000,
-            "mythic_normal": 7500, "mythic_variant": 15000
+            "rare_normal": 1800,
+            "rare_variant": 2700,
+            "epic_normal": 2700,
+            "epic_variant": 4000,
+            "legendary_normal": 4500,
+            "legendary_variant": 6750,
+            "mythic_normal": 6750,
+            "mythic_variant": 10000
         };
+
+        const BASIC_RARE_IDS = ['water', 'earth', 'fire'];
         
         let currentEditingSlot = null;
         let activeModalLevel = 1;
@@ -1346,8 +1352,15 @@
                     }
                 }
                 if (isOwned && isSummon) {
-                    const key = `${rarity.toLowerCase()}_${variant === 'Normal' ? 'normal' : 'variant'}`;
-                    dustNeeded += SUMMON_COSTS[key] || 0;
+                    const parentBlock = slot.closest('.sprite-card-block');
+                    const spriteId = parentBlock ? parentBlock.getAttribute('data-sprite-id') : '';
+
+                    if (rarity === 'Rare' && variant === 'Normal' && BASIC_RARE_IDS.includes(spriteId)) {
+                        dustNeeded += 100;
+                    } else {
+                        const key = `${rarity.toLowerCase()}_${variant === 'Normal' ? 'normal' : 'variant'}`;
+                        dustNeeded += SUMMON_COSTS[key] || 0;
+                    }
                 }
             });
             
