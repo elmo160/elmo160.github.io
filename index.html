@@ -621,7 +621,7 @@
                 <div class="key-item"><div class="rarity-sample" style="background: #9333ea;"></div> <span id="txtVarCube">Cube</span> <span id="countVarCube" class="rarity-count">(0/0)</span></div>
                 <div class="key-item"><div class="rarity-sample" style="background: #00b4d8;"></div> <span id="txtVarGem">Gem</span> <span id="countVarGem" class="rarity-count">(0/0)</span></div>
                 <div class="key-item"><div class="rarity-sample" style="background: #b87cf8;"></div> <span id="txtVarQuack">Quack</span> <span id="countVarQuack" class="rarity-count">(0/0)</span></div>
-                <div class="key-item"><div class="rarity-sample" style="background: #10b981;"></div> <span id="txtVarCheat">Cheat</span> <span id="countVarCheat" class="rarity-count">(0/0)</span></div>
+                <div class="key-item"><div class="rarity-sample" style="background: #047857;"></div> <span id="txtVarCheat">Cheat</span> <span id="countVarCheat" class="rarity-count">(0/0)</span></div>
             </div>
         </div>
     </div>
@@ -710,7 +710,7 @@
                         <button class="btn-opt lvl-btn crown-opt" id="modalCrownBtn" onclick="toggleModalCrown()"><img src="crown.webp" alt="👑" class="icon-small"></button>
                     </div>
                 </div>
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:5px;">
+                <div style="display:flex; justify-style:space-between; align-items:center; margin-top:5px;">
                     <label style="display:flex; align-items:center; gap:6px; cursor:pointer; font-size:11px;">
                         <input type="checkbox" id="modalSummonCheck" onchange="toggleModalSummon()">
                         <span id="txtModalNeedsSummon">¿Requiere Invocación?</span>
@@ -890,7 +890,7 @@
                 levelWord: "Niveau", lvlShort: "Niv.", seasonS3: "Ch7 S3", seasonS4: "Ch7 S4", showcaseCloseHint: "Cliquez à l'extérieur pour fermer",
                 toastCopied: "Liste copiée dans le presse-papiers !",
                 variants: { Normal: "Normal", Gold: "Or", Gummy: "Gummy", Galaxy: "Galaxie", Holo: "Holofoil", Cube: "Cube", Gem: "Gemme", Quack: "Canard", Cheat: "Cheat" },
-                spirits: { water: "Eau", earth: "Terre", fire: "Feu", fishy: "Poisson", air: "Air", duck: "Canard", ghost: "Fantôme", demon: "Démon", king: "Roi", striker: "Attaquant", aura: "Aura", dream: "Rêve", punk: "Punk", boss: "Boss", seven: "Sept", peanut: "Cacahuète", zp: "Point Zéro", grim: "Faucheuse", batman: "Batman", vini: "Vini Jr.", pollo: "Poulet", john: "John Wick", peely: "Banane", llama: "Lama", ironmouse: "Ironmouse", tails: "Tails", sonic: "Sonic", crown: "Couronne", klombo: "Klombo", killswitch: "Killswitch", jackrabbit: "JackRabbit", bushranger: "Patrouilleur buissonneux", adventure: "Aventure", bullet: "Balle", dumpster: "Conteneur", honey: "Miel", pond: "Étang", xray: "Rayons X", "8bit": "8 Bit", jonesy: "Jonesy", shadow: "Shadow", storm: "Storm Scout" }
+                spirits: { water: "Eau", earth: "Terre", fire: "Feu", fishy: "Poisson", air: "Air", duck: "Canard", ghost: "Fantôme", demon: "Démon", king: "Roi", striker: "Attaquant", aura: "Aura", dream: "Rêve", punk: "Punk", boss: "Boss", seven: "Sept", peanut: "Cacahuète", zp: "Point Zéro", grim: "Faucheuse", batman: "Batman", vini: "Vini Jr.", pollo: "Poulet", john: "John Wick", peely: "Banane", llama: "Lama", ironmouse: "Ironmouse", tails: "Tails", sonic: "Sonic", crown: "Couronne", klombo: "Klombo", killswitch: "Killswitch", jackrabbit: "JackRabbit", bushranger: "Patrouilleur Buissonneux", adventure: "Aventure", bullet: "Balle", dumpster: "Conteneur", honey: "Miel", pond: "Étang", xray: "Rayons X", "8bit": "8 Bit", jonesy: "Jonesy", shadow: "Shadow", storm: "Storm Scout" }
             },
             it: {
                 titleGarden: "Giardino degli Spiriti", titleS3: "Lista Cap 7 Stagione 3", titleS4: "Lista Cap 7 Stagione 4",
@@ -2316,9 +2316,14 @@
         function copyTextCollection(filterMode = 'all') {
             closeTextExportDialog();
             const t = getTranslationDict(currentLang);
-            const allVariantKeys = ["Normal", "Gold", "Gummy", "Galaxy", "Holo", "Cube", "Gem", "Quack", "Cheat"];
             
-            const allVariantHeaders = allVariantKeys.map(v => {
+            // Filtra solo las variantes que existen para la temporada seleccionada
+            const activeVariantsInSeason = ALL_VARIANTS.filter(v => {
+                if (currentSeasonFilter === 'garden') return true;
+                return SPIRITS_DATA.some(sprite => isVariantAvailableInSeason(sprite.id, v, currentSeasonFilter));
+            });
+
+            const allVariantHeaders = activeVariantsInSeason.map(v => {
                 return (t.variants && t.variants[v]) ? t.variants[v].toUpperCase() : (v === "Holo" ? "HOLOFOIL" : v.toUpperCase());
             });
 
@@ -2339,8 +2344,8 @@
 
             let textOutput = "```\n";
             textOutput += `${padEndVisual('', maxNameWidth)} | ${allVariantHeaders.join(' | ')} |\n`;
-            textOutput += `👑 ${masteredLabel} | ✅ ${ownedLabel} | 🔄 ${summonLabel} | ❌ ${missingLabel} | ⚫ N/A\n`;
-            textOutput += "-".repeat(maxNameWidth + 70) + "\n";
+            textOutput += `👑 ${masteredLabel} | ✅ ${ownedLabel} | 🔄 ${summonLabel} | ❌ ${missingLabel}\n`;
+            textOutput += "-".repeat(maxNameWidth + (activeVariantsInSeason.length * 8)) + "\n";
 
             sortedSpirits.forEach(sprite => {
                 const card = document.querySelector(`.sprite-card-block[data-sprite-id="${sprite.id}"]`);
@@ -2349,38 +2354,26 @@
                 let icons = [];
                 let hasActiveVariantInSeason = false;
 
-                allVariantKeys.forEach(v => {
+                activeVariantsInSeason.forEach(v => {
                     const isAvailInSeason = isVariantAvailableInSeason(sprite.id, v, currentSeasonFilter);
                     const slot = card.querySelector(`.slot-box[data-variant="${v}"]`);
 
-                    if (slot && !slot.classList.contains('single-variant-disabled')) {
+                    if (slot && !slot.classList.contains('single-variant-disabled') && isAvailInSeason) {
+                        hasActiveVariantInSeason = true;
                         const isOwned = slot.getAttribute('data-owned') === 'true';
                         const isMastered = slot.getAttribute('data-mastery') === 'true';
                         const isSummon = slot.getAttribute('data-summon') === 'true';
 
-                        if (filterMode === 'news') {
-                            const isNewActive = (currentSeasonFilter === 's4' && isAvailInSeason);
-                            if (!isNewActive) {
-                                icons.push("⚫");
-                                return;
-                            }
-                        }
-
-                        if (!isAvailInSeason && currentSeasonFilter !== 'garden') {
-                            icons.push("⚫");
-                        } else {
-                            hasActiveVariantInSeason = true;
-                            if (isMastered) icons.push("👑");
-                            else if (isSummon) icons.push("🔄");
-                            else if (isOwned) icons.push("✅");
-                            else icons.push("❌");
-                        }
+                        if (isMastered) icons.push("👑");
+                        else if (isSummon) icons.push("🔄");
+                        else if (isOwned) icons.push("✅");
+                        else icons.push("❌");
                     } else {
                         icons.push("⚫");
                     }
                 });
 
-                if (hasActiveVariantInSeason || currentSeasonFilter === 'garden') {
+                if (hasActiveVariantInSeason || (currentSeasonFilter === 'garden' && Array.from(card.querySelectorAll('.slot-box[data-owned="true"]')).length > 0)) {
                     const translatedSpriteName = (t.spirits && t.spirits[sprite.id]) ? t.spirits[sprite.id] : sprite.name;
                     textOutput += `${padEndVisual(translatedSpriteName, maxNameWidth)} | ${icons.join(' | ')} |\n`;
                 }
