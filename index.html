@@ -357,7 +357,7 @@
         .slot-box[data-variant="Gem"] .variant-tag { background: #00b4d8 !important; }
         .slot-box[data-variant="Cube"] .variant-tag { background: #9333ea !important; }
         .slot-box[data-variant="Quack"] .variant-tag { background: #b87cf8 !important; }
-        .slot-box[data-variant="Cheat"] .variant-tag { background: #ff0055 !important; }
+        .slot-box[data-variant="Cheat"] .variant-tag { background: #047857 !important; }
 
         .slot-box[data-owned="true"][data-variant="Gold"]   { background: radial-gradient(circle at center, #ffe082 0%, #ffb300 40%, #4e342e 100%) !important; border-color: #ffb300 !important; }
         .slot-box[data-owned="true"][data-variant="Gummy"]  { background: linear-gradient(135deg, #ff8da1, #8effa1) !important; border-color: #ec4899 !important; }
@@ -366,7 +366,7 @@
         .slot-box[data-owned="true"][data-variant="Gem"]    { background: linear-gradient(135deg, #ffffff 0%, #dbe7f2 60%, #b5cbde 100%) !important; border-color: #00b4d8 !important; }
         .slot-box[data-owned="true"][data-variant="Cube"]   { background: radial-gradient(circle at center, #6a1b9a 0%, #3a005c 40%, #05000a 100%) !important; border-color: #9333ea !important; color: white !important; }
         .slot-box[data-owned="true"][data-variant="Quack"]  { background: linear-gradient(135deg, #ffffff 0%, #e0c3fc 50%, #8ec5fc 100%) !important; border-color: #b87cf8 !important; }
-        .slot-box[data-owned="true"][data-variant="Cheat"]  { background: radial-gradient(circle at center, #00f0ff 0%, #ff007f 50%, #110022 100%) !important; border-color: #00f0ff !important; color: white !important; }
+        .slot-box[data-owned="true"][data-variant="Cheat"]  { background: radial-gradient(circle at center, #6ee7b7 0%, #059669 40%, #022c22 100%) !important; border-color: #34d399 !important; color: white !important; }
         
         .slot-box[data-owned="true"][data-variant="Normal"][data-rarity-origin="Rare"] { background: radial-gradient(circle at center, #0284c7 0%, #0369a1 40%, #0f172a 100%) !important; border-color: #0284c7 !important; }
         .slot-box[data-owned="true"][data-variant="Normal"][data-rarity-origin="Epic"] { background: radial-gradient(circle at center, #a855f7 0%, #7e22ce 40%, #0f172a 100%) !important; border-color: #9333ea !important; }
@@ -621,7 +621,7 @@
                 <div class="key-item"><div class="rarity-sample" style="background: #9333ea;"></div> <span id="txtVarCube">Cube</span> <span id="countVarCube" class="rarity-count">(0/0)</span></div>
                 <div class="key-item"><div class="rarity-sample" style="background: #00b4d8;"></div> <span id="txtVarGem">Gem</span> <span id="countVarGem" class="rarity-count">(0/0)</span></div>
                 <div class="key-item"><div class="rarity-sample" style="background: #b87cf8;"></div> <span id="txtVarQuack">Quack</span> <span id="countVarQuack" class="rarity-count">(0/0)</span></div>
-                <div class="key-item"><div class="rarity-sample" style="background: #ff0055;"></div> <span id="txtVarCheat">Cheat</span> <span id="countVarCheat" class="rarity-count">(0/0)</span></div>
+                <div class="key-item"><div class="rarity-sample" style="background: #10b981;"></div> <span id="txtVarCheat">Cheat</span> <span id="countVarCheat" class="rarity-count">(0/0)</span></div>
             </div>
         </div>
     </div>
@@ -1084,7 +1084,7 @@
             { id: "fishy", name: "Fishy", rarity: "Rare", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: false, Cube: [3], Quack: false, Cheat: false } },
             { id: "air", name: "Air", rarity: "Rare", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: false, Cube: false, Quack: false, Cheat: false } },
             { id: "bushranger", imgPrefix: "bush", name: "Bush Ranger", rarity: "Rare", variants: { Normal: [4], Gold: [4], Cheat: [4], Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
-            { id: "adventure", name: "Adventure", rarity: "Rare", variants: { Normal: [4], Gold: [4], Cheat: [4], Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
+            { id: "adventure", imgPrefix: "adventur", name: "Adventure", rarity: "Rare", variants: { Normal: [4], Gold: [4], Cheat: [4], Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
             { id: "jonesy", name: "Jonesy", rarity: "Rare", variants: { Normal: [4], Gold: [4], Cheat: [4], Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
             { id: "storm", imgPrefix: "storm", name: "Storm Scout", rarity: "Rare", variants: { Normal: [4], Gold: [4], Cheat: [4], Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
             { id: "8bit", imgPrefix: "8bit", name: "8 Bit", rarity: "Rare", variants: { Normal: [4], Gold: [4], Cheat: [4], Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
@@ -1140,7 +1140,7 @@
 
         const VARIANT_BORDER_COLORS = {
             "Normal": "#38bdf8", "Gold": "#ffb300", "Gummy": "#ec4899", "Galaxy": "#bf55ec",
-            "Holo": "#2dd4bf", "Cube": "#9333ea", "Gem": "#00b4d8", "Quack": "#b87cf8", "Cheat": "#ff0055"
+            "Holo": "#2dd4bf", "Cube": "#9333ea", "Gem": "#00b4d8", "Quack": "#b87cf8", "Cheat": "#10b981"
         };
 
         const SHOWCASE_RARITY_CARD_BG = {
@@ -1165,7 +1165,7 @@
             "Cube": "radial-gradient(circle at center, #c084fc 0%, #6b21a8 45%, #2e1065 80%, #090314 100%)",
             "Gem": "radial-gradient(circle at center, #ffffff 0%, #a5f3fc 40%, #0284c7 75%, #082f49 100%)",
             "Quack": "radial-gradient(circle at center, #f472b6 0%, #c084fc 40%, #38bdf8 75%, #0f172a 100%)",
-            "Cheat": "radial-gradient(circle at center, #00f0ff 0%, #ff007f 50%, #080314 100%)"
+            "Cheat": "radial-gradient(circle at center, #a7f3d0 0%, #10b981 35%, #064e3b 70%, #022c22 100%)"
         };
 
         const SHOWCASE_NORMAL_BG = {
