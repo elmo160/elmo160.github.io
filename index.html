@@ -22,7 +22,7 @@
         :root {
             /* Chapter 7 Season 4 Theme (Cyber Glitch) */
             --bg-gradient: linear-gradient(135deg, #080314 0%, #0d0722 40%, #1e0938 100%);
-            --panel-bg: rgba(18, 10, 36, 0.85);
+            --panel-bg: rgba(18, 10, 36, 0.92);
             --panel-border: rgba(0, 240, 255, 0.4);
             
             --card-block-bg: rgba(38, 16, 58, 0.9);
@@ -49,7 +49,7 @@
         /* Season 3 Theme (Beach / Warm Sunset) */
         body[data-theme="s3"] {
             --bg-gradient: linear-gradient(135deg, #2e1065 0%, #581c87 50%, #831843 100%);
-            --panel-bg: rgba(45, 20, 65, 0.75);
+            --panel-bg: rgba(45, 20, 65, 0.92);
             --panel-border: rgba(244, 114, 182, 0.4);
             
             --card-block-bg: rgba(58, 28, 20, 0.9);
@@ -69,7 +69,7 @@
         /* Sprite Garden Theme (Grass Green + Earth Brown + Lake Blue) */
         body[data-theme="garden"] {
             --bg-gradient: linear-gradient(135deg, #092011 0%, #173d23 30%, #2e1e14 65%, #0b253a 100%);
-            --panel-bg: rgba(20, 38, 26, 0.88);
+            --panel-bg: rgba(20, 38, 26, 0.92);
             --panel-border: rgba(134, 239, 172, 0.35);
             
             --card-block-bg: rgba(46, 30, 20, 0.85);
@@ -381,7 +381,7 @@
         .mini-crown img { width: 100%; height: 100%; object-fit: contain; }
         body:not([data-theme="garden"]) .slot-box.has-crown .mini-crown { display: block; }
 
-        .slot-inner { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; z-index: 1; overflow: hidden; }
+        .slot-inner { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: justify; z-index: 1; overflow: hidden; }
         
         .slot-inner img { 
             width: 100%; height: 100%; object-fit: cover; 
@@ -415,18 +415,43 @@
 
         .invisible-space { visibility: hidden !important; pointer-events: none !important; }
 
-        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(10px); display: none; justify-content: center; align-items: center; z-index: 999; }
-        .modal-card { background: #0f172a; color: #f8fafc; width: 340px; border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 18px; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
+        /* MODAL OVERLAY & CARD (ACTUALIZADO: Más grande y adaptado a la temática) */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(12px); display: none; justify-content: center; align-items: center; z-index: 999; }
+        .modal-card { 
+            background: var(--panel-bg); 
+            color: var(--text-color); 
+            width: 440px; 
+            max-width: 90vw; 
+            border-radius: 22px; 
+            padding: 28px; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 20px; 
+            border: 1px solid var(--panel-border); 
+            box-shadow: 0 25px 50px rgba(0,0,0,0.8); 
+            backdrop-filter: blur(16px);
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
         .modal-header { display: flex; flex-direction: column; align-items: center; }
-        .modal-avatar { width: 56px; height: 56px; background: rgba(255,255,255,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+        .modal-avatar { 
+            width: 80px; 
+            height: 80px; 
+            background: rgba(0,0,0,0.3); 
+            border-radius: 18px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            border: 1px solid var(--panel-border);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+        }
         .modal-avatar img { width: 90%; height: 90%; object-fit: contain; }
-        .close-modal-btn { position: absolute; top: 14px; right: 18px; background: #ffffff; color: #000; cursor: pointer; border: none; font-size: 14px; width: 32px; height: 32px; border-radius: 50%; font-weight: bold; z-index: 10; transition: transform 0.2s ease; display: flex; align-items: center; justify-content: center; }
+        .close-modal-btn { position: absolute; top: 16px; right: 18px; background: #ffffff; color: #000; cursor: pointer; border: none; font-size: 16px; width: 34px; height: 34px; border-radius: 50%; font-weight: bold; z-index: 10; transition: transform 0.2s ease; display: flex; align-items: center; justify-content: center; }
         .close-modal-btn:hover { transform: scale(1.1); }
         
-        .btn-opt { font-family: 'Poppins', sans-serif; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; cursor: pointer; font-weight: 700; font-size: 14px; text-align: center; }
-        .btn-opt.lvl-btn { width: 36px; height: 36px; border-radius: 50%; }
-        .btn-opt.lvl-btn.active { background: #2563eb; color: white; }
-        .btn-opt.crown-opt.active { background: #eab308; color: white; }
+        .btn-opt { font-family: 'Poppins', sans-serif; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: var(--text-color); cursor: pointer; font-weight: 700; font-size: 15px; text-align: center; transition: all 0.2s ease; }
+        .btn-opt.lvl-btn { width: 44px; height: 44px; border-radius: 50%; }
+        .btn-opt.lvl-btn.active { background: var(--accent-neon); color: #000; border-color: #ffffff; box-shadow: 0 0 12px var(--accent-neon); font-weight: 900; }
+        .btn-opt.crown-opt.active { background: #eab308; color: white; border-color: #fef08a; box-shadow: 0 0 12px #eab308; }
 
         .garden-showcase-card {
             width: 92% !important;
@@ -504,10 +529,10 @@
         }
 
         .export-dialog-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); backdrop-filter: blur(6px); display: none; justify-content: center; align-items: center; z-index: 1000; }
-        .export-dialog { background: #0f172a !important; padding: 22px; border-radius: 14px; width: 320px; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 20px 40px rgba(0,0,0,0.6); text-align: center; color: #f8fafc !important; font-family: 'Poppins', sans-serif; }
+        .export-dialog { background: var(--panel-bg) !important; padding: 22px; border-radius: 14px; width: 320px; border: 1px solid var(--panel-border); box-shadow: 0 20px 40px rgba(0,0,0,0.6); text-align: center; color: var(--text-color) !important; font-family: 'Poppins', sans-serif; }
         .export-dialog h3 { margin: 0 0 14px 0; color: #ffffff !important; font-size: 16px; font-weight: 800; }
-        .export-opt-btn { width: 100%; margin: 6px 0; padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: #1e293b !important; color: #f8fafc !important; font-weight: 700; cursor: pointer; font-size: 11px; transition: all 0.2s ease; }
-        .export-opt-btn:hover { background: #334155 !important; border-color: #38bdf8 !important; }
+        .export-opt-btn { width: 100%; margin: 6px 0; padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: rgba(0,0,0,0.3) !important; color: #f8fafc !important; font-weight: 700; cursor: pointer; font-size: 11px; transition: all 0.2s ease; }
+        .export-opt-btn:hover { background: rgba(255,255,255,0.1) !important; border-color: var(--accent-neon) !important; }
 
         #toastNotification {
             position: fixed; bottom: 20px; right: 20px;
@@ -524,6 +549,8 @@
             .brand-zone h1 { font-size: 28px; }
             .stats-wrapper { width: 100%; justify-content: center; }
             .content-grid { grid-template-columns: 1fr !important; }
+            .modal-card { width: 92vw; padding: 20px; gap: 16px; }
+            .btn-opt.lvl-btn { width: 38px; height: 38px; font-size: 13px; }
             .garden-hero-avatar { width: 240px; height: 240px; }
             .garden-showcase-card { padding: 22px 18px !important; }
             .showcase-desc-spirit { font-size: 14px; }
@@ -696,12 +723,12 @@
             <div class="modal-card">
                 <div class="modal-header">
                     <div class="modal-avatar" id="modalIcon"></div>
-                    <h3 id="modalNameDisplay" style="margin:10px 0 2px 0;"></h3>
-                    <div id="modalRarityDisplay" style="font-size:10px; font-weight:800; text-transform:uppercase;"></div>
+                    <h3 id="modalNameDisplay" style="margin:14px 0 2px 0; font-size:20px; font-weight:800; text-align:center;"></h3>
+                    <div id="modalRarityDisplay" style="font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:0.5px;"></div>
                 </div>
                 <div>
-                    <div id="txtModalLevelTitle" style="font-size:10px; text-transform:uppercase; text-align:center; margin-bottom:8px; color:#cbd5e1;">Nivel / Dominio</div>
-                    <div style="display:flex; gap:8px; justify-content:center;">
+                    <div id="txtModalLevelTitle" style="font-size:11px; text-transform:uppercase; text-align:center; margin-bottom:10px; color:var(--text-muted); font-weight:700; letter-spacing:0.5px;">Nivel / Dominio</div>
+                    <div style="display:flex; gap:10px; justify-content:center; align-items:center;">
                         <button class="btn-opt lvl-btn" id="lBtn1" onclick="setModalLvl(1)">1</button>
                         <button class="btn-opt lvl-btn" id="lBtn2" onclick="setModalLvl(2)">2</button>
                         <button class="btn-opt lvl-btn" id="lBtn3" onclick="setModalLvl(3)">3</button>
@@ -710,14 +737,14 @@
                         <button class="btn-opt lvl-btn crown-opt" id="modalCrownBtn" onclick="toggleModalCrown()"><img src="crown.webp" alt="👑" class="icon-small"></button>
                     </div>
                 </div>
-                <div style="display:flex; justify-style:space-between; align-items:center; margin-top:5px;">
-                    <label style="display:flex; align-items:center; gap:6px; cursor:pointer; font-size:11px;">
-                        <input type="checkbox" id="modalSummonCheck" onchange="toggleModalSummon()">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top:8px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.1);">
+                    <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:12px; font-weight:600;">
+                        <input type="checkbox" id="modalSummonCheck" onchange="toggleModalSummon()" style="width:16px; height:16px; cursor:pointer;">
                         <span id="txtModalNeedsSummon">¿Requiere Invocación?</span>
                     </label>
-                    <button id="btnModalRemove" style="background:#ef4444; color:white; border:none; padding:8px 12px; border-radius:8px; font-weight:700; cursor:pointer;" onclick="removeCurrentSprite()">Eliminar Espíritu</button>
+                    <button id="btnModalRemove" style="background:#ef4444; color:white; border:none; padding:10px 16px; border-radius:10px; font-weight:800; cursor:pointer; font-size:12px; transition:transform 0.2s ease;" onclick="removeCurrentSprite()">Eliminar Espíritu</button>
                 </div>
-                <div id="txtModalCloseHint" style="font-size:10px; color:#94a3b8; text-align:center; font-style:italic;">Haz clic fuera de la caja para cerrar</div>
+                <div id="txtModalCloseHint" style="font-size:11px; color:var(--text-muted); text-align:center; font-style:italic;">Haz clic fuera de la caja para cerrar</div>
             </div>
         </div>
     </div>
@@ -2317,7 +2344,6 @@
             closeTextExportDialog();
             const t = getTranslationDict(currentLang);
             
-            // Filtra solo las variantes que existen para la temporada seleccionada
             const activeVariantsInSeason = ALL_VARIANTS.filter(v => {
                 if (currentSeasonFilter === 'garden') return true;
                 return SPIRITS_DATA.some(sprite => isVariantAvailableInSeason(sprite.id, v, currentSeasonFilter));
