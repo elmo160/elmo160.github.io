@@ -102,27 +102,11 @@
             display: none !important;
         }
 
-        /* Oculta la primera fila de la leyenda en Garden */
         body[data-theme="garden"] .key-panel .key-row:first-child {
             display: none !important;
         }
 
-        /* Garden Season Badge Displayed ONLY in Garden Mode on the Right */
-        body[data-theme="garden"] .season-badge {
-            display: inline-block !important;
-            position: absolute;
-            top: 3px;
-            right: 3px;
-            font-size: 8px;
-            font-weight: 900;
-            background: rgba(0, 0, 0, 0.85);
-            padding: 1px 4px;
-            border-radius: 3px;
-            z-index: 4;
-            pointer-events: none;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
+        body[data-theme="garden"] .season-badge,
         body:not([data-theme="garden"]) .season-badge {
             display: inline-block !important;
             position: absolute;
@@ -337,6 +321,7 @@
         .sprite-matrix.fixed-grid .slot-box[data-variant="Cube"]   { grid-column: 2; grid-row: 2; }
         .sprite-matrix.fixed-grid .slot-box[data-variant="Gem"]    { grid-column: 3; grid-row: 2; }
         .sprite-matrix.fixed-grid .slot-box[data-variant="Quack"]  { grid-column: 4; grid-row: 2; }
+        .sprite-matrix.fixed-grid .slot-box[data-variant="Cheat"]  { grid-column: 1; grid-row: 3; }
         
         .sprite-matrix.flow-grid .slot-box { grid-column: auto !important; grid-row: auto !important; }
 
@@ -372,6 +357,7 @@
         .slot-box[data-variant="Gem"] .variant-tag { background: #00b4d8 !important; }
         .slot-box[data-variant="Cube"] .variant-tag { background: #9333ea !important; }
         .slot-box[data-variant="Quack"] .variant-tag { background: #b87cf8 !important; }
+        .slot-box[data-variant="Cheat"] .variant-tag { background: #ff0055 !important; }
 
         .slot-box[data-owned="true"][data-variant="Gold"]   { background: radial-gradient(circle at center, #ffe082 0%, #ffb300 40%, #4e342e 100%) !important; border-color: #ffb300 !important; }
         .slot-box[data-owned="true"][data-variant="Gummy"]  { background: linear-gradient(135deg, #ff8da1, #8effa1) !important; border-color: #ec4899 !important; }
@@ -380,6 +366,7 @@
         .slot-box[data-owned="true"][data-variant="Gem"]    { background: linear-gradient(135deg, #ffffff 0%, #dbe7f2 60%, #b5cbde 100%) !important; border-color: #00b4d8 !important; }
         .slot-box[data-owned="true"][data-variant="Cube"]   { background: radial-gradient(circle at center, #6a1b9a 0%, #3a005c 40%, #05000a 100%) !important; border-color: #9333ea !important; color: white !important; }
         .slot-box[data-owned="true"][data-variant="Quack"]  { background: linear-gradient(135deg, #ffffff 0%, #e0c3fc 50%, #8ec5fc 100%) !important; border-color: #b87cf8 !important; }
+        .slot-box[data-owned="true"][data-variant="Cheat"]  { background: radial-gradient(circle at center, #00f0ff 0%, #ff007f 50%, #110022 100%) !important; border-color: #00f0ff !important; color: white !important; }
         
         .slot-box[data-owned="true"][data-variant="Normal"][data-rarity-origin="Rare"] { background: radial-gradient(circle at center, #0284c7 0%, #0369a1 40%, #0f172a 100%) !important; border-color: #0284c7 !important; }
         .slot-box[data-owned="true"][data-variant="Normal"][data-rarity-origin="Epic"] { background: radial-gradient(circle at center, #a855f7 0%, #7e22ce 40%, #0f172a 100%) !important; border-color: #9333ea !important; }
@@ -634,6 +621,7 @@
                 <div class="key-item"><div class="rarity-sample" style="background: #9333ea;"></div> <span id="txtVarCube">Cube</span> <span id="countVarCube" class="rarity-count">(0/0)</span></div>
                 <div class="key-item"><div class="rarity-sample" style="background: #00b4d8;"></div> <span id="txtVarGem">Gem</span> <span id="countVarGem" class="rarity-count">(0/0)</span></div>
                 <div class="key-item"><div class="rarity-sample" style="background: #b87cf8;"></div> <span id="txtVarQuack">Quack</span> <span id="countVarQuack" class="rarity-count">(0/0)</span></div>
+                <div class="key-item"><div class="rarity-sample" style="background: #ff0055;"></div> <span id="txtVarCheat">Cheat</span> <span id="countVarCheat" class="rarity-count">(0/0)</span></div>
             </div>
         </div>
     </div>
@@ -823,8 +811,8 @@
                 textExportTitle: "Copy Text List", btnExportTextAll: "🗂️ Copy All Sprites List", btnExportTextNews: "🆕 Copy Only New Sprites List",
                 levelWord: "Level", lvlShort: "Lvl", seasonS3: "Ch7 S3", seasonS4: "Ch7 S4", showcaseCloseHint: "Click outside the box to close",
                 toastCopied: "List copied to clipboard!",
-                variants: { Normal: "Normal", Gold: "Gold", Gummy: "Gummy", Galaxy: "Galaxy", Holo: "Holofoil", Cube: "Cube", Gem: "Gem", Quack: "Quack" },
-                spirits: { water: "Water", earth: "Earth", fire: "Fire", fishy: "Fishy", air: "Air", duck: "Duck", ghost: "Ghost", demon: "Demon", king: "King", striker: "Striker", aura: "Aura", dream: "Dream", punk: "Punk", boss: "Boss", seven: "Seven", peanut: "Burnt Peanut", zp: "Zero Point", grim: "Grim Reaper", batman: "Batman", vini: "Vini Jr.", pollo: "Pollo", john: "John Wick", peely: "Peely", llama: "Llama", ironmouse: "Ironmouse", tails: "Tails", sonic: "Sonic", crown: "Crown", klombo: "Klombo", killswitch: "Killswitch", jazz: "Jazz Jackrabbit", bushranger: "Bush Ranger", adventurer: "Adventurer", bullet: "Bullet", dumpster: "Dumpster Dive", honey: "Honey", pond: "Pond", xray: "X-Ray" }
+                variants: { Normal: "Normal", Gold: "Gold", Gummy: "Gummy", Galaxy: "Galaxy", Holo: "Holofoil", Cube: "Cube", Gem: "Gem", Quack: "Quack", Cheat: "Cheat" },
+                spirits: { water: "Water", earth: "Earth", fire: "Fire", fishy: "Fishy", air: "Air", duck: "Duck", ghost: "Ghost", demon: "Demon", king: "King", striker: "Striker", aura: "Aura", dream: "Dream", punk: "Punk", boss: "Boss", seven: "Seven", peanut: "Burnt Peanut", zp: "Zero Point", grim: "Grim Reaper", batman: "Batman", vini: "Vini Jr.", pollo: "Pollo", john: "John Wick", peely: "Peely", llama: "Llama", ironmouse: "Ironmouse", tails: "Tails", sonic: "Sonic", crown: "Crown", klombo: "Klombo", killswitch: "Killswitch", jackrabbit: "JackRabbit", bushranger: "Bush Ranger", adventure: "Adventure", bullet: "Bullet", dumpster: "Dumpster Dive", honey: "Honey", pond: "Pond", xray: "X-Ray", "8bit": "8 Bit", jonesy: "Jonesy", shadow: "Shadow", storm: "Storm Scout" }
             },
             es: {
                 titleGarden: "Jardín de Espíritus", titleS3: "Lista Cap 7 Temporada 3", titleS4: "Lista Cap 7 Temporada 4",
@@ -849,8 +837,8 @@
                 textExportTitle: "Copiar Lista de Texto", btnExportTextAll: "🗂️ Copiar Lista Completa", btnExportTextNews: "🆕 Copiar Solo Novedades",
                 levelWord: "Nivel", lvlShort: "Nivel", seasonS3: "Cap7 T3", seasonS4: "Cap7 T4", showcaseCloseHint: "Haz clic fuera de la caja para cerrar",
                 toastCopied: "¡Lista copiada al portapapeles!",
-                variants: { Normal: "Normal", Gold: "Dorado", Gummy: "Gummy", Galaxy: "Galaxia", Holo: "Holofoil", Cube: "Cubo", Gem: "Gema", Quack: "Pato" },
-                spirits: { water: "Agua", earth: "Tierra", fire: "Fuego", fishy: "Pecesito", air: "Aire", duck: "Pato", ghost: "Fantasma", demon: "Demonio", king: "Rey", striker: "Delantero", aura: "Aura", dream: "Sueño", punk: "Punk", boss: "Jefe", seven: "Siete", peanut: "Cacahuate Q.", zp: "Punto Cero", grim: "Sega-Almas", batman: "Batman", vini: "Vini Jr.", pollo: "Pollo", john: "John Wick", peely: "Banano", llama: "Llama", ironmouse: "Ironmouse", tails: "Tails", sonic: "Sonic", crown: "Corona", klombo: "Klombo", killswitch: "Killswitch", jazz: "Jazz Jackrabbit", bushranger: "Arbustín", adventurer: "Aventurero", bullet: "Bala", dumpster: "Basurero", honey: "Miel", pond: "Estanque", xray: "Rayos X" }
+                variants: { Normal: "Normal", Gold: "Dorado", Gummy: "Gummy", Galaxy: "Galaxia", Holo: "Holofoil", Cube: "Cubo", Gem: "Gema", Quack: "Pato", Cheat: "Cheat" },
+                spirits: { water: "Agua", earth: "Tierra", fire: "Fuego", fishy: "Pecesito", air: "Aire", duck: "Pato", ghost: "Fantasma", demon: "Demonio", king: "Rey", striker: "Delantero", aura: "Aura", dream: "Sueño", punk: "Punk", boss: "Jefe", seven: "Siete", peanut: "Cacahuate Q.", zp: "Punto Cero", grim: "Sega-Almas", batman: "Batman", vini: "Vini Jr.", pollo: "Pollo", john: "John Wick", peely: "Banano", llama: "Llama", ironmouse: "Ironmouse", tails: "Tails", sonic: "Sonic", crown: "Corona", klombo: "Klombo", killswitch: "Killswitch", jackrabbit: "JackRabbit", bushranger: "Arbustín", adventure: "Aventura", bullet: "Bala", dumpster: "Basurero", honey: "Miel", pond: "Estanque", xray: "Rayos X", "8bit": "8 Bit", jonesy: "Jonesy", shadow: "Shadow", storm: "Storm Scout" }
             },
             de: {
                 titleGarden: "Geistergarten", titleS3: "Kap 7 Saison 3 Liste", titleS4: "Kap 7 Saison 4 Liste",
@@ -875,8 +863,8 @@
                 textExportTitle: "Textliste Kopieren", btnExportTextAll: "🗂️ Alle Kopieren", btnExportTextNews: "🆕 Nur Neuheiten Kopieren",
                 levelWord: "Level", lvlShort: "Lvl", seasonS3: "Kap7 St3", seasonS4: "Kap7 St4", showcaseCloseHint: "Klicke außerhalb zum Schließen",
                 toastCopied: "Liste in die Zwischenablage kopiert!",
-                variants: { Normal: "Normal", Gold: "Gold", Gummy: "Gummy", Galaxy: "Galaxy", Holo: "Holofoil", Cube: "Würfel", Gem: "Edelstein", Quack: "Ente" },
-                spirits: { water: "Wasser", earth: "Erde", fire: "Feuer", fishy: "Fisch", air: "Luft", duck: "Ente", ghost: "Geist", demon: "Dämon", king: "König", striker: "Stürmer", aura: "Aura", dream: "Traum", punk: "Punk", boss: "Boss", seven: "Sieben", peanut: "Erdnuss", zp: "Nullpunkt", grim: "Sensemann", batman: "Batman", vini: "Vini Jr.", pollo: "Hähnchen", john: "John Wick", peely: "Banane", llama: "Lama", ironmouse: "Ironmouse", tails: "Tails", sonic: "Sonic", crown: "Krone", klombo: "Klombo", killswitch: "Killswitch", jazz: "Jazz Jackrabbit", bushranger: "Buschranger", adventurer: "Abenteurer", bullet: "Kugel", dumpster: "Müllcontainer", honey: "Honig", pond: "Teich", xray: "Röntgen" }
+                variants: { Normal: "Normal", Gold: "Gold", Gummy: "Gummy", Galaxy: "Galaxy", Holo: "Holofoil", Cube: "Würfel", Gem: "Edelstein", Quack: "Ente", Cheat: "Cheat" },
+                spirits: { water: "Wasser", earth: "Erde", fire: "Feuer", fishy: "Fisch", air: "Luft", duck: "Ente", ghost: "Geist", demon: "Dämon", king: "König", striker: "Stürmer", aura: "Aura", dream: "Traum", punk: "Punk", boss: "Boss", seven: "Sieben", peanut: "Erdnuss", zp: "Nullpunkt", grim: "Sensemann", batman: "Batman", vini: "Vini Jr.", pollo: "Hähnchen", john: "John Wick", peely: "Banane", llama: "Lama", ironmouse: "Ironmouse", tails: "Tails", sonic: "Sonic", crown: "Krone", klombo: "Klombo", killswitch: "Killswitch", jackrabbit: "JackRabbit", bushranger: "Buschranger", adventure: "Abenteuer", bullet: "Kugel", dumpster: "Müllcontainer", honey: "Honig", pond: "Teich", xray: "Röntgen", "8bit": "8 Bit", jonesy: "Jonesy", shadow: "Shadow", storm: "Storm Scout" }
             },
             fr: {
                 titleGarden: "Jardin des Esprits", titleS3: "Liste Chap 7 Saison 3", titleS4: "Liste Chap 7 Saison 4",
@@ -901,8 +889,8 @@
                 textExportTitle: "Copier Liste Texte", btnExportTextAll: "🗂️ Copier Tout", btnExportTextNews: "🆕 Copier Nouveautés",
                 levelWord: "Niveau", lvlShort: "Niv.", seasonS3: "Ch7 S3", seasonS4: "Ch7 S4", showcaseCloseHint: "Cliquez à l'extérieur pour fermer",
                 toastCopied: "Liste copiée dans le presse-papiers !",
-                variants: { Normal: "Normal", Gold: "Or", Gummy: "Gummy", Galaxy: "Galaxie", Holo: "Holofoil", Cube: "Cube", Gem: "Gemme", Quack: "Canard" },
-                spirits: { water: "Eau", earth: "Terre", fire: "Feu", fishy: "Poisson", air: "Air", duck: "Canard", ghost: "Fantôme", demon: "Démon", king: "Roi", striker: "Attaquant", aura: "Aura", dream: "Rêve", punk: "Punk", boss: "Boss", seven: "Sept", peanut: "Cacahuète", zp: "Point Zéro", grim: "Faucheuse", batman: "Batman", vini: "Vini Jr.", pollo: "Poulet", john: "John Wick", peely: "Banane", llama: "Lama", ironmouse: "Ironmouse", tails: "Tails", sonic: "Sonic", crown: "Couronne", klombo: "Klombo", killswitch: "Killswitch", jazz: "Jazz Jackrabbit", bushranger: "Patrouilleur buissonneux", adventurer: "Aventurier", bullet: "Balle", dumpster: "Conteneur", honey: "Miel", pond: "Étang", xray: "Rayons X" }
+                variants: { Normal: "Normal", Gold: "Or", Gummy: "Gummy", Galaxy: "Galaxie", Holo: "Holofoil", Cube: "Cube", Gem: "Gemme", Quack: "Canard", Cheat: "Cheat" },
+                spirits: { water: "Eau", earth: "Terre", fire: "Feu", fishy: "Poisson", air: "Air", duck: "Canard", ghost: "Fantôme", demon: "Démon", king: "Roi", striker: "Attaquant", aura: "Aura", dream: "Rêve", punk: "Punk", boss: "Boss", seven: "Sept", peanut: "Cacahuète", zp: "Point Zéro", grim: "Faucheuse", batman: "Batman", vini: "Vini Jr.", pollo: "Poulet", john: "John Wick", peely: "Banane", llama: "Lama", ironmouse: "Ironmouse", tails: "Tails", sonic: "Sonic", crown: "Couronne", klombo: "Klombo", killswitch: "Killswitch", jackrabbit: "JackRabbit", bushranger: "Patrouilleur buissonneux", adventure: "Aventure", bullet: "Balle", dumpster: "Conteneur", honey: "Miel", pond: "Étang", xray: "Rayons X", "8bit": "8 Bit", jonesy: "Jonesy", shadow: "Shadow", storm: "Storm Scout" }
             },
             it: {
                 titleGarden: "Giardino degli Spiriti", titleS3: "Lista Cap 7 Stagione 3", titleS4: "Lista Cap 7 Stagione 4",
@@ -927,8 +915,8 @@
                 textExportTitle: "Copia Lista Testo", btnExportTextAll: "🗂️ Copia Tutto", btnExportTextNews: "🆕 Copia Novità",
                 levelWord: "Livello", lvlShort: "Liv.", seasonS3: "Cap7 St3", seasonS4: "Cap7 St4", showcaseCloseHint: "Clicca fuori per chiudere",
                 toastCopied: "Lista copiata negli appunti!",
-                variants: { Normal: "Normale", Gold: "Oro", Gummy: "Gummy", Galaxy: "Galassia", Holo: "Holofoil", Cube: "Cubo", Gem: "Gemma", Quack: "Anatra" },
-                spirits: { water: "Acqua", earth: "Terra", fire: "Fuoco", fishy: "Pesciolino", air: "Aria", duck: "Anatra", ghost: "Fantasma", demon: "Demone", king: "Re", striker: "Attaccante", aura: "Aura", dream: "Sogno", punk: "Punk", boss: "Boss", seven: "Sette", peanut: "Nocciolina", zp: "Punto Zero", grim: "Mietitore", batman: "Batman", vini: "Vini Jr.", pollo: "Pollo", john: "John Wick", peely: "Banana", llama: "Llama", ironmouse: "Ironmouse", tails: "Tails", sonic: "Sonic", crown: "Corona", klombo: "Klombo", killswitch: "Killswitch", jazz: "Jazz Jackrabbit", bushranger: "Cespuglio", adventurer: "Avventuriero", bullet: "Proiettile", dumpster: "Cassonetto", honey: "Miele", pond: "Stagno", xray: "Raggi X" }
+                variants: { Normal: "Normale", Gold: "Oro", Gummy: "Gummy", Galaxy: "Galassia", Holo: "Holofoil", Cube: "Cubo", Gem: "Gemma", Quack: "Anatra", Cheat: "Cheat" },
+                spirits: { water: "Acqua", earth: "Terra", fire: "Fuoco", fishy: "Pesciolino", air: "Aria", duck: "Anatra", ghost: "Fantasma", demon: "Demone", king: "Re", striker: "Attaccante", aura: "Aura", dream: "Sogno", punk: "Punk", boss: "Boss", seven: "Sette", peanut: "Nocciolina", zp: "Punto Zero", grim: "Mietitore", batman: "Batman", vini: "Vini Jr.", pollo: "Pollo", john: "John Wick", peely: "Banana", llama: "Llama", ironmouse: "Ironmouse", tails: "Tails", sonic: "Sonic", crown: "Corona", klombo: "Klombo", killswitch: "Killswitch", jackrabbit: "JackRabbit", bushranger: "Cespuglio", adventure: "Avventura", bullet: "Proiettile", dumpster: "Cassonetto", honey: "Miele", pond: "Stagno", xray: "Raggi X", "8bit": "8 Bit", jonesy: "Jonesy", shadow: "Shadow", storm: "Storm Scout" }
             },
             pt: {
                 titleGarden: "Jardim de Espíritos", titleS3: "Lista Cap 7 Temporada 3", titleS4: "Lista Cap 7 Temporada 4",
@@ -953,8 +941,8 @@
                 textExportTitle: "Copiar Lista de Texto", btnExportTextAll: "🗂️ Copiar Tudo", btnExportTextNews: "🆕 Copiar Novidades",
                 levelWord: "Nível", lvlShort: "Nível", seasonS3: "Cap7 T3", seasonS4: "Cap7 T4", showcaseCloseHint: "Clique fora da caixa para fechar",
                 toastCopied: "Lista copiada para a área de transferência!",
-                variants: { Normal: "Normal", Gold: "Ouro", Gummy: "Gummy", Galaxy: "Galáxia", Holo: "Holofoil", Cube: "Cubo", Gem: "Gema", Quack: "Pato" },
-                spirits: { water: "Água", earth: "Terra", fire: "Fogo", fishy: "Peixinho", air: "Ar", duck: "Pato", ghost: "Fantasma", demon: "Demônio", king: "Rei", striker: "Atacante", aura: "Aura", dream: "Sonho", punk: "Punk", boss: "Chefe", seven: "Sete", peanut: "Amendoim", zp: "Ponto Zero", grim: "Ceifador", batman: "Batman", vini: "Vini Jr.", pollo: "Frango", john: "John Wick", peely: "Banana", llama: "Llama", ironmouse: "Ironmouse", tails: "Tails", sonic: "Sonic", crown: "Coroa", klombo: "Klombo", killswitch: "Killswitch", jazz: "Jazz Jackrabbit", bushranger: "Patrulheiro Arbustivo", adventurer: "Aventureiro", bullet: "Bala", dumpster: "Caçamba", honey: "Mel", pond: "Lagoa", xray: "Raio X" }
+                variants: { Normal: "Normal", Gold: "Ouro", Gummy: "Gummy", Galaxy: "Galáxia", Holo: "Holofoil", Cube: "Cubo", Gem: "Gema", Quack: "Pato", Cheat: "Cheat" },
+                spirits: { water: "Água", earth: "Terra", fire: "Fogo", fishy: "Peixinho", air: "Ar", duck: "Pato", ghost: "Fantasma", demon: "Demônio", king: "Rei", striker: "Atacante", aura: "Aura", dream: "Sonho", punk: "Punk", boss: "Chefe", seven: "Sete", peanut: "Amendoim", zp: "Ponto Zero", grim: "Ceifador", batman: "Batman", vini: "Vini Jr.", pollo: "Frango", john: "John Wick", peely: "Banana", llama: "Llama", ironmouse: "Ironmouse", tails: "Tails", sonic: "Sonic", crown: "Coroa", klombo: "Klombo", killswitch: "Killswitch", jackrabbit: "JackRabbit", bushranger: "Patrulheiro Arbustivo", adventure: "Aventura", bullet: "Bala", dumpster: "Caçamba", honey: "Mel", pond: "Lagoa", xray: "Raio X", "8bit": "8 Bit", jonesy: "Jonesy", shadow: "Shadow", storm: "Storm Scout" }
             },
             ru: {
                 titleGarden: "Sprite Garden", titleS3: "Глава 7 Сезон 3 Чеклист", titleS4: "Глава 7 Сезон 4 Чеклист",
@@ -979,8 +967,8 @@
                 textExportTitle: "Скопировать Текст", btnExportTextAll: "🗂️ Скопировать Все", btnExportTextNews: "🆕 Скопировать Новинки",
                 levelWord: "Уровень", lvlShort: "Ур.", seasonS3: "Г7 С3", seasonS4: "Г7 С4", showcaseCloseHint: "Нажмите снаружи для закрытия",
                 toastCopied: "Список скопирован в буфер обмена!",
-                variants: { Normal: "Обычный", Gold: "Золотой", Gummy: "Мармелад", Galaxy: "Галактика", Holo: "Голографический", Cube: "Куб", Gem: "Самоцвет", Quack: "Утка" },
-                spirits: { water: "Вода", earth: "Земля", fire: "Огонь", fishy: "Рыбка", air: "Воздух", duck: "Утка", ghost: "Призрак", demon: "Демон", king: "Король", striker: "Форвард", aura: "Аура", dream: "Мечта", punk: "Панк", boss: "Босс", seven: "Семёрка", peanut: "Арахис", zp: "Эпицентр", grim: "Жнец", batman: "Бэтмен", vini: "Вини Джуниор", pollo: "Цыплёнок", john: "Джон Уик", peely: "Банан", llama: "Лама", ironmouse: "Ironmouse", tails: "Тейлз", sonic: "Соник", crown: "Корона", klombo: "Кломбо", killswitch: "Киллсвитч", jazz: "Джаз Джакраббит", bushranger: "Бушрейнджер", adventurer: "Искатель приключений", bullet: "Пуля", dumpster: "Мусорка", honey: "Мёд", pond: "Пруд", xray: "Рентген" }
+                variants: { Normal: "Обычный", Gold: "Золотой", Gummy: "Мармелад", Galaxy: "Галактика", Holo: "Голографический", Cube: "Куб", Gem: "Самоцвет", Quack: "Утка", Cheat: "Cheat" },
+                spirits: { water: "Вода", earth: "Земля", fire: "Огонь", fishy: "Рыбка", air: "Воздух", duck: "Утка", ghost: "Призрак", demon: "Демон", king: "Король", striker: "Форвард", aura: "Аура", dream: "Мечта", punk: "Панк", boss: "Босс", seven: "Семёрка", peanut: "Арахис", zp: "Эпицентр", grim: "Жнец", batman: "Бэтмен", vini: "Вини Джуниор", pollo: "Цыплёнок", john: "Джон Уик", peely: "Банан", llama: "Лама", ironmouse: "Ironmouse", tails: "Тейлз", sonic: "Соник", crown: "Корона", klombo: "Кломбо", killswitch: "Киллсвитч", jackrabbit: "JackRabbit", bushranger: "Бушрейнджер", adventure: "Приключение", bullet: "Пуля", dumpster: "Мусорка", honey: "Мёд", pond: "Пруд", xray: "Рентген", "8bit": "8 Bit", jonesy: "Jonesy", shadow: "Shadow", storm: "Storm Scout" }
             },
             ja: {
                 titleGarden: "精霊の庭", titleS3: "第7章 第3期 Checklist", titleS4: "第7章 第4期 Checklist",
@@ -1005,8 +993,8 @@
                 textExportTitle: "テキストコピー", btnExportTextAll: "🗂️ 全リストコピー", btnExportTextNews: "🆕 新要素のみコピー",
                 levelWord: "レベル", lvlShort: "Lv.", seasonS3: "第7章 第3期", seasonS4: "第7章 第4期", showcaseCloseHint: "枠外をクリックして閉じる",
                 toastCopied: "リストをクリップボードにコピーしました！",
-                variants: { Normal: "ノーマル", Gold: "ゴールド", Gummy: "グミ", Galaxy: "ギャラクシー", Holo: "ホロ", Cube: "キューブ", Gem: "ジェム", Quack: "アヒル" },
-                spirits: { water: "ウォーター", earth: "アース", fire: "ファイア", fishy: "フィッシー", air: "エアー", duck: "ダック", ghost: "ゴースト", demon: "デーモン", king: "キング", striker: "ストライカー", aura: "オーラ", dream: "ドリーム", punk: "パンク", boss: "ボス", seven: "セブン", peanut: "ピーナッツ", zp: "ゼロポイント", grim: "グリムリーパー", batman: "バットマン", vini: "ヴィニJr.", pollo: "ポヨ", john: "ジョン・ウィック", peely: "ピーリー", llama: "ラマ", ironmouse: "アイアンマウス", tails: "テイルス", sonic: "ソニック", crown: "クラウン", klombo: "クロンボ", killswitch: "キルスイッチ", jazz: "ジャズジャックラビット", bushranger: "ブッシュレンジャー", adventurer: "アドベンチャラー", bullet: "バレット", dumpster: "ゴミ箱", honey: "ハニー", pond: "ポンド", xray: "レントゲン" }
+                variants: { Normal: "ノーマル", Gold: "ゴールド", Gummy: "グミ", Galaxy: "ギャラクシー", Holo: "ホロ", Cube: "キューブ", Gem: "ジェム", Quack: "アヒル", Cheat: "チート" },
+                spirits: { water: "ウォーター", earth: "アース", fire: "ファイア", fishy: "フィッシー", air: "エアー", duck: "ダック", ghost: "ゴースト", demon: "デーモン", king: "キング", striker: "ストライカー", aura: "オーラ", dream: "ドリーム", punk: "パンク", boss: "ボス", seven: "セブン", peanut: "ピーナッツ", zp: "ゼロポイント", grim: "グリムリーパー", batman: "バットマン", vini: "ヴィニJr.", pollo: "ポヨ", john: "ジョン・ウィック", peely: "ピーリー", llama: "ラマ", ironmouse: "アイアンマウス", tails: "テイルス", sonic: "ソニック", crown: "クラウン", klombo: "クロンボ", killswitch: "キルスイッチ", jackrabbit: "JackRabbit", bushranger: "ブッシュレンジャー", adventure: "アドベンチャー", bullet: "バレット", dumpster: "ゴミ箱", honey: "ハニー", pond: "ポンド", xray: "レントゲン", "8bit": "8 Bit", jonesy: "Jonesy", shadow: "Shadow", storm: "Storm Scout" }
             },
             zh: {
                 titleGarden: "精灵花园", titleS3: "第7章 第3季 清单", titleS4: "第7章 第4季 清单",
@@ -1031,8 +1019,8 @@
                 textExportTitle: "复制文本", btnExportTextAll: "🗂️ 复制全部", btnExportTextNews: "🆕 仅复制新品",
                 levelWord: "等级", lvlShort: "Lv.", seasonS3: "第7章 第3季", seasonS4: "第7章 第4季", showcaseCloseHint: "点击框外关闭",
                 toastCopied: "列表已复制到剪贴板！",
-                variants: { Normal: "普通", Gold: "黄金", Gummy: "软糖", Galaxy: "银河", Holo: "激光", Cube: "方块", Gem: "宝石", Quack: "鸭子" },
-                spirits: { water: "水精灵", earth: "土精灵", fire: "火精灵", fishy: "小鱼", air: "风精灵", duck: "鸭子", ghost: "幽灵", demon: "恶魔", king: "国王", striker: "前锋", aura: "光环", dream: "梦境", punk: "朋克", boss: "首领", seven: "七人", peanut: "花生", zp: "零点", grim: "死神", batman: "蝙蝠侠", vini: "维尼修斯", pollo: "小鸡", john: "约翰·威克", peely: "香蕉人", llama: "羊驼", ironmouse: "铁鼠", tails: "塔尔斯", sonic: "索尼克", crown: "皇冠", klombo: "克隆博", killswitch: "断路器", jazz: "爵士兔", bushranger: "丛林游侠", adventurer: "冒险家", bullet: "子弹", dumpster: "垃圾箱", honey: "蜂蜜", pond: "池塘", xray: "X光" }
+                variants: { Normal: "普通", Gold: "黄金", Gummy: "软糖", Galaxy: "银河", Holo: "激光", Cube: "方块", Gem: "宝石", Quack: "鸭子", Cheat: "Cheat" },
+                spirits: { water: "水精灵", earth: "土精灵", fire: "火精灵", fishy: "小鱼", air: "风精灵", duck: "鸭子", ghost: "幽灵", demon: "恶魔", king: "国王", striker: "前锋", aura: "光环", dream: "梦境", punk: "朋克", boss: "首领", seven: "七人", peanut: "花生", zp: "零点", grim: "死神", batman: "蝙蝠侠", vini: "维尼修斯", pollo: "小鸡", john: "约翰·威克", peely: "香蕉人", llama: "羊驼", ironmouse: "铁鼠", tails: "塔尔斯", sonic: "索尼克", crown: "皇冠", klombo: "克隆博", killswitch: "断路器", jackrabbit: "JackRabbit", bushranger: "丛林游侠", adventure: "冒险", bullet: "子弹", dumpster: "垃圾箱", honey: "蜂蜜", pond: "池塘", xray: "X光", "8bit": "8 Bit", jonesy: "Jonesy", shadow: "Shadow", storm: "Storm Scout" }
             },
             ko: {
                 titleGarden: "정령의 정원", titleS3: "제7장 시즌3 체크리스트", titleS4: "제7장 시즌4 체크리스트",
@@ -1057,8 +1045,8 @@
                 textExportTitle: "텍스트 복사", btnExportTextAll: "🗂️ 전체 복사", btnExportTextNews: "🆕 신규 요소만 복사",
                 levelWord: "레벨", lvlShort: "Lv.", seasonS3: "제7장 시즌3", seasonS4: "제7장 시즌4", showcaseCloseHint: "바깥 영역을 클릭하여 닫기",
                 toastCopied: "목록이 클립보드에 복사되었습니다!",
-                variants: { Normal: "일반", Gold: "골드", Gummy: "구미", Galaxy: "갤럭시", Holo: "홀로그램", Cube: "큐브", Gem: "보석", Quack: "오리" },
-                spirits: { water: "워터", earth: "어스", fire: "파이어", fishy: "피시", air: "에어", duck: "덕", ghost: "고스트", demon: "디몬", king: "킹", striker: "스트라이커", aura: "오라", dream: "드림", punk: "펑크", boss: "보스", seven: "세븐", peanut: "피넛", zp: "제로 포인트", grim: "사신", batman: "배트맨", vini: "비니 주니어", pollo: "치킨", john: "존 윅", peely: "필리", llama: "라마", ironmouse: "아이언마우스", tails: "테일즈", sonic: "소닉", crown: "왕관", klombo: "클롬보", killswitch: "킬스위치", jazz: "재즈 재크래빗", bushranger: "부시 레인저", adventurer: "모험가", bullet: "총알", dumpster: "쓰레기통", honey: "허니", pond: "연못", xray: "엑스레이" }
+                variants: { Normal: "일반", Gold: "골드", Gummy: "구미", Galaxy: "갤럭시", Holo: "홀로그램", Cube: "큐브", Gem: "보석", Quack: "오리", Cheat: "치트" },
+                spirits: { water: "워터", earth: "어스", fire: "파이어", fishy: "피시", air: "에어", duck: "덕", ghost: "고스트", demon: "디몬", king: "킹", striker: "스트라이커", aura: "오라", dream: "드림", punk: "펑크", boss: "보스", seven: "세븐", peanut: "피넛", zp: "제로 포인트", grim: "사신", batman: "배트맨", vini: "비니 주니어", pollo: "치킨", john: "존 윅", peely: "필리", llama: "라마", ironmouse: "아이언마우스", tails: "테일즈", sonic: "소닉", crown: "왕관", klombo: "클롬보", killswitch: "킬스위치", jackrabbit: "JackRabbit", bushranger: "부시 레인저", adventure: "어드벤처", bullet: "총알", dumpster: "쓰레기통", honey: "허니", pond: "연못", xray: "엑스레이", "8bit": "8 Bit", jonesy: "Jonesy", shadow: "Shadow", storm: "Storm Scout" }
             },
             ar: {
                 titleGarden: "حديقة الأرواح", titleS3: "الفصل 7 الموسم 3", titleS4: "الفصل 7 الموسم 4",
@@ -1083,63 +1071,67 @@
                 textExportTitle: "نسخ القائمة النصية", btnExportTextAll: "🗂️ نسخ الكل", btnExportTextNews: "🆕 نسخ المستجدات",
                 levelWord: "مستوى", lvlShort: "مستوى", seasonS3: "الموسم 3", seasonS4: "الموسم 4", showcaseCloseHint: "انقر خارج الصندوق للإغلاق",
                 toastCopied: "تم نسخ القائمة إلى الحافظة!",
-                variants: { Normal: "عادي", Gold: "ذهبي", Gummy: "صمغي", Galaxy: "مجرة", Holo: "هولو", Cube: "مكعب", Gem: "جوهرة", Quack: "بطة" },
-                spirits: { water: "ماء", earth: "أرض", fire: "نار", fishy: "سمكة", air: "هواء", duck: "بطة", ghost: "شباح", demon: "شيطان", king: "ملك", striker: "مهاجم", aura: "هالة", dream: "حلم", punk: "بانك", boss: "زعيم", seven: "سبعة", peanut: "فول سوداني", zp: "نقطة الصفر", grim: "حاصد الأرواح", batman: "باتمان", vini: "فيني جونيور", pollo: "دجاجة", john: "جون ويك", peely: "موزة", llama: "لاما", ironmouse: "آيرون ماوس", tails: "تيلز", sonic: "سونيك", crown: "تاج", klombo: "كلومبو", killswitch: "كيل سويتش", jazz: "جاز جاكرابيت", bushranger: "بوش رينجر", adventurer: "مغامر", bullet: "رصاصة", dumpster: "حاوية", honey: "عسل", pond: "بركة", xray: "أشعة سينية" }
+                variants: { Normal: "عادي", Gold: "ذهبي", Gummy: "صمغي", Galaxy: "مجرة", Holo: "هولو", Cube: "مكعب", Gem: "جوهرة", Quack: "بطة", Cheat: "Cheat" },
+                spirits: { water: "ماء", earth: "أرض", fire: "نار", fishy: "سمكة", air: "هواء", duck: "بطة", ghost: "شباح", demon: "شيطان", king: "ملك", striker: "مهاجم", aura: "هالة", dream: "حلم", punk: "بانك", boss: "زعيم", seven: "سبعة", peanut: "فول سوداني", zp: "نقطة الصفر", grim: "حاصد الأرواح", batman: "باتمان", vini: "فيني جونيور", pollo: "دجاجة", john: "جون ويك", peely: "موزة", llama: "لاما", ironmouse: "آيرون ماوس", tails: "تيلز", sonic: "سونيك", crown: "تاج", klombo: "كلومبو", killswitch: "كيل سويتش", jackrabbit: "JackRabbit", bushranger: "بوش رينجر", adventure: "مغامرة", bullet: "رصاصة", dumpster: "حاوية", honey: "عسل", pond: "بركة", xray: "أشعة سينية", "8bit": "8 Bit", jonesy: "Jonesy", shadow: "Shadow", storm: "Storm Scout" }
             }
         };
 
         const SPIRITS_DATA = [
             /* Rare */
-            { id: "water", name: "Water", rarity: "Rare", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: [3], Cube: false, Quack: [3] } },
-            { id: "earth", name: "Earth", rarity: "Rare", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: [3], Cube: [3], Quack: [3] } },
-            { id: "fire", name: "Fire", rarity: "Rare", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: false, Cube: [3], Quack: [3] } },
-            { id: "fishy", name: "Fishy", rarity: "Rare", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: false, Cube: [3], Quack: false } },
-            { id: "air", name: "Air", rarity: "Rare", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: false, Cube: false, Quack: false } },
-            { id: "bushranger", imgPrefix: "bush", name: "Bush Ranger", rarity: "Rare", variants: { Normal: [4], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
-            { id: "jazz", name: "Jazz Jackrabbit", rarity: "Rare", variants: { Normal: [4], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
+            { id: "water", name: "Water", rarity: "Rare", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: [3], Cube: false, Quack: [3], Cheat: false } },
+            { id: "earth", name: "Earth", rarity: "Rare", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: [3], Cube: [3], Quack: [3], Cheat: false } },
+            { id: "fire", name: "Fire", rarity: "Rare", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: false, Cube: [3], Quack: [3], Cheat: false } },
+            { id: "fishy", name: "Fishy", rarity: "Rare", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: false, Cube: [3], Quack: false, Cheat: false } },
+            { id: "air", name: "Air", rarity: "Rare", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: false, Cube: false, Quack: false, Cheat: false } },
+            { id: "bushranger", imgPrefix: "bush", name: "Bush Ranger", rarity: "Rare", variants: { Normal: [4], Gold: [4], Cheat: [4], Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
+            { id: "adventure", name: "Adventure", rarity: "Rare", variants: { Normal: [4], Gold: [4], Cheat: [4], Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
+            { id: "jonesy", name: "Jonesy", rarity: "Rare", variants: { Normal: [4], Gold: [4], Cheat: [4], Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
+            { id: "storm", imgPrefix: "storm", name: "Storm Scout", rarity: "Rare", variants: { Normal: [4], Gold: [4], Cheat: [4], Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
+            { id: "8bit", imgPrefix: "8bit", name: "8 Bit", rarity: "Rare", variants: { Normal: [4], Gold: [4], Cheat: [4], Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
 
             /* Epic */
-            { id: "duck", name: "Duck", rarity: "Epic", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: [3], Cube: false, Quack: false } },
-            { id: "ghost", name: "Ghost", rarity: "Epic", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: false, Cube: false, Quack: false } },
-            { id: "demon", name: "Demon", rarity: "Epic", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: [3], Cube: false, Quack: false } },
-            { id: "king", name: "King", rarity: "Epic", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: false, Cube: false, Quack: false } },
-            { id: "striker", name: "Striker", rarity: "Epic", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: false, Cube: false, Quack: false } },
-            { id: "aura", name: "Aura", rarity: "Epic", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: [3], Cube: false, Quack: false } },
-            { id: "killswitch", name: "Killswitch", rarity: "Epic", variants: { Normal: [4], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
-            { id: "adventurer", name: "Adventurer", rarity: "Epic", variants: { Normal: [4], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
+            { id: "duck", name: "Duck", rarity: "Epic", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: [3], Cube: false, Quack: false, Cheat: false } },
+            { id: "ghost", name: "Ghost", rarity: "Epic", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: false, Cube: false, Quack: false, Cheat: false } },
+            { id: "demon", name: "Demon", rarity: "Epic", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: [3], Cube: false, Quack: false, Cheat: false } },
+            { id: "king", name: "King", rarity: "Epic", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: false, Cube: false, Quack: false, Cheat: false } },
+            { id: "striker", name: "Striker", rarity: "Epic", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: false, Cube: false, Quack: false, Cheat: false } },
+            { id: "aura", name: "Aura", rarity: "Epic", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: [3], Cube: false, Quack: false, Cheat: false } },
+            { id: "killswitch", name: "Killswitch", rarity: "Epic", variants: { Normal: [4], Gold: [4], Cheat: [4], Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
+            { id: "sonic", name: "Sonic", rarity: "Epic", variants: { Normal: [4], Gold: [4], Cheat: [4], Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
+            { id: "tails", name: "Tails", rarity: "Epic", variants: { Normal: [4], Gold: [4], Cheat: [4], Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
+            { id: "shadow", name: "Shadow", rarity: "Epic", variants: { Normal: [4], Gold: [4], Cheat: [4], Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
             
             /* Legendary */
-            { id: "dream", name: "Dream", rarity: "Legendary", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: false, Cube: [3], Quack: false } },
-            { id: "punk", name: "Punk", rarity: "Legendary", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: false, Cube: [3], Quack: false } },
-            { id: "boss", name: "Boss", rarity: "Legendary", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: false, Cube: [3], Quack: false } },
-            { id: "seven", name: "Seven", rarity: "Legendary", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: false, Cube: false, Quack: false } },
-            { id: "peely", name: "Peely", rarity: "Legendary", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: false, Cube: false, Quack: false } },
-            { id: "llama", name: "Llama", rarity: "Legendary", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: [3], Cube: false, Quack: false } },
-            { id: "crown", name: "Crown", rarity: "Legendary", variants: { Normal: [4], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
-            { id: "klombo", name: "Klombo", rarity: "Legendary", variants: { Normal: [4], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
+            { id: "dream", name: "Dream", rarity: "Legendary", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: false, Cube: [3], Quack: false, Cheat: false } },
+            { id: "punk", name: "Punk", rarity: "Legendary", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: false, Cube: [3], Quack: false, Cheat: false } },
+            { id: "boss", name: "Boss", rarity: "Legendary", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: false, Cube: [3], Quack: false, Cheat: false } },
+            { id: "seven", name: "Seven", rarity: "Legendary", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: false, Cube: false, Quack: false, Cheat: false } },
+            { id: "peely", name: "Peely", rarity: "Legendary", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: false, Cube: false, Quack: false, Cheat: false } },
+            { id: "llama", name: "Llama", rarity: "Legendary", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: [3], Cube: false, Quack: false, Cheat: false } },
+            { id: "jackrabbit", imgPrefix: "jack", name: "JackRabbit", rarity: "Legendary", variants: { Normal: [4], Gold: [4], Cheat: [4], Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
             
             /* Mythic */
-            { id: "peanut", name: "Burnt Peanut", rarity: "Mythic", variants: { Normal: [3], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
-            { id: "zp", name: "Zero Point", rarity: "Mythic", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: [3], Cube: [3], Quack: [3] } },
-            { id: "grim", name: "Grim Reaper", rarity: "Mythic", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: [3], Cube: [3], Quack: false } },
-            { id: "batman", name: "Batman", rarity: "Mythic", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: false, Cube: [3], Quack: false } },
-            { id: "vini", name: "Vini Jr.", rarity: "Mythic", variants: { Normal: [3], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
-            { id: "pollo", name: "Pollo", rarity: "Mythic", variants: { Normal: [3], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
-            { id: "john", name: "John Wick", rarity: "Mythic", variants: { Normal: [3], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
-            { id: "ironmouse", name: "Ironmouse", rarity: "Mythic", variants: { Normal: [3], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
-            { id: "tails", name: "Tails", rarity: "Mythic", variants: { Normal: [4], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
-            { id: "sonic", name: "Sonic", rarity: "Mythic", variants: { Normal: [4], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
+            { id: "peanut", name: "Burnt Peanut", rarity: "Mythic", variants: { Normal: [3], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false, Cheat: false } },
+            { id: "zp", name: "Zero Point", rarity: "Mythic", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: [3], Cube: [3], Quack: [3], Cheat: false } },
+            { id: "grim", name: "Grim Reaper", rarity: "Mythic", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: [3], Cube: [3], Quack: false, Cheat: false } },
+            { id: "batman", name: "Batman", rarity: "Mythic", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: false, Cube: [3], Quack: false, Cheat: false } },
+            { id: "vini", name: "Vini Jr.", rarity: "Mythic", variants: { Normal: [3], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false, Cheat: false } },
+            { id: "pollo", name: "Pollo", rarity: "Mythic", variants: { Normal: [3], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false, Cheat: false } },
+            { id: "john", name: "John Wick", rarity: "Mythic", variants: { Normal: [3], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false, Cheat: false } },
+            { id: "ironmouse", name: "Ironmouse", rarity: "Mythic", variants: { Normal: [3], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false, Cheat: false } },
+            { id: "crown", name: "Crown", rarity: "Mythic", variants: { Normal: [4], Gold: [4], Cheat: [4], Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
+            { id: "klombo", name: "Klombo", rarity: "Mythic", variants: { Normal: [4], Gold: [4], Cheat: [4], Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
             
             /* Próximos Espíritus */
-            { id: "bullet", name: "Bullet", rarity: "Epic", variants: { Normal: false, Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
-            { id: "xray", name: "X-Ray", rarity: "Legendary", variants: { Normal: false, Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
-            { id: "dumpster", name: "Dumpster Dive", rarity: "Rare", variants: { Normal: false, Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
-            { id: "pond", name: "Pond", rarity: "Rare", variants: { Normal: false, Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
-            { id: "honey", name: "Honey", rarity: "Rare", variants: { Normal: false, Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } }
+            { id: "bullet", name: "Bullet", rarity: "Epic", variants: { Normal: false, Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false, Cheat: false } },
+            { id: "xray", name: "X-Ray", rarity: "Legendary", variants: { Normal: false, Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false, Cheat: false } },
+            { id: "dumpster", name: "Dumpster Dive", rarity: "Rare", variants: { Normal: false, Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false, Cheat: false } },
+            { id: "pond", name: "Pond", rarity: "Rare", variants: { Normal: false, Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false, Cheat: false } },
+            { id: "honey", name: "Honey", rarity: "Rare", variants: { Normal: false, Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false, Cheat: false } }
         ];
 
         const SINGLE_VARIANT_SPIRITS = ["peanut", "vini", "pollo", "john", "ironmouse"];
-        const ALL_VARIANTS = ["Normal", "Gold", "Gummy", "Galaxy", "Holo", "Cube", "Gem", "Quack"];
+        const ALL_VARIANTS = ["Normal", "Gold", "Gummy", "Galaxy", "Holo", "Cube", "Gem", "Quack", "Cheat"];
         
         const SUMMON_COSTS = {
             "rare_normal": 1800, "rare_variant": 2700, "epic_normal": 2700, "epic_variant": 4000,
@@ -1148,7 +1140,7 @@
 
         const VARIANT_BORDER_COLORS = {
             "Normal": "#38bdf8", "Gold": "#ffb300", "Gummy": "#ec4899", "Galaxy": "#bf55ec",
-            "Holo": "#2dd4bf", "Cube": "#9333ea", "Gem": "#00b4d8", "Quack": "#b87cf8"
+            "Holo": "#2dd4bf", "Cube": "#9333ea", "Gem": "#00b4d8", "Quack": "#b87cf8", "Cheat": "#ff0055"
         };
 
         const SHOWCASE_RARITY_CARD_BG = {
@@ -1172,7 +1164,8 @@
             "Holo": "radial-gradient(circle at center, #ffffff 0%, #67e8f9 35%, #a855f7 70%, #0f172a 100%)",
             "Cube": "radial-gradient(circle at center, #c084fc 0%, #6b21a8 45%, #2e1065 80%, #090314 100%)",
             "Gem": "radial-gradient(circle at center, #ffffff 0%, #a5f3fc 40%, #0284c7 75%, #082f49 100%)",
-            "Quack": "radial-gradient(circle at center, #f472b6 0%, #c084fc 40%, #38bdf8 75%, #0f172a 100%)"
+            "Quack": "radial-gradient(circle at center, #f472b6 0%, #c084fc 40%, #38bdf8 75%, #0f172a 100%)",
+            "Cheat": "radial-gradient(circle at center, #00f0ff 0%, #ff007f 50%, #080314 100%)"
         };
 
         const SHOWCASE_NORMAL_BG = {
@@ -1247,7 +1240,8 @@
                 "Holo": "5% chance for your squad to find rare Sprite Variants from looting chests",
                 "Cube": "While in the Storm, gain the Overdrive Effect",
                 "Gem": "Take 30% less Fall damage",
-                "Quack": "Gives 50% Sprite XP to all other Sprites in your inventory"
+                "Quack": "Gives 50% Sprite XP to all other Sprites in your inventory",
+                "Cheat": "Special Cheat Master effect active in combat"
             },
             es: {
                 "Gold": "Gana 3x XP adicional por eliminaciones",
@@ -1256,7 +1250,8 @@
                 "Holo": "5% de probabilidad de que tu escuadrón encuentre Variantes Raras en cofres",
                 "Cube": "Mientras estés en la Tormenta, obtienes el efecto Sobrecarga",
                 "Gem": "Recibe un 30% menos de daño por caída",
-                "Quack": "Otorga 50% de XP de Espíritu a todos los demás Espíritus de tu inventario"
+                "Quack": "Otorga 50% de XP de Espíritu a todos los demás Espíritus de tu inventario",
+                "Cheat": "Efecto especial Cheat Master activo en combate"
             },
             de: {
                 "Gold": "Erhalte 3x Bonus-EP durch Eliminierungen",
@@ -1265,7 +1260,8 @@
                 "Holo": "5% Chance für dein Team, seltene Geistervarianten in Truhen zu finden",
                 "Cube": "Erhalte den Überdruck-Effekt, während du dich im Sturm befindest",
                 "Gem": "Nimm 30% weniger Sturzschaden",
-                "Quack": "Gibt allen anderen Geistern in deinem Inventar 50% Geister-EP"
+                "Quack": "Gibt allen anderen Geistern in deinem Inventar 50% Geister-EP",
+                "Cheat": "Spezielle Cheat Master-Effekt im Kampf aktiv"
             },
             fr: {
                 "Gold": "Gagnez 3x d'XP bonus grâce aux éliminations",
@@ -1274,7 +1270,8 @@
                 "Holo": "5% de chance pour votre section de trouver des Variantes Rares dans les coffres",
                 "Cube": "Dans la tempête, gagnez l'effet Surcharge",
                 "Gem": "Subissez 30% de dégâts de chute en moins",
-                "Quack": "Donne 50% d'XP d'Esprit à tous les autres Esprits de votre inventaire"
+                "Quack": "Donne 50% d'XP d'Esprit à tous les autres Esprits de votre inventaire",
+                "Cheat": "Effet spécial Cheat Master actif en combat"
             },
             it: {
                 "Gold": "Ottieni 3x PE bonus dalle eliminazioni",
@@ -1283,7 +1280,8 @@
                 "Holo": "5% di probabilità per la tua squadra di trovare Varianti Rare nei forzieri",
                 "Cube": "Mentre sei nella Tempesta, ottieni l'effetto Sovracarico",
                 "Gem": "Subisci il 30% di danni da caduta in meno",
-                "Quack": "Dà il 50% di PE Spirito a tutti gli altri Spiriti nel tuo inventario"
+                "Quack": "Dà il 50% di PE Spirito a tutti gli altri Spiriti nel tuo inventario",
+                "Cheat": "Effetto speciale Cheat Master attivo in combattimento"
             },
             pt: {
                 "Gold": "Ganhe 3x XP bônus por eliminações",
@@ -1292,7 +1290,8 @@
                 "Holo": "5% de chance para seu esquadrão encontrar Variantes Raras em baús",
                 "Cube": "Enquanto estiver na Tempestade, ganhe o Efeito Sobrecarga",
                 "Gem": "Receba 30% a menos de dano de queda",
-                "Quack": "Concede 50% de XP de Espírito para todos os outros Espíritos no seu inventário"
+                "Quack": "Concede 50% de XP de Espírito para todos os outros Espíritos no seu inventário",
+                "Cheat": "Efeito especial Cheat Master ativo em combate"
             },
             ru: {
                 "Gold": "3x доп. опыта за ликвидации",
@@ -1301,7 +1300,8 @@
                 "Holo": "5% шанс для отряда найти редкие варианты духов в сундуках",
                 "Cube": "В буре вы получаете эффект «Перегрузка»",
                 "Gem": "-30% урон от падения",
-                "Quack": "+50% опыта духов всем остальным духам в инвентаре"
+                "Quack": "+50% опыта духов всем остальным духам в инвентаре",
+                "Cheat": "Особый эффект Cheat Master активен в бою"
             },
             ja: {
                 "Gold": "撃破で3倍のボーナスXPを獲得",
@@ -1310,7 +1310,8 @@
                 "Holo": "宝箱から部隊がレアなスプライトバリアントを見つける確率が5%",
                 "Cube": "ストーム内にいる間、オーバードライブ効果を獲得",
                 "Gem": "落下ダメージを30%軽減",
-                "Quack": "インベントリ内の他のすべてのスプライトに50%のスプライトXPを与える"
+                "Quack": "インベントリ内の他のすべてのスプライトに50%のスプライトXPを与える",
+                "Cheat": "戦闘中に特別なCheat Master効果が発動"
             },
             zh: {
                 "Gold": "淘汰敌人可获得 3 倍经验值",
@@ -1319,7 +1320,8 @@
                 "Holo": "小队在搜刮宝箱时有 5% 概率找到稀有精灵变体",
                 "Cube": "处于风暴中时获得超频效果",
                 "Gem": "受到的坠落伤害减少 30%",
-                "Quack": "为你背包中的所有其他精灵提供 50% 精灵经验值"
+                "Quack": "为你背包中的所有其他精灵提供 50% 精灵经验值",
+                "Cheat": "战斗中激活特殊的 Cheat Master 效果"
             },
             ko: {
                 "Gold": "처치 시 3배 보너스 경험치 획득",
@@ -1328,7 +1330,8 @@
                 "Holo": "상자 수색 시 분대가 희귀 정령 변형을 발견할 확률 5%",
                 "Cube": "폭풍 속에 있는 동안 오버드라이브 효과 획득",
                 "Gem": "낙하 피해 30% 감소",
-                "Quack": "인벤토리의 다른 모든 정령에게 정령 경험치 50% 부여"
+                "Quack": "인벤토리의 다른 모든 정령에게 정령 경험치 50% 부여",
+                "Cheat": "전투 중 특별한 Cheat Master 효과 활성화"
             },
             ar: {
                 "Gold": "احصل على 3 أضعاف خبرة إضافية عند التصفية",
@@ -1337,7 +1340,8 @@
                 "Holo": "فرصة 5% لفريقك للعثور على متغيرات أرواح نادرة عند فتح الصناديق",
                 "Cube": "أثناء وجودك في العاصفة، احصل على تأثير الحمل الزائد",
                 "Gem": "تلقي ضرر سقوط أقل بنسبة 30%",
-                "Quack": "يمنح 50% خبرة أرواح لجميع الأرواح الأخرى في حقيبتك"
+                "Quack": "يمنح 50% خبرة أرواح لجميع الأرواح الأخرى في حقيبتك",
+                "Cheat": "تأثير Cheat Master الخاص نشط في القتال"
             }
         };
 
@@ -1353,7 +1357,6 @@
             return langDict[variantKey] || (VARIANT_BONUSES['en'] ? VARIANT_BONUSES['en'][variantKey] : null);
         }
 
-        /* FUNCIONES PARA CALCULAR ANCHO VISUAL REAL MONOESPACIADO (CJK / Full-Width) */
         function getVisualWidth(str) {
             let width = 0;
             for (let i = 0; i < str.length; i++) {
@@ -1573,6 +1576,7 @@
                 document.getElementById('txtVarCube').innerText = t.variants.Cube || "Cube";
                 document.getElementById('txtVarGem').innerText = t.variants.Gem || "Gem";
                 document.getElementById('txtVarQuack').innerText = t.variants.Quack || "Quack";
+                if (document.getElementById('txtVarCheat')) document.getElementById('txtVarCheat').innerText = t.variants.Cheat || "Cheat";
             }
             
             document.getElementById('txtBarCollectionText').innerText = t.barCollection;
@@ -2130,7 +2134,8 @@
                 Holo: { owned: 0, total: 0 },
                 Cube: { owned: 0, total: 0 },
                 Gem: { owned: 0, total: 0 },
-                Quack: { owned: 0, total: 0 }
+                Quack: { owned: 0, total: 0 },
+                Cheat: { owned: 0, total: 0 }
             };
 
             SPIRITS_DATA.forEach(sprite => {
@@ -2308,11 +2313,10 @@
         function openTextExportDialog() { document.getElementById('textExportOverlay').style.display = 'flex'; }
         function closeTextExportDialog() { document.getElementById('textExportOverlay').style.display = 'none'; }
 
-        /* GENERADOR DE LISTA DE TEXTO CON ANCHO VISUAL REAL CORREGIDO */
         function copyTextCollection(filterMode = 'all') {
             closeTextExportDialog();
             const t = getTranslationDict(currentLang);
-            const allVariantKeys = ["Normal", "Gold", "Gummy", "Galaxy", "Holo", "Cube", "Gem", "Quack"];
+            const allVariantKeys = ["Normal", "Gold", "Gummy", "Galaxy", "Holo", "Cube", "Gem", "Quack", "Cheat"];
             
             const allVariantHeaders = allVariantKeys.map(v => {
                 return (t.variants && t.variants[v]) ? t.variants[v].toUpperCase() : (v === "Holo" ? "HOLOFOIL" : v.toUpperCase());
@@ -2325,19 +2329,18 @@
 
             const sortedSpirits = [...SPIRITS_DATA];
 
-            // Calcula dinámicamente el ancho visual máximo de la columna de nombres según el idioma activo
             let maxNameWidth = 14;
             sortedSpirits.forEach(sprite => {
                 const translatedSpriteName = (t.spirits && t.spirits[sprite.id]) ? t.spirits[sprite.id] : sprite.name;
                 const vWidth = getVisualWidth(translatedSpriteName);
                 if (vWidth > maxNameWidth) maxNameWidth = vWidth;
             });
-            maxNameWidth += 2; // Espaciado de margen limpio
+            maxNameWidth += 2;
 
             let textOutput = "```\n";
             textOutput += `${padEndVisual('', maxNameWidth)} | ${allVariantHeaders.join(' | ')} |\n`;
             textOutput += `👑 ${masteredLabel} | ✅ ${ownedLabel} | 🔄 ${summonLabel} | ❌ ${missingLabel} | ⚫ N/A\n`;
-            textOutput += "-".repeat(maxNameWidth + 62) + "\n";
+            textOutput += "-".repeat(maxNameWidth + 70) + "\n";
 
             sortedSpirits.forEach(sprite => {
                 const card = document.querySelector(`.sprite-card-block[data-sprite-id="${sprite.id}"]`);
