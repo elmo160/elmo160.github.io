@@ -113,7 +113,7 @@
             position: absolute;
             top: 3px;
             right: 3px;
-            font-size: 7.5px;
+            font-size: 8px;
             font-weight: 900;
             background: rgba(0, 0, 0, 0.85);
             padding: 1px 4px;
@@ -124,7 +124,18 @@
         }
 
         body:not([data-theme="garden"]) .season-badge {
-            display: none !important;
+            display: inline-block !important;
+            position: absolute;
+            top: 3px;
+            right: 3px;
+            font-size: 8px;
+            font-weight: 900;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 1px 4px;
+            border-radius: 3px;
+            z-index: 4;
+            pointer-events: none;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         body[data-theme="garden"] .slot-box.not-owned:not(.single-variant-disabled) {
@@ -1084,7 +1095,7 @@
             { id: "fire", name: "Fire", rarity: "Rare", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: false, Cube: [3], Quack: [3] } },
             { id: "fishy", name: "Fishy", rarity: "Rare", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: false, Gem: false, Cube: [3], Quack: false } },
             { id: "air", name: "Air", rarity: "Rare", variants: { Normal: [3], Gold: [3], Gummy: [3], Galaxy: [3], Holo: [3], Gem: false, Cube: false, Quack: false } },
-            { id: "bushranger", name: "Bush Ranger", rarity: "Rare", variants: { Normal: [4], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
+            { id: "bushranger", imgPrefix: "bush", name: "Bush Ranger", rarity: "Rare", variants: { Normal: [4], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
             { id: "jazz", name: "Jazz Jackrabbit", rarity: "Rare", variants: { Normal: [4], Gold: false, Gummy: false, Galaxy: false, Holo: false, Gem: false, Cube: false, Quack: false } },
 
             /* Epic */
@@ -1409,13 +1420,8 @@
             const spirit = SPIRITS_DATA.find(s => s.id === spriteId);
             if (!spirit || !spirit.variants) return '';
             const vConfig = spirit.variants[variant];
-            const t = getTranslationDict(currentLang);
             if (Array.isArray(vConfig) && vConfig.length > 0) {
-                return vConfig.map(s => {
-                    if (s === 3) return t.seasonS3 || "S3";
-                    if (s === 4) return t.seasonS4 || "S4";
-                    return `S${s}`;
-                }).join('-');
+                return vConfig.map(s => `S${s}`).join('-');
             }
             return '';
         }
@@ -1675,7 +1681,7 @@
                     if (sBadge) {
                         const sText = getSeasonTagText(sId, variant);
                         sBadge.innerText = sText;
-                        sBadge.className = "season-badge " + (sText.includes("S4") || sText.includes("T4") || sText.includes("St4") || sText.includes("С4") || sText.includes("第4") ? "badge-s4" : "badge-s3");
+                        sBadge.className = "season-badge " + (sText.includes("S4") ? "badge-s4" : "badge-s3");
                     }
                     refreshSlotDOM(slot);
                 });
@@ -1825,8 +1831,9 @@
             slot.setAttribute('data-owned', 'false');
             slot.onclick = function() { handleSlotClick(this); };
             
-            const badgeClass = (seasonTag.includes("S4") || seasonTag.includes("T4") || seasonTag.includes("St4") || seasonTag.includes("С4") || seasonTag.includes("第4")) ? "badge-s4" : "badge-s3";
-            const imgName = `${sprite.id}_${variant.toLowerCase()}.webp`;
+            const badgeClass = seasonTag.includes("S4") ? "badge-s4" : "badge-s3";
+            const imgPrefix = sprite.imgPrefix || sprite.id;
+            const imgName = `${imgPrefix}_${variant.toLowerCase()}.webp`;
             
             slot.innerHTML = `
                 <div class="variant-tag">${displayTagText}</div>
@@ -1930,7 +1937,7 @@
         function openGardenShowcase(sId, spriteName, variantType, displayVariantName, rarityType, slotElement) {
             const imgHtml = slotElement.querySelector('.slot-inner').innerHTML;
             const t = getTranslationDict(currentLang);
-            const seasonOrigin = getSeasonTagText(sId, variantType) || (t.seasonS3 || 'S3');
+            const seasonOrigin = getSeasonTagText(sId, variantType) || "S3";
             
             const rarityHex = SHOWCASE_RARITY_BORDER[rarityType] || '#0284c7';
             const variantBorderHex = (variantType === "Normal") ? rarityHex : (VARIANT_BORDER_COLORS[variantType] || rarityHex);
@@ -1956,7 +1963,7 @@
             const seasonBadge = document.getElementById('gardenShowcaseSeasonBadge');
             if (seasonBadge) {
                 seasonBadge.innerText = seasonOrigin;
-                const isS4 = seasonOrigin.includes("S4") || seasonOrigin.includes("T4") || seasonOrigin.includes("St4") || seasonOrigin.includes("С4");
+                const isS4 = seasonOrigin.includes("S4");
                 seasonBadge.style.color = isS4 ? "#00f0ff" : "#fbbf24";
                 seasonBadge.style.borderColor = isS4 ? "rgba(0, 240, 255, 0.6)" : "rgba(251, 191, 36, 0.6)";
             }
