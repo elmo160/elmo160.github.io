@@ -106,8 +106,12 @@
             display: none !important;
         }
 
-        body[data-theme="garden"] .season-badge,
-        body:not([data-theme="garden"]) .season-badge {
+        /* La insignia de temporada sólo debe ser visible en el modo Garden */
+        .season-badge {
+            display: none !important;
+        }
+
+        body[data-theme="garden"] .season-badge {
             display: inline-block !important;
             position: absolute;
             top: 3px;
