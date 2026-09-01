@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-<link rel="icon" type="image/webp" href="eye.webp">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fortnite Spirits Tracker</title>
+  
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="eye.svg">
+
   <style>
     :root {
       --bg-color: #0F1017;
@@ -18,6 +19,7 @@
       
       --accent-color: #E07A5F;
       --accent-glow: rgba(224, 122, 95, 0.35);
+      --uncollected-color: rgba(239, 68, 68, 0.4);
       --collected-color: #4E9F3D;
       --mastered-color: #D4AF37;
       --mastered-glow: rgba(212, 175, 55, 0.45);
@@ -411,6 +413,7 @@
     .rarity-legendary { background-color: rgba(154, 52, 18, 0.5); color: #FDBA74; border: 1px solid #9A3412; }
     .rarity-mythic { background-color: rgba(154, 126, 18, 0.5); color: #FEF08A; border: 1px solid #B45309; }
 
+    /* SLOTS DE VARIANTES (MATRIZ) */
     .variant-slot {
       position: relative;
       background-color: var(--card-bg);
@@ -429,9 +432,7 @@
     }
 
     .variant-slot:hover:not(.na):not(.empty-cell):not(.status-inactive) {
-      border-color: var(--accent-color);
       transform: translateY(-2px);
-      box-shadow: 0 4px 14px var(--accent-glow);
     }
 
     .variant-slot img {
@@ -439,6 +440,30 @@
       height: 82px;
       object-fit: contain;
       filter: drop-shadow(0 4px 10px rgba(0,0,0,0.65));
+    }
+
+    /* ESTADO 1: UNCOLLECTED / NO OBTENIDO (TONO ROJIZO) */
+    .variant-slot.status-none {
+      background-color: rgba(185, 28, 28, 0.14);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+    }
+    .variant-slot.status-none:hover {
+      border-color: #EF4444;
+      box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
+    }
+
+    /* ESTADO 2: COLLECTED / OBTENIDO (VERDE) */
+    .variant-slot.status-collected {
+      background-color: rgba(78, 159, 61, 0.25);
+      border: 2px solid var(--collected-color);
+      box-shadow: 0 0 12px rgba(78, 159, 61, 0.3);
+    }
+
+    /* ESTADO 3: MASTERED / DOMINADO (DORADO) */
+    .variant-slot.status-mastered {
+      background-color: rgba(212, 175, 55, 0.25);
+      border: 2px solid var(--mastered-color);
+      box-shadow: 0 0 16px rgba(212, 175, 55, 0.4);
     }
 
     .variant-slot.na {
@@ -463,21 +488,9 @@
     }
 
     .variant-slot.status-inactive {
-      opacity: 0.38;
+      opacity: 0.35;
       filter: grayscale(60%);
       cursor: not-allowed;
-    }
-
-    .variant-slot.status-collected {
-      background-color: rgba(78, 159, 61, 0.25);
-      border: 2px solid var(--collected-color);
-      box-shadow: 0 0 12px rgba(78, 159, 61, 0.3);
-    }
-
-    .variant-slot.status-mastered {
-      background-color: rgba(212, 175, 55, 0.25);
-      border: 2px solid var(--mastered-color);
-      box-shadow: 0 0 16px rgba(212, 175, 55, 0.4);
     }
 
     .mastered-badge {
@@ -504,7 +517,6 @@
       gap: 28px;
     }
 
-    /* ESTILOS DE RAREZA COMPARTIDOS (TARJETAS GARDEN Y MODAL) */
     .garden-card, .modal-content {
       transition: all 0.35s ease;
     }
@@ -700,7 +712,7 @@
       transform: scale(1.08);
     }
 
-    /* --- VENTANA MODAL EMERGENTE (COLOR DE RAREZA EN TARJETA + VARIANTE EN MARCO) --- */
+    /* --- VENTANA MODAL EMERGENTE --- */
     .modal-overlay {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -1043,12 +1055,21 @@
       renderView();
     }
 
-    function doesStatusMatchFilter(currentStatus, filter) {
+    /* REGLAS DE FILTRADO DE ESTADOS DE VARIANTES CORREGIDAS */
+    function doesStatusMatchFilter(spirit, vName, currentStatus, filter) {
+      const exists = isVariantExist(spirit, vName);
+      const inactive = isVariantInactive(spirit, vName);
+
+      // Si no existe o está marcada como Unavailable / Blocked, NO debe aparecer en vistas filtradas
+      if (!exists || inactive) {
+        return filter === 'all';
+      }
+
       if (filter === 'all') return true;
       if (filter === 'collected') return currentStatus === 'collected' || currentStatus === 'mastered';
       if (filter === 'mastered') return currentStatus === 'mastered';
-      if (filter === 'none') return currentStatus === 'none';
-      if (filter === 'not-mastered') return currentStatus !== 'mastered';
+      if (filter === 'none') return currentStatus === 'none'; // Uncollected (Faltante)
+      if (filter === 'not-mastered') return currentStatus === 'collected'; // OBTENIDO pero SIN DOMINAR
       return true;
     }
 
@@ -1222,7 +1243,7 @@
       tryNext();
     }
 
-    /* MATRIZ (S3 / S4) */
+    /* MATRIZ (S3 / S4) CORREGIDA CON CELDAS OCULTAS Y FILTRADO RIGUROSO */
     function renderMatrixTable(overrideStatusFilter, isExportMode = false) {
       const container = document.getElementById('content-render-area');
       if (!container) return;
@@ -1243,9 +1264,8 @@
       if (statusFilter !== 'all') {
         activeVariants = fullVariantsList.filter(vName => 
           spirits.some(spirit => {
-            if (!isVariantExist(spirit, vName)) return false;
             const status = userProgress[`${spirit.id}_${vName}`] || 'none';
-            return doesStatusMatchFilter(status, statusFilter);
+            return doesStatusMatchFilter(spirit, vName, status, statusFilter);
           })
         );
       }
@@ -1268,11 +1288,9 @@
 
         let matchingVariantsCount = 0;
         activeVariants.forEach(vName => {
-          if (isVariantExist(spirit, vName)) {
-            const currentStatus = userProgress[`${spiritId}_${vName}`] || 'none';
-            if (doesStatusMatchFilter(currentStatus, statusFilter)) {
-              matchingVariantsCount++;
-            }
+          const currentStatus = userProgress[`${spiritId}_${vName}`] || 'none';
+          if (doesStatusMatchFilter(spirit, vName, currentStatus, statusFilter)) {
+            matchingVariantsCount++;
           }
         });
 
@@ -1304,32 +1322,31 @@
         activeVariants.forEach(vName => {
           const exists = isVariantExist(spirit, vName);
           const inactive = isVariantInactive(spirit, vName);
+          const key = `${spiritId}_${vName}`;
+          const currentStatus = userProgress[key] || 'none';
+          const isMatch = doesStatusMatchFilter(spirit, vName, currentStatus, statusFilter);
 
-          if (!exists) {
+          if (!isMatch) {
+            // Si no coincide con el filtro actual, renderiza una celda completamente transparente e invisible
+            html += `<div class="variant-slot empty-cell"></div>`;
+          } else if (!exists || inactive) {
+            // Únicamente en 'All Statuses' renderiza el cuadro de N/A (⊘)
             html += `<div class="variant-slot na"></div>`;
           } else {
-            const key = `${spiritId}_${vName}`;
-            const currentStatus = userProgress[key] || 'none';
-            const isMatch = doesStatusMatchFilter(currentStatus, statusFilter);
+            const variantSlug = VARIANT_SLUGS[vName] || vName.toLowerCase();
+            const imgPathPrimary = `assets/${seasonDir}/${spiritSlug}_${variantSlug}.webp`;
+            const masteredIconHTML = `<span class="mastered-badge"><img src="crown.webp" onerror="this.onerror=null; this.src='assets/crown.webp'; this.onerror=function(){this.replaceWith('👑');};" alt="👑"></span>`;
 
-            if (!isMatch && statusFilter !== 'all') {
-              html += `<div class="variant-slot empty-cell"></div>`;
-            } else {
-              const variantSlug = VARIANT_SLUGS[vName] || vName.toLowerCase();
-              const imgPathPrimary = `assets/${seasonDir}/${spiritSlug}_${variantSlug}.webp`;
-              const masteredIconHTML = `<span class="mastered-badge"><img src="crown.webp" onerror="this.onerror=null; this.src='assets/crown.webp'; this.onerror=function(){this.replaceWith('👑');};" alt="👑"></span>`;
+            const clickAction = `onclick="toggleVariantState('${spiritId}', '${vName}')"`;
+            const slotStateClass = `status-${currentStatus}`;
 
-              const clickAction = inactive ? '' : `onclick="toggleVariantState('${spiritId}', '${vName}')"`;
-              const slotStateClass = inactive ? 'status-inactive' : `status-${currentStatus}`;
-
-              html += `
-                <div class="variant-slot ${slotStateClass}" ${clickAction}>
-                  ${currentStatus === 'mastered' && !inactive ? masteredIconHTML : ''}
-                  <img src="${imgPathPrimary}" alt="${spiritName}" 
-                       onerror="handleImgError(this, '${seasonDir}', '${spiritSlug}', '${variantSlug}')">
-                </div>
-              `;
-            }
+            html += `
+              <div class="variant-slot ${slotStateClass}" ${clickAction}>
+                ${currentStatus === 'mastered' ? masteredIconHTML : ''}
+                <img src="${imgPathPrimary}" alt="${spiritName}" 
+                     onerror="handleImgError(this, '${seasonDir}', '${spiritSlug}', '${variantSlug}')">
+              </div>
+            `;
           }
         });
       });
@@ -1364,7 +1381,7 @@
           const defined = isVariantDefined(spirit, vName);
           const inactive = isVariantInactive(spirit, vName);
           const currentStatus = userProgress[`${spiritId}_${vName}`] || 'none';
-          const isMatch = doesStatusMatchFilter(currentStatus, statusFilter);
+          const isMatch = doesStatusMatchFilter(spirit, vName, currentStatus, statusFilter);
           return { vName, defined, inactive, currentStatus, isMatch, idx };
         });
 
@@ -1503,7 +1520,7 @@
       renderView();
     }
 
-    /* VENTANA MODAL CON COLOR DE RAREZA EN TARJETA Y VARIANTE EN MARCO */
+    /* VENTANA MODAL EMERGENTE CON COLOR DE RAREZA EN TARJETA Y VARIANTE EN MARCO */
     function openSpiritModal(spiritId, variantName) {
       const spirits = getSpiritsList();
       const spirit = spirits.find(s => s.id === spiritId);
