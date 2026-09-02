@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fortnite Spirits Tracker</title>
   
-  <!-- Favicon SVG -->
+  <!-- Favicon WebP -->
   <link rel="icon" type="image/webp" href="eye.webp">
 
   <style>
@@ -131,6 +131,41 @@
       display: flex;
       gap: 6px;
       align-items: center;
+    }
+
+    /* CONTROLES DE ZOOM */
+    .zoom-group {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border-color);
+      padding: 4px 8px;
+      border-radius: 10px;
+    }
+
+    .zoom-value {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: #FFF;
+      min-width: 46px;
+      text-align: center;
+    }
+
+    .btn-zoom {
+      background: rgba(255, 255, 255, 0.08);
+      color: white;
+      border: 1px solid var(--border-color);
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .btn-zoom:hover {
+      background: rgba(255, 255, 255, 0.2);
     }
 
     .action-btn {
@@ -307,12 +342,18 @@
       border: 1px solid var(--border-color);
       overflow-x: auto;
       padding: 20px;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    #content-render-area {
+      transition: transform 0.2s ease;
     }
 
     .matrix-grid {
       display: grid;
       gap: 12px;
       align-items: center;
+      grid-template-columns: var(--col-first, 210px) repeat(var(--col-count, 8), minmax(105px, 1fr));
     }
 
     .matrix-header-cell {
@@ -442,7 +483,6 @@
       filter: drop-shadow(0 4px 10px rgba(0,0,0,0.65));
     }
 
-    /* ESTADO 1: UNCOLLECTED / NO OBTENIDO (TONO ROJIZO) */
     .variant-slot.status-none {
       background-color: rgba(185, 28, 28, 0.14);
       border: 1px solid rgba(239, 68, 68, 0.35);
@@ -452,14 +492,12 @@
       box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
     }
 
-    /* ESTADO 2: COLLECTED / OBTENIDO (VERDE) */
     .variant-slot.status-collected {
       background-color: rgba(78, 159, 61, 0.25);
       border: 2px solid var(--collected-color);
       box-shadow: 0 0 12px rgba(78, 159, 61, 0.3);
     }
 
-    /* ESTADO 3: MASTERED / DOMINADO (DORADO) */
     .variant-slot.status-mastered {
       background-color: rgba(212, 175, 55, 0.25);
       border: 2px solid var(--mastered-color);
@@ -510,10 +548,10 @@
 
     .is-capturing .spirit-quick-actions { display: none !important; }
 
-    /* --- GARDEN GALLERY --- */
+    /* --- GARDEN GALLERY (RESPONSIVE) --- */
     .garden-gallery-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(560px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
       gap: 28px;
     }
 
@@ -757,6 +795,7 @@
       display: flex;
       gap: 10px;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     .modal-close-btn {
@@ -841,6 +880,102 @@
       color: rgba(255,255,255,0.35);
       font-style: italic;
     }
+
+    /* --- REGLAS RESPONSIVE PARA DISPOSITIVOS MÓVILES (CELULARES Y TABLETS) --- */
+    @media (max-width: 768px) {
+      body {
+        padding: 12px 8px;
+      }
+
+      .container {
+        padding: 18px 12px;
+        border-radius: 14px;
+      }
+
+      .header h1 {
+        font-size: 1.6rem;
+        text-align: center;
+      }
+
+      .tabs-container {
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .tab-btn {
+        flex: 1 1 auto;
+        padding: 9px 12px;
+        font-size: 0.85rem;
+        text-align: center;
+      }
+
+      .actions-bar, .filters-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+
+      .capture-group, .zoom-group {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .search-input, .filter-select, .capture-select, .action-btn {
+        width: 100%;
+      }
+
+      /* Ajuste Matriz en Celular */
+      .matrix-grid {
+        --col-first: 140px;
+        gap: 8px;
+      }
+
+      .spirit-name { font-size: 0.88rem; }
+      .rarity-pill { font-size: 0.58rem; padding: 2px 6px; }
+      .variant-slot { height: 92px; }
+      .variant-slot img { width: 62px; height: 62px; }
+
+      /* Ajuste Sprite Garden en Celular (2 Columnas por tarjeta) */
+      .garden-gallery-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .garden-card {
+        padding: 16px 12px;
+        border-radius: 18px;
+      }
+
+      .garden-variants-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      /* Ventana Modal Responsiva */
+      .modal-content {
+        padding: 24px 16px 20px 16px;
+        gap: 14px;
+        max-height: 88vh;
+        overflow-y: auto;
+        border-radius: 22px;
+      }
+
+      .modal-img-frame {
+        width: 190px;
+        height: 190px;
+        border-radius: 24px;
+      }
+
+      .modal-img-frame img {
+        width: 145px;
+        height: 145px;
+      }
+
+      .modal-title { font-size: 1.6rem; }
+      .modal-desc-main { font-size: 1rem; }
+      .modal-desc-sub { font-size: 0.85rem; }
+      .modal-xp-banner { font-size: 0.9rem; padding: 12px; }
+    }
   </style>
 </head>
 <body class="theme-s3">
@@ -866,6 +1001,14 @@
           <option value="mastered">📷 Mode: Mastered Only</option>
           <option value="not-mastered">📷 Mode: Not Mastered</option>
         </select>
+      </div>
+
+      <!-- CONTROLES DE ZOOM -->
+      <div class="zoom-group">
+        <button class="btn-zoom" onclick="changeZoom(-0.1)" title="Zoom Out">🔍 -</button>
+        <span id="zoom-value" class="zoom-value">100%</span>
+        <button class="btn-zoom" onclick="changeZoom(0.1)" title="Zoom In">🔍 +</button>
+        <button class="btn-zoom" onclick="resetZoom()" title="Reset Zoom">🔄</button>
       </div>
 
       <button class="action-btn btn-select" onclick="selectAllCurrentTab()">
@@ -1040,10 +1183,45 @@
     };
 
     let currentTab = 'S3';
+    let currentZoom = parseFloat(localStorage.getItem('fortnite_spirits_zoom')) || 1.0;
     let userProgress = JSON.parse(localStorage.getItem('fortnite_spirits_progress')) || {};
+
+    /* LÓGICA DE ZOOM */
+    function changeZoom(delta) {
+      currentZoom = Math.min(Math.max(0.5, currentZoom + delta), 1.8);
+      currentZoom = Math.round(currentZoom * 10) / 10;
+      applyZoom();
+      persistState();
+    }
+
+    function resetZoom() {
+      currentZoom = 1.0;
+      applyZoom();
+      persistState();
+    }
+
+    function applyZoom() {
+      const targetArea = document.getElementById('content-render-area');
+      const zoomDisplay = document.getElementById('zoom-value');
+      
+      if (targetArea) {
+        targetArea.style.transform = `scale(${currentZoom})`;
+        targetArea.style.transformOrigin = 'top left';
+        if (currentZoom !== 1.0) {
+          targetArea.style.width = `${100 / currentZoom}%`;
+        } else {
+          targetArea.style.width = '100%';
+        }
+      }
+
+      if (zoomDisplay) {
+        zoomDisplay.textContent = `${Math.round(currentZoom * 100)}%`;
+      }
+    }
 
     function persistState() {
       localStorage.setItem('fortnite_spirits_tab', currentTab);
+      localStorage.setItem('fortnite_spirits_zoom', currentZoom);
       localStorage.setItem('fortnite_spirits_search', document.getElementById('search-input')?.value || '');
       localStorage.setItem('fortnite_spirits_rarity', document.getElementById('rarity-filter')?.value || 'all');
       localStorage.setItem('fortnite_spirits_status', document.getElementById('status-filter')?.value || 'all');
@@ -1055,12 +1233,10 @@
       renderView();
     }
 
-    /* REGLAS DE FILTRADO DE ESTADOS DE VARIANTES CORREGIDAS */
     function doesStatusMatchFilter(spirit, vName, currentStatus, filter) {
       const exists = isVariantExist(spirit, vName);
       const inactive = isVariantInactive(spirit, vName);
 
-      // Si no existe o está marcada como Unavailable / Blocked, NO debe aparecer en vistas filtradas
       if (!exists || inactive) {
         return filter === 'all';
       }
@@ -1068,8 +1244,8 @@
       if (filter === 'all') return true;
       if (filter === 'collected') return currentStatus === 'collected' || currentStatus === 'mastered';
       if (filter === 'mastered') return currentStatus === 'mastered';
-      if (filter === 'none') return currentStatus === 'none'; // Uncollected (Faltante)
-      if (filter === 'not-mastered') return currentStatus === 'collected'; // OBTENIDO pero SIN DOMINAR
+      if (filter === 'none') return currentStatus === 'none';
+      if (filter === 'not-mastered') return currentStatus === 'collected';
       return true;
     }
 
@@ -1197,6 +1373,7 @@
       } else {
         renderMatrixTable(overrideStatusFilter, isExportMode);
       }
+      applyZoom();
       updateProgressUI();
     }
 
@@ -1243,7 +1420,7 @@
       tryNext();
     }
 
-    /* MATRIZ (S3 / S4) CORREGIDA CON CELDAS OCULTAS Y FILTRADO RIGUROSO */
+    /* MATRIZ S3 / S4 */
     function renderMatrixTable(overrideStatusFilter, isExportMode = false) {
       const container = document.getElementById('content-render-area');
       if (!container) return;
@@ -1270,7 +1447,7 @@
         );
       }
 
-      let html = `<div class="matrix-grid" style="grid-template-columns: 210px repeat(${activeVariants.length}, minmax(110px, 1fr));">`;
+      let html = `<div class="matrix-grid" style="--col-count: ${activeVariants.length};">`;
 
       html += `<div class="matrix-header-cell spirit-col">SPRITE</div>`;
       activeVariants.forEach(vName => {
@@ -1327,10 +1504,8 @@
           const isMatch = doesStatusMatchFilter(spirit, vName, currentStatus, statusFilter);
 
           if (!isMatch) {
-            // Si no coincide con el filtro actual, renderiza una celda completamente transparente e invisible
             html += `<div class="variant-slot empty-cell"></div>`;
           } else if (!exists || inactive) {
-            // Únicamente en 'All Statuses' renderiza el cuadro de N/A (⊘)
             html += `<div class="variant-slot na"></div>`;
           } else {
             const variantSlug = VARIANT_SLUGS[vName] || vName.toLowerCase();
@@ -1355,7 +1530,7 @@
       container.innerHTML = html;
     }
 
-    /* --- GARDEN GALLERY --- */
+    /* GARDEN GALLERY */
     function renderGardenGallery(overrideStatusFilter, isExportMode = false) {
       const container = document.getElementById('content-render-area');
       if (!container) return;
@@ -1520,7 +1695,7 @@
       renderView();
     }
 
-    /* VENTANA MODAL EMERGENTE CON COLOR DE RAREZA EN TARJETA Y VARIANTE EN MARCO */
+    /* VENTANA MODAL */
     function openSpiritModal(spiritId, variantName) {
       const spirits = getSpiritsList();
       const spirit = spirits.find(s => s.id === spiritId);
@@ -1534,30 +1709,25 @@
 
       const imgPathPrimary = `assets/${season}/${spiritSlug}_${variantSlug}.webp`;
 
-      // 1. Color de Rareza a la Tarjeta Modal Completa
       const modalContent = document.getElementById('modal-card-content');
       modalContent.className = `modal-content card-rarity-${spiritRarity}`;
 
-      // 2. Insignia de Rareza en Header
       const modalRarityBadge = document.getElementById('modal-rarity-badge');
       if (modalRarityBadge) {
         modalRarityBadge.textContent = (spirit.rarity || 'Rare').toUpperCase();
         modalRarityBadge.className = `rarity-pill rarity-${spiritRarity}`;
       }
 
-      // 3. Pin de Temporada
       const modalSeasonBadge = document.getElementById('modal-season');
       modalSeasonBadge.textContent = season;
       modalSeasonBadge.className = `modal-season-badge modal-season-${season.toLowerCase()}`;
 
-      // 4. Insignia de Variante
       const modalVariantBadge = document.getElementById('modal-variant-badge');
       if (modalVariantBadge) {
         modalVariantBadge.textContent = variantName;
         modalVariantBadge.className = `badge-variant ${getVariantBadgeClass(variantName)}`;
       }
 
-      // 5. Marco de la Imagen: Mantiene el Fondo Radial y Borde de la VARIANTE
       const frameEl = document.getElementById('modal-img-frame');
       const gradientBg = VARIANT_GRADIENTS[variantSlug] || VARIANT_GRADIENTS["normal"];
       const borderColor = VARIANT_BORDER_COLORS[variantSlug] || "#94A3B8";
@@ -1607,6 +1777,9 @@
       if (captureScope === 'mastered') filterOverride = 'mastered';
       if (captureScope === 'not-mastered') filterOverride = 'not-mastered';
 
+      const savedZoom = currentZoom;
+      resetZoom(); // Resetea zoom para la captura PNG
+
       renderView(filterOverride, true);
 
       const captureElement = document.getElementById('capture-area-container');
@@ -1641,6 +1814,8 @@
         captureElement.classList.remove('is-capturing');
         btn.innerHTML = originalText;
         btn.disabled = false;
+
+        currentZoom = savedZoom;
         renderView();
       }
     }
@@ -1658,6 +1833,7 @@
       if (document.getElementById('capture-scope')) document.getElementById('capture-scope').value = savedScope;
 
       switchTab(savedTab);
+      applyZoom();
     });
   </script>
 </body>
