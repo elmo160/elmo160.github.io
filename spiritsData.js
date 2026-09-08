@@ -1630,57 +1630,57 @@ const SPIRITS_DATA = {
       }
     },
     {
-      "id": "adventure",
-      "name": "Adventure",
+      "id": "adventur",
+      "name": "Adventur",
       "rarity": "Rare",
       "desc_sprite": "Upgrades a random item in the player's inventory with each Level Up!",
       "desc_level": "",
       "levels": {},
       "variants": {
         "Normal": {
-          "name": "adventure",
+          "name": "adventur",
           "status": "Available S4",
           "cost": "100",
           "rarity": "Rare"
         },
         "Gold": {
-          "name": "Gold adventure",
+          "name": "Gold adventur",
           "status": "Available S4",
           "cost": "1500",
           "rarity": "Rare"
         },
         "Cheat Master": {
-          "name": "Cheat Master adventure",
+          "name": "Cheat Master adventur",
           "status": "Available S4",
           "cost": "1500",
           "rarity": "Rare"
         },
         "Hacker": {
-          "name": "Hacker adventure",
+          "name": "Hacker adventur",
           "status": "Available S4",
           "cost": "1500",
           "rarity": "Rare"
         },
         "Reaper": {
-          "name": "Reaper adventure",
+          "name": "Reaper adventur",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Rare"
         },
         "Gummy": {
-          "name": "Gummy adventure",
+          "name": "Gummy adventur",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Rare"
         },
         "Holofoil": {
-          "name": "Holofoil adventure",
+          "name": "Holofoil adventur",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Rare"
         },
         "Trick Treat": {
-          "name": "Trick Treat adventure",
+          "name": "Trick Treat adventur",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Rare"
