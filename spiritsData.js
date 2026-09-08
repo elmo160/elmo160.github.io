@@ -2385,56 +2385,56 @@ const SPIRITS_DATA = {
     },
 	{
       "id": "xray",
-      "name": "X Ray",
+      "name": "X-Ray",
       "rarity": "Legendary",
       "desc_sprite": "Periodically mark enemies in an area around you.",
       "desc_level": "Mark more often and in a larger radius with each Level Up!",
       "levels": {},
       "variants": {
         "Normal": {
-          "name": "X Ray",
+          "name": "X-Ray",
           "status": "Available S4",
           "cost": "1750",
           "rarity": "Legendary"
         },
         "Gold": {
-          "name": "Gold X Ray",
+          "name": "Gold X-Ray",
           "status": "Available S4",
           "cost": "2100",
           "rarity": "Legendary"
         },
         "Cheat Master": {
-          "name": "Cheat Master X Ray",
+          "name": "Cheat Master X-Ray",
           "status": "Available S4",
           "cost": "2100",
           "rarity": "Legendary"
         },
         "Hacker": {
-          "name": "Hacker X Ray",
+          "name": "Hacker X-Ray",
           "status": "Available S4",
           "cost": "2100",
           "rarity": "Legendary"
         },
         "Reaper": {
-          "name": "Reaper X Ray",
+          "name": "Reaper X-Ray",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Legendary"
         },
         "Gummy": {
-          "name": "Gummy X Ray",
+          "name": "Gummy X-Ray",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Legendary"
         },
         "Holofoil": {
-          "name": "Holofoil X Ray",
+          "name": "Holofoil X-Ray",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Legendary"
         },
         "Trick Treat": {
-          "name": "Trick Treat X Ray",
+          "name": "Trick Treat X-Ray",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Legendary"
