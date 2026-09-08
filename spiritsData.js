@@ -2267,7 +2267,7 @@ const SPIRITS_DATA = {
         }
       }
     },
-	{
+    {
       "id": "onigiri",
       "name": "Onigiri",
       "rarity": "Rare",
@@ -2383,7 +2383,7 @@ const SPIRITS_DATA = {
         }
       }
     },
-	{
+    {
       "id": "xray",
       "name": "X-Ray",
       "rarity": "Legendary",
@@ -2441,7 +2441,7 @@ const SPIRITS_DATA = {
         }
       }
     },
-	{
+    {
       "id": "megaman",
       "name": "Megaman",
       "rarity": "Rare",

@@ -133,7 +133,6 @@
       align-items: center;
     }
 
-    /* CONTROLES DE ZOOM */
     .zoom-group {
       display: flex;
       align-items: center;
@@ -228,7 +227,6 @@
       cursor: not-allowed;
     }
 
-    /* Doble Sección de Progreso */
     .progress-section {
       background: rgba(0, 0, 0, 0.35);
       padding: 18px 22px;
@@ -279,7 +277,6 @@
       box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
     }
 
-    /* Filtros */
     .filters-bar {
       display: flex;
       gap: 12px;
@@ -289,7 +286,7 @@
 
     .search-input {
       flex: 1;
-      min-width: 220px;
+      min-width: 200px;
       background-color: rgba(0, 0, 0, 0.25);
       border: 1px solid var(--border-color);
       color: white;
@@ -310,7 +307,6 @@
       font-size: 0.9rem;
     }
 
-    /* INSIGNIAS DE VARIANTES */
     .badge-variant {
       font-size: 0.64rem;
       font-weight: 800;
@@ -333,9 +329,8 @@
     .badge-cheat, .badge-cheat-master { background: linear-gradient(135deg, #00E676, #00C853); color: #000; }
     .badge-hacker { background: linear-gradient(135deg, #1DE9B6, #00BFA5); color: #000; }
     .badge-reaper { background: linear-gradient(135deg, #FF1744, #D50000); color: #FFF; }
-    .badge-trick, .badge-trick-treat { background: linear-gradient(135deg, #FF6D00, #DD2C00); color: #FFF; }
+    .badge-trick, .badge-trick-treat, .badge-trick-or-treat { background: linear-gradient(135deg, #FF6D00, #DD2C00); color: #FFF; }
 
-    /* Matriz S3 / S4 */
     .matrix-table-container {
       background-color: rgba(0, 0, 0, 0.25);
       border-radius: 14px;
@@ -454,7 +449,6 @@
     .rarity-legendary { background-color: rgba(154, 52, 18, 0.5); color: #FDBA74; border: 1px solid #9A3412; }
     .rarity-mythic { background-color: rgba(154, 126, 18, 0.5); color: #FEF08A; border: 1px solid #B45309; }
 
-    /* SLOTS DE VARIANTES (MATRIZ) */
     .variant-slot {
       position: relative;
       background-color: var(--card-bg);
@@ -547,6 +541,109 @@
     }
 
     .is-capturing .spirit-quick-actions { display: none !important; }
+
+    /* --- VISTA HORIZONTAL DE VARIANTE (CARRUSEL) --- */
+    .horizontal-view-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+    }
+
+    .horizontal-view-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4px 8px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 12px;
+    }
+
+    .horizontal-view-header h2 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .horizontal-carousel {
+      display: flex;
+      flex-direction: row;
+      gap: 18px;
+      overflow-x: auto;
+      padding: 12px 6px 20px 6px;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .horizontal-carousel::-webkit-scrollbar {
+      height: 9px;
+    }
+
+    .horizontal-carousel::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 6px;
+    }
+
+    .horizontal-carousel::-webkit-scrollbar-thumb {
+      background: var(--accent-color);
+      border-radius: 6px;
+    }
+
+    .horizontal-card {
+      flex: 0 0 190px;
+      height: 250px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      padding: 14px 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .horizontal-card:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6), 0 0 20px var(--accent-glow);
+    }
+
+    .horizontal-card .card-top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      width: 100%;
+    }
+
+    .horizontal-card .card-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: #FFF;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+
+    .horizontal-card img {
+      width: 110px;
+      height: 110px;
+      object-fit: contain;
+      filter: drop-shadow(0 6px 14px rgba(0,0,0,0.7));
+      transition: transform 0.2s ease;
+    }
+
+    .horizontal-card:hover img {
+      transform: scale(1.08);
+    }
 
     /* --- GARDEN GALLERY (RESPONSIVE) --- */
     .garden-gallery-container {
@@ -662,7 +759,7 @@
     .garden-vslot.bg-variant-cheat, .garden-vslot.bg-variant-cheat-master { background: radial-gradient(circle at center, rgba(0, 230, 118, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-hacker { background: radial-gradient(circle at center, rgba(29, 233, 182, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-reaper { background: radial-gradient(circle at center, rgba(255, 23, 68, 0.30) 0%, rgba(15, 18, 32, 0.95) 75%); }
-    .garden-vslot.bg-variant-trick, .garden-vslot.bg-variant-trick-treat { background: radial-gradient(circle at center, rgba(255, 109, 0, 0.30) 0%, rgba(15, 18, 32, 0.95) 75%); }
+    .garden-vslot.bg-variant-trick, .garden-vslot.bg-variant-trick-treat, .garden-vslot.bg-variant-trick-or-treat { background: radial-gradient(circle at center, rgba(255, 109, 0, 0.30) 0%, rgba(15, 18, 32, 0.95) 75%); }
 
     .garden-vslot.empty-space {
       visibility: hidden;
@@ -881,7 +978,7 @@
       font-style: italic;
     }
 
-    /* --- REGLAS RESPONSIVE PARA DISPOSITIVOS MÓVILES (CELULARES Y TABLETS) --- */
+    /* --- REGLAS RESPONSIVE --- */
     @media (max-width: 768px) {
       body {
         padding: 12px 8px;
@@ -924,7 +1021,6 @@
         width: 100%;
       }
 
-      /* Ajuste Matriz en Celular */
       .matrix-grid {
         --col-first: 140px;
         gap: 8px;
@@ -935,7 +1031,6 @@
       .variant-slot { height: 92px; }
       .variant-slot img { width: 62px; height: 62px; }
 
-      /* Ajuste Sprite Garden en Celular (2 Columnas por tarjeta) */
       .garden-gallery-container {
         grid-template-columns: 1fr;
         gap: 16px;
@@ -951,7 +1046,6 @@
         gap: 10px;
       }
 
-      /* Ventana Modal Responsiva */
       .modal-content {
         padding: 24px 16px 20px 16px;
         gap: 14px;
@@ -1003,7 +1097,6 @@
         </select>
       </div>
 
-      <!-- CONTROLES DE ZOOM -->
       <div class="zoom-group">
         <button class="btn-zoom" onclick="changeZoom(-0.1)" title="Zoom Out">🔍 -</button>
         <span id="zoom-value" class="zoom-value">100%</span>
@@ -1025,7 +1118,6 @@
       </button>
     </div>
 
-    <!-- SECCIÓN DOBLE DE PROGRESO -->
     <div class="progress-section">
       <div class="progress-block">
         <div class="progress-info">
@@ -1050,6 +1142,23 @@
 
     <div class="filters-bar">
       <input type="text" id="search-input" class="search-input" placeholder="Search spirit name..." oninput="onFilterChange()">
+      
+      <select id="variant-filter" class="filter-select" onchange="onFilterChange()">
+        <option value="all">All Variants</option>
+        <option value="Normal">Normal</option>
+        <option value="Gold">Gold</option>
+        <option value="Gummy">Gummy</option>
+        <option value="Galaxy">Galaxy</option>
+        <option value="Holofoil">Holofoil</option>
+        <option value="Cube">Cube</option>
+        <option value="Gem">Gem</option>
+        <option value="Quack">Quack</option>
+        <option value="Cheat Master">Cheat Master</option>
+        <option value="Hacker">Hacker</option>
+        <option value="Reaper">Reaper</option>
+        <option value="Trick or Treat">Trick or Treat</option>
+      </select>
+
       <select id="rarity-filter" class="filter-select" onchange="onFilterChange()">
         <option value="all">All Rarities</option>
         <option value="rare">Rare</option>
@@ -1057,6 +1166,7 @@
         <option value="legendary">Legendary</option>
         <option value="mythic">Mythic</option>
       </select>
+      
       <select id="status-filter" class="filter-select" onchange="onFilterChange()">
         <option value="all">All Statuses</option>
         <option value="collected">Collected</option>
@@ -1071,7 +1181,6 @@
     </div>
   </div>
 
-  <!-- MODAL EMERGENTE -->
   <div id="spirit-modal" class="modal-overlay" onclick="closeModal(event)">
     <div class="modal-content" id="modal-card-content" onclick="event.stopPropagation()">
       <div class="modal-top-bar">
@@ -1083,7 +1192,7 @@
         <button class="modal-close-btn" onclick="closeModal()">&times;</button>
       </div>
       <div class="modal-img-frame" id="modal-img-frame">
-        <img id="modal-img" src="" alt="Spirit">
+        <img id="modal-img" src="" alt="Spirit" loading="lazy">
       </div>
       <h2 id="modal-title" class="modal-title">Gold Earth</h2>
       <div class="modal-desc-box">
@@ -1111,6 +1220,13 @@
       "storm scout": "storm",
       "jackrabbit": "jack",
       "x-ray": "xray",
+      "x ray": "xray",
+      "xray": "xray",
+      "overshield": "overshield",
+      "onigiri": "onigiri",
+      "megaman": "megaman",
+      "adventure": "adventure",
+      "adventur": "adventure"
     };
 
     const VARIANT_SLUGS = {
@@ -1125,7 +1241,8 @@
       "Cheat Master": "cheat",
       "Hacker": "hacker",
       "Reaper": "reaper",
-      "Trick or Treat": "trick"
+      "Trick or Treat": "trick",
+      "Trick Treat": "trick"
     };
 
     const VARIANT_DESCRIPTIONS = {
@@ -1140,8 +1257,9 @@
       "Quack": "Gives 50% Sprite XP to all other Sprites in your inventory",
       "Cheat Master": "Button mash! All inputs are correct when entering cheat codes found in the world.",
       "Hacker": "Increases chances of spawning items from your Loot Hacks.",
-	  "Reaper": "ToDo",
-	  "Trick or Treat": "Chance to find Candy when opening containers."
+      "Reaper": "Siphon Health on eliminations.",
+      "Trick or Treat": "Chance to find Candy when opening containers.",
+      "Trick Treat": "Chance to find Candy when opening containers."
     };
 
     const VARIANT_GRADIENTS = {
@@ -1180,7 +1298,6 @@
     let currentZoom = parseFloat(localStorage.getItem('fortnite_spirits_zoom')) || 1.0;
     let userProgress = JSON.parse(localStorage.getItem('fortnite_spirits_progress')) || {};
 
-    /* LÓGICA DE ZOOM */
     function changeZoom(delta) {
       currentZoom = Math.min(Math.max(0.5, currentZoom + delta), 1.8);
       currentZoom = Math.round(currentZoom * 10) / 10;
@@ -1217,6 +1334,7 @@
       localStorage.setItem('fortnite_spirits_tab', currentTab);
       localStorage.setItem('fortnite_spirits_zoom', currentZoom);
       localStorage.setItem('fortnite_spirits_search', document.getElementById('search-input')?.value || '');
+      localStorage.setItem('fortnite_spirits_variant', document.getElementById('variant-filter')?.value || 'all');
       localStorage.setItem('fortnite_spirits_rarity', document.getElementById('rarity-filter')?.value || 'all');
       localStorage.setItem('fortnite_spirits_status', document.getElementById('status-filter')?.value || 'all');
       localStorage.setItem('fortnite_spirits_capture_scope', document.getElementById('capture-scope')?.value || 'all');
@@ -1278,9 +1396,9 @@
         return (typeof S3_VARIANTS !== 'undefined') ? S3_VARIANTS : ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"];
       }
       if (currentTab === 'S4') {
-        return (typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Hacker", "Reaper", "Gummy", "Holofoil", "Trick Treat"];
+        return (typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Hacker", "Reaper", "Gummy", "Holofoil", "Trick or Treat"];
       }
-      return ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack", "Cheat Master", "Hacker", "Reaper", "Trick Treat"];
+      return ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack", "Cheat Master", "Hacker", "Reaper", "Trick or Treat"];
     }
 
     function getSpiritsList() {
@@ -1362,7 +1480,11 @@
     }
 
     function renderView(overrideStatusFilter, isExportMode = false) {
-      if (currentTab === 'Garden') {
+      const selectedVariant = document.getElementById('variant-filter')?.value || 'all';
+
+      if (selectedVariant !== 'all') {
+        renderHorizontalVariantView(selectedVariant, overrideStatusFilter, isExportMode);
+      } else if (currentTab === 'Garden') {
         renderGardenGallery(overrideStatusFilter, isExportMode);
       } else {
         renderMatrixTable(overrideStatusFilter, isExportMode);
@@ -1414,7 +1536,85 @@
       tryNext();
     }
 
-    /* MATRIZ S3 / S4 */
+    /* VISTA HORIZONTAL CUANDO SE FILTRA UNA VARIANTE ESPECÍFICA */
+    function renderHorizontalVariantView(variantName, overrideStatusFilter, isExportMode = false) {
+      const container = document.getElementById('content-render-area');
+      if (!container) return;
+
+      const spirits = getSpiritsList();
+      const searchVal = (document.getElementById('search-input')?.value || '').toLowerCase();
+      const rarityFilter = document.getElementById('rarity-filter')?.value || 'all';
+      const statusFilter = overrideStatusFilter !== undefined ? overrideStatusFilter : (document.getElementById('status-filter')?.value || 'all');
+
+      const badgeClass = getVariantBadgeClass(variantName);
+      const variantSlug = VARIANT_SLUGS[variantName] || variantName.toLowerCase();
+      const bgGradient = VARIANT_GRADIENTS[variantSlug] || VARIANT_GRADIENTS["normal"];
+      const borderColor = VARIANT_BORDER_COLORS[variantSlug] || "#94A3B8";
+
+      let matchingSpirits = [];
+
+      spirits.forEach(spirit => {
+        const spiritName = spirit.name || 'Unknown';
+        const spiritRarity = (spirit.rarity || 'Rare').toLowerCase();
+        const spiritId = spirit.id || spiritName;
+
+        if (searchVal && !spiritName.toLowerCase().includes(searchVal)) return;
+        if (rarityFilter !== 'all' && spiritRarity !== rarityFilter.toLowerCase()) return;
+
+        const exists = isVariantExist(spirit, variantName);
+        const inactive = isVariantInactive(spirit, variantName);
+        const currentStatus = userProgress[`${spiritId}_${variantName}`] || 'none';
+
+        if (exists && !inactive && doesStatusMatchFilter(spirit, variantName, currentStatus, statusFilter)) {
+          matchingSpirits.push({ spirit, spiritId, spiritName, spiritRarity, currentStatus });
+        }
+      });
+
+      if (matchingSpirits.length === 0) {
+        container.innerHTML = `<div class="empty-warning" style="text-align:center; padding:40px; color:var(--text-muted);">⚠️ No hay espíritus disponibles para la variante <strong>${variantName}</strong> con los filtros actuales.</div>`;
+        return;
+      }
+
+      let html = `
+        <div class="horizontal-view-container">
+          <div class="horizontal-view-header">
+            <h2>
+              <span>Variante:</span>
+              <span class="header-badge ${badgeClass}">${variantName}</span>
+              <span style="font-size: 0.9rem; color: var(--text-muted);">(${matchingSpirits.length} espíritus)</span>
+            </h2>
+          </div>
+          <div class="horizontal-carousel">
+      `;
+
+      matchingSpirits.forEach(({ spirit, spiritId, spiritName, spiritRarity, currentStatus }) => {
+        const spiritSlug = SPIRIT_SLUGS[spiritName.toLowerCase()] || spiritName.toLowerCase().replace(/\s+/g, '-');
+        const seasonDir = spirit._season || currentTab;
+        const imgPathPrimary = `assets/${seasonDir}/${spiritSlug}_${variantSlug}.webp`;
+        const slotStateClass = `status-${currentStatus}`;
+
+        html += `
+          <div class="horizontal-card ${slotStateClass}" style="background: ${bgGradient}; border-color: ${borderColor};" onclick="openSpiritModal('${spiritId}', '${variantName}')">
+            <div class="card-top">
+              <span class="badge-variant ${badgeClass}">${variantName}</span>
+              <span class="rarity-pill rarity-${spiritRarity}">${spiritRarity.toUpperCase()}</span>
+            </div>
+            <img src="${imgPathPrimary}" alt="${spiritName}" loading="lazy"
+                 onerror="handleImgError(this, '${seasonDir}', '${spiritSlug}', '${variantSlug}')">
+            <span class="card-title">${spiritName}</span>
+            ${currentStatus === 'mastered' ? '<span class="mastered-badge"><img src="crown.webp" onerror="this.onerror=null; this.src=\'assets/crown.webp\';" alt="👑"></span>' : ''}
+          </div>
+        `;
+      });
+
+      html += `
+          </div>
+        </div>
+      `;
+
+      container.innerHTML = html;
+    }
+
     function renderMatrixTable(overrideStatusFilter, isExportMode = false) {
       const container = document.getElementById('content-render-area');
       if (!container) return;
@@ -1512,7 +1712,7 @@
             html += `
               <div class="variant-slot ${slotStateClass}" ${clickAction}>
                 ${currentStatus === 'mastered' ? masteredIconHTML : ''}
-                <img src="${imgPathPrimary}" alt="${spiritName}" 
+                <img src="${imgPathPrimary}" alt="${spiritName}" loading="lazy"
                      onerror="handleImgError(this, '${seasonDir}', '${spiritSlug}', '${variantSlug}')">
               </div>
             `;
@@ -1524,7 +1724,6 @@
       container.innerHTML = html;
     }
 
-    /* GARDEN GALLERY */
     function renderGardenGallery(overrideStatusFilter, isExportMode = false) {
       const container = document.getElementById('content-render-area');
       if (!container) return;
@@ -1600,7 +1799,7 @@
                     <span class="badge-variant ${badgeClass}">${vName}</span>
                     <span class="season-tag ${seasonPinClass}">${seasonDir}</span>
                   </div>
-                  <img src="${imgPathPrimary}" alt="${spiritName}"
+                  <img src="${imgPathPrimary}" alt="${spiritName}" loading="lazy"
                        onerror="handleImgError(this, '${seasonDir}', '${spiritSlug}', '${variantSlug}')">
                 </div>
               `;
@@ -1618,7 +1817,6 @@
       container.innerHTML = html;
     }
 
-    /* GESTIÓN DE ESTADOS */
     function toggleVariantState(spiritId, variant) {
       if (currentTab === 'Garden') return;
 
@@ -1689,7 +1887,6 @@
       renderView();
     }
 
-    /* VENTANA MODAL */
     function openSpiritModal(spiritId, variantName) {
       const spirits = getSpiritsList();
       const spirit = spirits.find(s => s.id === spiritId);
@@ -1772,7 +1969,7 @@
       if (captureScope === 'not-mastered') filterOverride = 'not-mastered';
 
       const savedZoom = currentZoom;
-      resetZoom(); // Resetea zoom para la captura PNG
+      resetZoom();
 
       renderView(filterOverride, true);
 
@@ -1817,11 +2014,13 @@
     window.addEventListener('DOMContentLoaded', () => {
       const savedTab = localStorage.getItem('fortnite_spirits_tab') || 'S3';
       const savedSearch = localStorage.getItem('fortnite_spirits_search') || '';
+      const savedVariant = localStorage.getItem('fortnite_spirits_variant') || 'all';
       const savedRarity = localStorage.getItem('fortnite_spirits_rarity') || 'all';
       const savedStatus = localStorage.getItem('fortnite_spirits_status') || 'all';
       const savedScope = localStorage.getItem('fortnite_spirits_capture_scope') || 'all';
 
       if (document.getElementById('search-input')) document.getElementById('search-input').value = savedSearch;
+      if (document.getElementById('variant-filter')) document.getElementById('variant-filter').value = savedVariant;
       if (document.getElementById('rarity-filter')) document.getElementById('rarity-filter').value = savedRarity;
       if (document.getElementById('status-filter')) document.getElementById('status-filter').value = savedStatus;
       if (document.getElementById('capture-scope')) document.getElementById('capture-scope').value = savedScope;
