@@ -1621,7 +1621,7 @@ const SPIRITS_DATA = {
           "cost": "-",
           "rarity": "Rare"
         },
-        "Trick Treat": {
+        "Trick or Treat": {
           "name": "Trick Treat bush",
           "status": "Not Exist",
           "cost": "-",
@@ -1679,7 +1679,7 @@ const SPIRITS_DATA = {
           "cost": "-",
           "rarity": "Rare"
         },
-        "Trick Treat": {
+        "Trick or Treat": {
           "name": "Trick Treat adventure",
           "status": "Not Exist",
           "cost": "-",
@@ -1737,7 +1737,7 @@ const SPIRITS_DATA = {
           "cost": "-",
           "rarity": "Rare"
         },
-        "Trick Treat": {
+        "Trick or Treat": {
           "name": "Trick Treat Jonesy",
           "status": "Not Exist",
           "cost": "-",
@@ -1795,7 +1795,7 @@ const SPIRITS_DATA = {
           "cost": "-",
           "rarity": "Rare"
         },
-        "Trick Treat": {
+        "Trick or Treat": {
           "name": "Trick Treat 8 Bit",
           "status": "Not Exist",
           "cost": "-",
@@ -1853,7 +1853,7 @@ const SPIRITS_DATA = {
           "cost": "-",
           "rarity": "Epic"
         },
-        "Trick Treat": {
+        "Trick or Treat": {
           "name": "Trick Treat Killswitch",
           "status": "Not Exist",
           "cost": "-",
@@ -1911,7 +1911,7 @@ const SPIRITS_DATA = {
           "cost": "-",
           "rarity": "Epic"
         },
-        "Trick Treat": {
+        "Trick or Treat": {
           "name": "Trick Treat Sonic",
           "status": "Not Exist",
           "cost": "-",
@@ -1969,7 +1969,7 @@ const SPIRITS_DATA = {
           "cost": "-",
           "rarity": "Epic"
         },
-        "Trick Treat": {
+        "Trick or Treat": {
           "name": "Trick Treat Tails",
           "status": "Not Exist",
           "cost": "-",
@@ -2027,7 +2027,7 @@ const SPIRITS_DATA = {
           "cost": "-",
           "rarity": "Epic"
         },
-        "Trick Treat": {
+        "Trick or Treat": {
           "name": "Trick Treat Shadow",
           "status": "Not Exist",
           "cost": "-",
@@ -2085,7 +2085,7 @@ const SPIRITS_DATA = {
           "cost": "-",
           "rarity": "Legendary"
         },
-        "Trick Treat": {
+        "Trick or Treat": {
           "name": "Trick Treat JackRabbit",
           "status": "Not Exist",
           "cost": "-",
@@ -2143,7 +2143,7 @@ const SPIRITS_DATA = {
           "cost": "-",
           "rarity": "Mythic"
         },
-        "Trick Treat": {
+        "Trick or Treat": {
           "name": "Trick Treat Crown",
           "status": "Not Exist",
           "cost": "-",
@@ -2201,7 +2201,7 @@ const SPIRITS_DATA = {
           "cost": "-",
           "rarity": "Mythic"
         },
-        "Trick Treat": {
+        "Trick or Treat": {
           "name": "Trick Treat Klombo",
           "status": "Not Exist",
           "cost": "-",
@@ -2259,7 +2259,7 @@ const SPIRITS_DATA = {
           "cost": "-",
           "rarity": "Rare"
         },
-        "Trick Treat": {
+        "Trick or Treat": {
           "name": "Trick Treat Storm Scout",
           "status": "Not Exist",
           "cost": "-",
@@ -2317,7 +2317,7 @@ const SPIRITS_DATA = {
           "cost": "-",
           "rarity": "Rare"
         },
-        "Trick Treat": {
+        "Trick or Treat": {
           "name": "Trick Treat Onigiri",
           "status": "Not Exist",
           "cost": "-",
@@ -2375,7 +2375,7 @@ const SPIRITS_DATA = {
           "cost": "-",
           "rarity": "Rare"
         },
-        "Trick Treat": {
+        "Trick or Treat": {
           "name": "Trick Treat Overshield",
           "status": "Not Exist",
           "cost": "-",
@@ -2433,7 +2433,7 @@ const SPIRITS_DATA = {
           "cost": "-",
           "rarity": "Legendary"
         },
-        "Trick Treat": {
+        "Trick or Treat": {
           "name": "Trick Treat X-Ray",
           "status": "Not Exist",
           "cost": "-",
@@ -2491,7 +2491,7 @@ const SPIRITS_DATA = {
           "cost": "-",
           "rarity": "Rare"
         },
-        "Trick Treat": {
+        "Trick or Treat": {
           "name": "Trick Treat Megaman",
           "status": "Not Exist",
           "cost": "-",
