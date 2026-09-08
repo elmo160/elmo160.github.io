@@ -2267,61 +2267,61 @@ const SPIRITS_DATA = {
         }
       }
     },
-    {
-      "id": "xray",
-      "name": "X Ray",
-      "rarity": "Legendary",
-      "desc_sprite": "Periodically mark enemies in an area around you.",
-      "desc_level": "Mark more often and in a larger radius with each Level Up!",
+	{
+      "id": "onigiri",
+      "name": "Onigiri",
+      "rarity": "Rare",
+      "desc_sprite": "Applies Overdrive after eating or drinking a Consumable.",
+      "desc_level": "Overdrive lasts longer with each Level Up!",
       "levels": {},
       "variants": {
         "Normal": {
-          "name": "X Ray",
+          "name": "Onigiri",
           "status": "Available S4",
-          "cost": "1750",
-          "rarity": "Legendary"
+          "cost": "1250",
+          "rarity": "Rare"
         },
         "Gold": {
-          "name": "Gold X Ray",
+          "name": "Gold Onigiri",
           "status": "Available S4",
-          "cost": "2100",
-          "rarity": "Legendary"
+          "cost": "1500",
+          "rarity": "Rare"
         },
         "Cheat Master": {
-          "name": "Cheat Master X Ray",
+          "name": "Cheat Master Onigiri",
           "status": "Available S4",
-          "cost": "2100",
-          "rarity": "Legendary"
+          "cost": "1500",
+          "rarity": "Rare"
         },
         "Hacker": {
-          "name": "Hacker X Ray",
+          "name": "Hacker Onigiri",
           "status": "Available S4",
-          "cost": "2100",
-          "rarity": "Legendary"
+          "cost": "1500",
+          "rarity": "Rare"
         },
         "Reaper": {
-          "name": "Reaper X Ray",
+          "name": "Reaper Onigiri",
           "status": "Not Exist",
           "cost": "-",
-          "rarity": "Legendary"
+          "rarity": "Rare"
         },
         "Gummy": {
-          "name": "Gummy X Ray",
+          "name": "Gummy Onigiri",
           "status": "Not Exist",
           "cost": "-",
-          "rarity": "Legendary"
+          "rarity": "Rare"
         },
         "Holofoil": {
-          "name": "Holofoil X Ray",
+          "name": "Holofoil Onigiri",
           "status": "Not Exist",
           "cost": "-",
-          "rarity": "Legendary"
+          "rarity": "Rare"
         },
         "Trick Treat": {
-          "name": "Trick Treat X Ray",
+          "name": "Trick Treat Onigiri",
           "status": "Not Exist",
           "cost": "-",
-          "rarity": "Legendary"
+          "rarity": "Rare"
         }
       }
     },
@@ -2384,64 +2384,6 @@ const SPIRITS_DATA = {
       }
     },
     {
-      "id": "onigiri",
-      "name": "Onigiri",
-      "rarity": "Rare",
-      "desc_sprite": "Applies Overdrive after eating or drinking a Consumable.",
-      "desc_level": "Overdrive lasts longer with each Level Up!",
-      "levels": {},
-      "variants": {
-        "Normal": {
-          "name": "Onigiri",
-          "status": "Available S4",
-          "cost": "1250",
-          "rarity": "Rare"
-        },
-        "Gold": {
-          "name": "Gold Onigiri",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Cheat Master": {
-          "name": "Cheat Master Onigiri",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Hacker": {
-          "name": "Hacker Onigiri",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Reaper": {
-          "name": "Reaper Onigiri",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Gummy": {
-          "name": "Gummy Onigiri",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Holofoil": {
-          "name": "Holofoil Onigiri",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Trick Treat": {
-          "name": "Trick Treat Onigiri",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        }
-      }
-    },
-    {
       "id": "megaman",
       "name": "Megaman",
       "rarity": "Rare",
@@ -2496,6 +2438,64 @@ const SPIRITS_DATA = {
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Rare"
+        }
+      }
+    },
+	{
+      "id": "xray",
+      "name": "X Ray",
+      "rarity": "Legendary",
+      "desc_sprite": "Periodically mark enemies in an area around you.",
+      "desc_level": "Mark more often and in a larger radius with each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": {
+          "name": "X Ray",
+          "status": "Available S4",
+          "cost": "1750",
+          "rarity": "Legendary"
+        },
+        "Gold": {
+          "name": "Gold X Ray",
+          "status": "Available S4",
+          "cost": "2100",
+          "rarity": "Legendary"
+        },
+        "Cheat Master": {
+          "name": "Cheat Master X Ray",
+          "status": "Available S4",
+          "cost": "2100",
+          "rarity": "Legendary"
+        },
+        "Hacker": {
+          "name": "Hacker X Ray",
+          "status": "Available S4",
+          "cost": "2100",
+          "rarity": "Legendary"
+        },
+        "Reaper": {
+          "name": "Reaper X Ray",
+          "status": "Not Exist",
+          "cost": "-",
+          "rarity": "Legendary"
+        },
+        "Gummy": {
+          "name": "Gummy X Ray",
+          "status": "Not Exist",
+          "cost": "-",
+          "rarity": "Legendary"
+        },
+        "Holofoil": {
+          "name": "Holofoil X Ray",
+          "status": "Not Exist",
+          "cost": "-",
+          "rarity": "Legendary"
+        },
+        "Trick Treat": {
+          "name": "Trick Treat X Ray",
+          "status": "Not Exist",
+          "cost": "-",
+          "rarity": "Legendary"
         }
       }
     }
