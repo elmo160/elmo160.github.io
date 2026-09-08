@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fortnite Spirits Tracker</title>
   
-  <!-- Favicon WebP -->
   <link rel="icon" type="image/webp" href="eye.webp">
 
   <style>
@@ -163,9 +162,7 @@
       transition: background 0.2s ease;
     }
 
-    .btn-zoom:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
+    .btn-zoom:hover { background: rgba(255, 255, 255, 0.2); }
 
     .action-btn {
       border: none;
@@ -540,9 +537,6 @@
       height: 18px;
     }
 
-    .is-capturing .spirit-quick-actions { display: none !important; }
-
-    /* --- VISTA HORIZONTAL DE VARIANTE (CARRUSEL) --- */
     .horizontal-view-container {
       display: flex;
       flex-direction: column;
@@ -578,15 +572,11 @@
       -webkit-overflow-scrolling: touch;
     }
 
-    .horizontal-carousel::-webkit-scrollbar {
-      height: 9px;
-    }
-
+    .horizontal-carousel::-webkit-scrollbar { height: 9px; }
     .horizontal-carousel::-webkit-scrollbar-track {
       background: rgba(0, 0, 0, 0.25);
       border-radius: 6px;
     }
-
     .horizontal-carousel::-webkit-scrollbar-thumb {
       background: var(--accent-color);
       border-radius: 6px;
@@ -641,20 +631,13 @@
       transition: transform 0.2s ease;
     }
 
-    .horizontal-card:hover img {
-      transform: scale(1.08);
-    }
-
-    /* --- GARDEN GALLERY (RESPONSIVE) --- */
     .garden-gallery-container {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
       gap: 28px;
     }
 
-    .garden-card, .modal-content {
-      transition: all 0.35s ease;
-    }
+    .garden-card, .modal-content { transition: all 0.35s ease; }
 
     .card-rarity-rare {
       background: linear-gradient(180deg, rgba(0, 114, 255, 0.15) 0%, rgba(14, 20, 28, 0.94) 100%) !important;
@@ -698,32 +681,12 @@
       border-radius: 50%;
       display: inline-block;
     }
-    .garden-card-header .dot-rare {
-      background-color: #0072FF;
-      border: 2px solid #60A5FA;
-      box-shadow: 0 0 10px rgba(0, 114, 255, 0.9);
-    }
-    .garden-card-header .dot-epic {
-      background-color: #A855F7;
-      border: 2px solid #F3E8FF;
-      box-shadow: 0 0 10px rgba(168, 85, 247, 0.9);
-    }
-    .garden-card-header .dot-legendary {
-      background-color: #F97316;
-      border: 2px solid #FFEDD5;
-      box-shadow: 0 0 10px rgba(249, 115, 22, 0.9);
-    }
-    .garden-card-header .dot-mythic {
-      background-color: #EAB308;
-      border: 2px solid #FEF9C3;
-      box-shadow: 0 0 10px rgba(234, 179, 8, 0.9);
-    }
+    .garden-card-header .dot-rare { background-color: #0072FF; border: 2px solid #60A5FA; box-shadow: 0 0 10px rgba(0, 114, 255, 0.9); }
+    .garden-card-header .dot-epic { background-color: #A855F7; border: 2px solid #F3E8FF; box-shadow: 0 0 10px rgba(168, 85, 247, 0.9); }
+    .garden-card-header .dot-legendary { background-color: #F97316; border: 2px solid #FFEDD5; box-shadow: 0 0 10px rgba(249, 115, 22, 0.9); }
+    .garden-card-header .dot-mythic { background-color: #EAB308; border: 2px solid #FEF9C3; box-shadow: 0 0 10px rgba(234, 179, 8, 0.9); }
 
-    .garden-card-header h3 {
-      font-size: 1.45rem;
-      font-weight: 800;
-      color: #FFF;
-    }
+    .garden-card-header h3 { font-size: 1.45rem; font-weight: 800; color: #FFF; }
 
     .garden-variants-grid {
       display: grid;
@@ -839,15 +802,6 @@
       cursor: pointer;
     }
 
-    .garden-vslot.collected:hover, .garden-vslot.mastered:hover {
-      transform: translateY(-3px) scale(1.04);
-    }
-
-    .garden-vslot.collected:hover img, .garden-vslot.mastered:hover img {
-      transform: scale(1.08);
-    }
-
-    /* --- VENTANA MODAL EMERGENTE --- */
     .modal-overlay {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -931,11 +885,7 @@
       filter: drop-shadow(0 6px 16px rgba(0,0,0,0.7));
     }
 
-    .modal-title {
-      font-size: 2.3rem;
-      font-weight: 800;
-      color: #FFF;
-    }
+    .modal-title { font-size: 2.3rem; font-weight: 800; color: #FFF; }
 
     .modal-desc-box {
       width: 100%;
@@ -948,18 +898,8 @@
       gap: 12px;
     }
 
-    .modal-desc-main {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #FFF;
-      line-height: 1.4;
-    }
-
-    .modal-desc-sub {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.35;
-    }
+    .modal-desc-main { font-size: 1.2rem; font-weight: 700; color: #FFF; line-height: 1.4; }
+    .modal-desc-sub { font-size: 0.95rem; color: var(--text-muted); line-height: 1.35; }
 
     .modal-xp-banner {
       width: 100%;
@@ -972,99 +912,28 @@
       box-shadow: 0 4px 14px rgba(0,0,0,0.3);
     }
 
-    .modal-footer-note {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.35);
-      font-style: italic;
-    }
+    .modal-footer-note { font-size: 0.8rem; color: rgba(255,255,255,0.35); font-style: italic; }
 
-    /* --- REGLAS RESPONSIVE --- */
     @media (max-width: 768px) {
-      body {
-        padding: 12px 8px;
-      }
-
-      .container {
-        padding: 18px 12px;
-        border-radius: 14px;
-      }
-
-      .header h1 {
-        font-size: 1.6rem;
-        text-align: center;
-      }
-
-      .tabs-container {
-        justify-content: center;
-        gap: 8px;
-      }
-
-      .tab-btn {
-        flex: 1 1 auto;
-        padding: 9px 12px;
-        font-size: 0.85rem;
-        text-align: center;
-      }
-
-      .actions-bar, .filters-bar {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-      }
-
-      .capture-group, .zoom-group {
-        width: 100%;
-        justify-content: space-between;
-      }
-
-      .search-input, .filter-select, .capture-select, .action-btn {
-        width: 100%;
-      }
-
-      .matrix-grid {
-        --col-first: 140px;
-        gap: 8px;
-      }
-
+      body { padding: 12px 8px; }
+      .container { padding: 18px 12px; border-radius: 14px; }
+      .header h1 { font-size: 1.6rem; text-align: center; }
+      .tabs-container { justify-content: center; gap: 8px; }
+      .tab-btn { flex: 1 1 auto; padding: 9px 12px; font-size: 0.85rem; text-align: center; }
+      .actions-bar, .filters-bar { flex-direction: column; align-items: stretch; gap: 10px; }
+      .capture-group, .zoom-group { width: 100%; justify-content: space-between; }
+      .search-input, .filter-select, .capture-select, .action-btn { width: 100%; }
+      .matrix-grid { --col-first: 140px; gap: 8px; }
       .spirit-name { font-size: 0.88rem; }
       .rarity-pill { font-size: 0.58rem; padding: 2px 6px; }
       .variant-slot { height: 92px; }
       .variant-slot img { width: 62px; height: 62px; }
-
-      .garden-gallery-container {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
-
-      .garden-card {
-        padding: 16px 12px;
-        border-radius: 18px;
-      }
-
-      .garden-variants-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-      }
-
-      .modal-content {
-        padding: 24px 16px 20px 16px;
-        gap: 14px;
-        max-height: 88vh;
-        overflow-y: auto;
-        border-radius: 22px;
-      }
-
-      .modal-img-frame {
-        width: 190px;
-        height: 190px;
-        border-radius: 24px;
-      }
-
-      .modal-img-frame img {
-        width: 145px;
-        height: 145px;
-      }
-
+      .garden-gallery-container { grid-template-columns: 1fr; gap: 16px; }
+      .garden-card { padding: 16px 12px; border-radius: 18px; }
+      .garden-variants-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .modal-content { padding: 24px 16px 20px 16px; gap: 14px; max-height: 88vh; overflow-y: auto; border-radius: 22px; }
+      .modal-img-frame { width: 190px; height: 190px; border-radius: 24px; }
+      .modal-img-frame img { width: 145px; height: 145px; }
       .modal-title { font-size: 1.6rem; }
       .modal-desc-main { font-size: 1rem; }
       .modal-desc-sub { font-size: 0.85rem; }
@@ -1141,7 +1010,7 @@
     </div>
 
     <div class="filters-bar">
-      <input type="text" id="search-input" class="search-input" placeholder="Search spirit name..." oninput="onFilterChange()">
+      <input type="text" id="search-input" class="search-input" placeholder="Search spirit or variant name..." oninput="onFilterChange()">
       
       <select id="variant-filter" class="filter-select" onchange="onFilterChange()">
         <option value="all">All Variants</option>
@@ -1192,7 +1061,7 @@
         <button class="modal-close-btn" onclick="closeModal()">&times;</button>
       </div>
       <div class="modal-img-frame" id="modal-img-frame">
-        <img id="modal-img" src="" alt="Spirit" loading="lazy">
+        <img id="modal-img" src="" alt="Spirit" loading="lazy" decoding="async">
       </div>
       <h2 id="modal-title" class="modal-title">Gold Earth</h2>
       <div class="modal-desc-box">
@@ -1225,8 +1094,7 @@
       "overshield": "overshield",
       "onigiri": "onigiri",
       "megaman": "megaman",
-      "adventure": "adventure",
-      "adventur": "adventure"
+      "adventure": "adventure"
     };
 
     const VARIANT_SLUGS = {
@@ -1349,10 +1217,7 @@
       const exists = isVariantExist(spirit, vName);
       const inactive = isVariantInactive(spirit, vName);
 
-      if (!exists || inactive) {
-        return filter === 'all';
-      }
-
+      if (!exists || inactive) return filter === 'all';
       if (filter === 'all') return true;
       if (filter === 'collected') return currentStatus === 'collected' || currentStatus === 'mastered';
       if (filter === 'mastered') return currentStatus === 'mastered';
@@ -1376,10 +1241,7 @@
 
     function isVariantExist(spirit, variantName) {
       const status = getVariantRawStatus(spirit, variantName);
-      if (status === "Not Exist" || status === "Unreleased") {
-        return false;
-      }
-      return true;
+      return !(status === "Not Exist" || status === "Unreleased");
     }
 
     function isVariantInactive(spirit, variantName) {
@@ -1445,7 +1307,10 @@
       }
 
       persistState();
-      renderView();
+      
+      requestAnimationFrame(() => {
+        renderView();
+      });
     }
 
     function updateProgressUI() {
@@ -1495,23 +1360,12 @@
 
     function handleImgError(imgEl, seasonDir, spiritSlug, variantSlug) {
       imgEl.onerror = null;
-
       const cleanSlug = spiritSlug.replace(/[^a-z0-9]/gi, '');
-      const shortSlug = spiritSlug.split('-').pop();
 
       const fallbacks = [
         `assets/${seasonDir}/${spiritSlug}_${variantSlug}.webp`,
         `assets/${seasonDir}/${cleanSlug}_${variantSlug}.webp`,
-        `assets/${seasonDir}/${shortSlug}_${variantSlug}.webp`,
-        `${spiritSlug}_${variantSlug}.webp`,
-        `${cleanSlug}_${variantSlug}.webp`,
-        `${shortSlug}_${variantSlug}.webp`,
-        `assets/unreleased/${spiritSlug}_${variantSlug}.webp`,
-        `assets/unreleased/${cleanSlug}_${variantSlug}.webp`,
-        `unreleased/${spiritSlug}_${variantSlug}.webp`,
-        `assets/${seasonDir}/${spiritSlug}.webp`,
-        `assets/unreleased/${spiritSlug}.webp`,
-        `assets/${spiritSlug}.webp`
+        `${spiritSlug}_${variantSlug}.webp`
       ];
 
       let step = 0;
@@ -1536,13 +1390,12 @@
       tryNext();
     }
 
-    /* VISTA HORIZONTAL CUANDO SE FILTRA UNA VARIANTE ESPECÍFICA */
     function renderHorizontalVariantView(variantName, overrideStatusFilter, isExportMode = false) {
       const container = document.getElementById('content-render-area');
       if (!container) return;
 
       const spirits = getSpiritsList();
-      const searchVal = (document.getElementById('search-input')?.value || '').toLowerCase();
+      const searchVal = (document.getElementById('search-input')?.value || '').toLowerCase().trim();
       const rarityFilter = document.getElementById('rarity-filter')?.value || 'all';
       const statusFilter = overrideStatusFilter !== undefined ? overrideStatusFilter : (document.getElementById('status-filter')?.value || 'all');
 
@@ -1558,7 +1411,10 @@
         const spiritRarity = (spirit.rarity || 'Rare').toLowerCase();
         const spiritId = spirit.id || spiritName;
 
-        if (searchVal && !spiritName.toLowerCase().includes(searchVal)) return;
+        const matchesName = spiritName.toLowerCase().includes(searchVal);
+        const matchesVariant = variantName.toLowerCase().includes(searchVal);
+
+        if (searchVal && !matchesName && !matchesVariant) return;
         if (rarityFilter !== 'all' && spiritRarity !== rarityFilter.toLowerCase()) return;
 
         const exists = isVariantExist(spirit, variantName);
@@ -1599,7 +1455,7 @@
               <span class="badge-variant ${badgeClass}">${variantName}</span>
               <span class="rarity-pill rarity-${spiritRarity}">${spiritRarity.toUpperCase()}</span>
             </div>
-            <img src="${imgPathPrimary}" alt="${spiritName}" loading="lazy"
+            <img src="${imgPathPrimary}" alt="${spiritName}" loading="lazy" decoding="async"
                  onerror="handleImgError(this, '${seasonDir}', '${spiritSlug}', '${variantSlug}')">
             <span class="card-title">${spiritName}</span>
             ${currentStatus === 'mastered' ? '<span class="mastered-badge"><img src="crown.webp" onerror="this.onerror=null; this.src=\'assets/crown.webp\';" alt="👑"></span>' : ''}
@@ -1627,7 +1483,7 @@
         return;
       }
 
-      const searchVal = (document.getElementById('search-input')?.value || '').toLowerCase();
+      const searchVal = (document.getElementById('search-input')?.value || '').toLowerCase().trim();
       const rarityFilter = document.getElementById('rarity-filter')?.value || 'all';
       const statusFilter = overrideStatusFilter !== undefined ? overrideStatusFilter : (document.getElementById('status-filter')?.value || 'all');
 
@@ -1654,7 +1510,12 @@
         const spiritRarity = spirit.rarity || 'Rare';
         const spiritId = spirit.id || spiritName;
 
-        if (searchVal && !spiritName.toLowerCase().includes(searchVal)) return;
+        const matchesName = spiritName.toLowerCase().includes(searchVal);
+        const matchesVariant = activeVariants.some(vName => 
+          vName.toLowerCase().includes(searchVal) && isVariantExist(spirit, vName)
+        );
+
+        if (searchVal && !matchesName && !matchesVariant) return;
         if (rarityFilter !== 'all' && spiritRarity.toLowerCase() !== rarityFilter.toLowerCase()) return;
 
         let matchingVariantsCount = 0;
@@ -1712,7 +1573,7 @@
             html += `
               <div class="variant-slot ${slotStateClass}" ${clickAction}>
                 ${currentStatus === 'mastered' ? masteredIconHTML : ''}
-                <img src="${imgPathPrimary}" alt="${spiritName}" loading="lazy"
+                <img src="${imgPathPrimary}" alt="${spiritName}" loading="lazy" decoding="async"
                      onerror="handleImgError(this, '${seasonDir}', '${spiritSlug}', '${variantSlug}')">
               </div>
             `;
@@ -1731,7 +1592,7 @@
       const spirits = getSpiritsList();
       const canonicalVariantsList = getVariantsList();
 
-      const searchVal = (document.getElementById('search-input')?.value || '').toLowerCase();
+      const searchVal = (document.getElementById('search-input')?.value || '').toLowerCase().trim();
       const rarityFilter = document.getElementById('rarity-filter')?.value || 'all';
       const statusFilter = overrideStatusFilter !== undefined ? overrideStatusFilter : (document.getElementById('status-filter')?.value || 'all');
 
@@ -1742,7 +1603,12 @@
         const spiritRarity = (spirit.rarity || 'Rare').toLowerCase();
         const spiritId = spirit.id || spiritName;
 
-        if (searchVal && !spiritName.toLowerCase().includes(searchVal)) return;
+        const matchesName = spiritName.toLowerCase().includes(searchVal);
+        const matchesVariant = canonicalVariantsList.some(vName => 
+          vName.toLowerCase().includes(searchVal) && isVariantDefined(spirit, vName)
+        );
+
+        if (searchVal && !matchesName && !matchesVariant) return;
         if (rarityFilter !== 'all' && spiritRarity !== rarityFilter.toLowerCase()) return;
 
         const slotsMap = canonicalVariantsList.map((vName, idx) => {
@@ -1799,7 +1665,7 @@
                     <span class="badge-variant ${badgeClass}">${vName}</span>
                     <span class="season-tag ${seasonPinClass}">${seasonDir}</span>
                   </div>
-                  <img src="${imgPathPrimary}" alt="${spiritName}" loading="lazy"
+                  <img src="${imgPathPrimary}" alt="${spiritName}" loading="lazy" decoding="async"
                        onerror="handleImgError(this, '${seasonDir}', '${spiritSlug}', '${variantSlug}')">
                 </div>
               `;
@@ -1957,10 +1823,7 @@
 
     async function exportCard() {
       let captureScope = document.getElementById('capture-scope')?.value || 'all';
-      
-      if (currentTab === 'Garden') {
-        captureScope = 'all';
-      }
+      if (currentTab === 'Garden') captureScope = 'all';
 
       let filterOverride = 'all';
       if (captureScope === 'collected') filterOverride = 'collected';
