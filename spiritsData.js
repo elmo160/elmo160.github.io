@@ -1,7 +1,7 @@
 // Fortnite Spirits Data Config (Auto-generated from Espiritus Database.xlsx)
 
 const S3_VARIANTS = ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"];
-const S4_VARIANTS = ["Normal", "Gold", "Cheat Master", "Hacker", "Reaper", "Gummy", "Holofoil", "Trick Treat"];
+const S4_VARIANTS = ["Normal", "Gold", "Cheat Master", "Hacker", "Reaper", "Gummy", "Holofoil", "Trick or Treat"];
 
 const SPIRITS_DATA = {
   "S3": [
@@ -1622,7 +1622,7 @@ const SPIRITS_DATA = {
           "rarity": "Rare"
         },
         "Trick or Treat": {
-          "name": "Trick Treat bush",
+          "name": "Trick or Treat bush",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Rare"
@@ -1680,7 +1680,7 @@ const SPIRITS_DATA = {
           "rarity": "Rare"
         },
         "Trick or Treat": {
-          "name": "Trick Treat adventure",
+          "name": "Trick or Treat adventure",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Rare"
@@ -1738,7 +1738,7 @@ const SPIRITS_DATA = {
           "rarity": "Rare"
         },
         "Trick or Treat": {
-          "name": "Trick Treat Jonesy",
+          "name": "Trick or Treat Jonesy",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Rare"
@@ -1796,7 +1796,7 @@ const SPIRITS_DATA = {
           "rarity": "Rare"
         },
         "Trick or Treat": {
-          "name": "Trick Treat 8 Bit",
+          "name": "Trick or Treat 8 Bit",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Rare"
@@ -1854,7 +1854,7 @@ const SPIRITS_DATA = {
           "rarity": "Epic"
         },
         "Trick or Treat": {
-          "name": "Trick Treat Killswitch",
+          "name": "Trick or Treat Killswitch",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Epic"
@@ -1912,7 +1912,7 @@ const SPIRITS_DATA = {
           "rarity": "Epic"
         },
         "Trick or Treat": {
-          "name": "Trick Treat Sonic",
+          "name": "Trick or Treat Sonic",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Epic"
@@ -1970,7 +1970,7 @@ const SPIRITS_DATA = {
           "rarity": "Epic"
         },
         "Trick or Treat": {
-          "name": "Trick Treat Tails",
+          "name": "Trick or Treat Tails",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Epic"
@@ -2028,7 +2028,7 @@ const SPIRITS_DATA = {
           "rarity": "Epic"
         },
         "Trick or Treat": {
-          "name": "Trick Treat Shadow",
+          "name": "Trick or Treat Shadow",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Epic"
@@ -2086,7 +2086,7 @@ const SPIRITS_DATA = {
           "rarity": "Legendary"
         },
         "Trick or Treat": {
-          "name": "Trick Treat JackRabbit",
+          "name": "Trick or Treat JackRabbit",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Legendary"
@@ -2144,7 +2144,7 @@ const SPIRITS_DATA = {
           "rarity": "Mythic"
         },
         "Trick or Treat": {
-          "name": "Trick Treat Crown",
+          "name": "Trick or Treat Crown",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Mythic"
@@ -2202,7 +2202,7 @@ const SPIRITS_DATA = {
           "rarity": "Mythic"
         },
         "Trick or Treat": {
-          "name": "Trick Treat Klombo",
+          "name": "Trick or Treat Klombo",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Mythic"
@@ -2260,7 +2260,7 @@ const SPIRITS_DATA = {
           "rarity": "Rare"
         },
         "Trick or Treat": {
-          "name": "Trick Treat Storm Scout",
+          "name": "Trick or Treat Storm Scout",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Rare"
@@ -2318,7 +2318,7 @@ const SPIRITS_DATA = {
           "rarity": "Rare"
         },
         "Trick or Treat": {
-          "name": "Trick Treat Onigiri",
+          "name": "Trick or Treat Onigiri",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Rare"
@@ -2376,7 +2376,7 @@ const SPIRITS_DATA = {
           "rarity": "Rare"
         },
         "Trick or Treat": {
-          "name": "Trick Treat Overshield",
+          "name": "Trick or Treat Overshield",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Rare"
@@ -2434,7 +2434,7 @@ const SPIRITS_DATA = {
           "rarity": "Legendary"
         },
         "Trick or Treat": {
-          "name": "Trick Treat X-Ray",
+          "name": "Trick or Treat X-Ray",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Legendary"
@@ -2492,7 +2492,7 @@ const SPIRITS_DATA = {
           "rarity": "Rare"
         },
         "Trick or Treat": {
-          "name": "Trick Treat Megaman",
+          "name": "Trick or Treat Megaman",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Rare"
