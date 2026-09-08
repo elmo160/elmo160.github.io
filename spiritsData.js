@@ -1630,57 +1630,57 @@ const SPIRITS_DATA = {
       }
     },
     {
-      "id": "adventur",
-      "name": "Adventur",
+      "id": "adventure",
+      "name": "Adventure",
       "rarity": "Rare",
       "desc_sprite": "Upgrades a random item in the player's inventory with each Level Up!",
       "desc_level": "",
       "levels": {},
       "variants": {
         "Normal": {
-          "name": "adventur",
+          "name": "adventure",
           "status": "Available S4",
           "cost": "100",
           "rarity": "Rare"
         },
         "Gold": {
-          "name": "Gold adventur",
+          "name": "Gold adventure",
           "status": "Available S4",
           "cost": "1500",
           "rarity": "Rare"
         },
         "Cheat Master": {
-          "name": "Cheat Master adventur",
+          "name": "Cheat Master adventure",
           "status": "Available S4",
           "cost": "1500",
           "rarity": "Rare"
         },
         "Hacker": {
-          "name": "Hacker adventur",
+          "name": "Hacker adventure",
           "status": "Available S4",
           "cost": "1500",
           "rarity": "Rare"
         },
         "Reaper": {
-          "name": "Reaper adventur",
+          "name": "Reaper adventure",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Rare"
         },
         "Gummy": {
-          "name": "Gummy adventur",
+          "name": "Gummy adventure",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Rare"
         },
         "Holofoil": {
-          "name": "Holofoil adventur",
+          "name": "Holofoil adventure",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Rare"
         },
         "Trick Treat": {
-          "name": "Trick Treat adventur",
+          "name": "Trick Treat adventure",
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Rare"
@@ -2383,64 +2383,6 @@ const SPIRITS_DATA = {
         }
       }
     },
-    {
-      "id": "megaman",
-      "name": "Megaman",
-      "rarity": "Rare",
-      "desc_sprite": "Slip and slide around with reduced friction while Sliding.",
-      "desc_level": "Slide farther with each Level Up!",
-      "levels": {},
-      "variants": {
-        "Normal": {
-          "name": "Megaman",
-          "status": "Available S4",
-          "cost": "1750",
-          "rarity": "Rare"
-        },
-        "Gold": {
-          "name": "Gold Megaman",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Cheat Master": {
-          "name": "Cheat Master Megaman",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Hacker": {
-          "name": "Hacker Megaman",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Reaper": {
-          "name": "Reaper Megaman",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Gummy": {
-          "name": "Gummy Megaman",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Holofoil": {
-          "name": "Holofoil Megaman",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Trick Treat": {
-          "name": "Trick Treat Megaman",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        }
-      }
-    },
 	{
       "id": "xray",
       "name": "X Ray",
@@ -2496,6 +2438,64 @@ const SPIRITS_DATA = {
           "status": "Not Exist",
           "cost": "-",
           "rarity": "Legendary"
+        }
+      }
+    },
+	{
+      "id": "megaman",
+      "name": "Megaman",
+      "rarity": "Rare",
+      "desc_sprite": "Slip and slide around with reduced friction while Sliding.",
+      "desc_level": "Slide farther with each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": {
+          "name": "Megaman",
+          "status": "Available S4",
+          "cost": "1750",
+          "rarity": "Rare"
+        },
+        "Gold": {
+          "name": "Gold Megaman",
+          "status": "Not Exist",
+          "cost": "-",
+          "rarity": "Rare"
+        },
+        "Cheat Master": {
+          "name": "Cheat Master Megaman",
+          "status": "Not Exist",
+          "cost": "-",
+          "rarity": "Rare"
+        },
+        "Hacker": {
+          "name": "Hacker Megaman",
+          "status": "Not Exist",
+          "cost": "-",
+          "rarity": "Rare"
+        },
+        "Reaper": {
+          "name": "Reaper Megaman",
+          "status": "Not Exist",
+          "cost": "-",
+          "rarity": "Rare"
+        },
+        "Gummy": {
+          "name": "Gummy Megaman",
+          "status": "Not Exist",
+          "cost": "-",
+          "rarity": "Rare"
+        },
+        "Holofoil": {
+          "name": "Holofoil Megaman",
+          "status": "Not Exist",
+          "cost": "-",
+          "rarity": "Rare"
+        },
+        "Trick Treat": {
+          "name": "Trick Treat Megaman",
+          "status": "Not Exist",
+          "cost": "-",
+          "rarity": "Rare"
         }
       }
     }
