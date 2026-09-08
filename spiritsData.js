@@ -1506,8 +1506,8 @@ const SPIRITS_DATA = {
       }
     },
     {
-      "id": "Ironmouse",
-      "name": "John Wick",
+      "id": "ironmouse",
+      "name": "Ironmouse",
       "rarity": "Mythic",
       "desc_sprite": "Regenerate health over time when low.\nWhile regenerating, gain Cloak and low gravity!",
       "desc_level": "Health regenerated to increases at each Level Up:",
@@ -1520,7 +1520,7 @@ const SPIRITS_DATA = {
       },
       "variants": {
         "Normal": {
-          "name": "John Wick",
+          "name": "Ironmouse",
           "status": "Available S3",
           "cost": "6750",
           "rarity": "Mythic"
