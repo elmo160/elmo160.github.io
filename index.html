@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Fortnite Spirits Tracker</title>
   
   <link rel="icon" type="image/webp" href="eye.webp">
@@ -104,6 +104,7 @@
       font-size: 0.95rem;
       cursor: pointer;
       transition: all 0.15s ease;
+      touch-action: manipulation;
     }
 
     .tab-btn:hover {
@@ -176,6 +177,7 @@
       justify-content: center;
       gap: 8px;
       transition: transform 0.15s ease, opacity 0.2s ease, background-color 0.3s ease;
+      touch-action: manipulation;
     }
 
     .action-btn:hover {
@@ -324,7 +326,8 @@
     .badge-gem { background: linear-gradient(135deg, #FFFFFF, #94A3B8); color: #0F172A; }
     .badge-quack { background: linear-gradient(135deg, #E9D5FF, #A855F7); color: #3B0764; }
     .badge-cheat, .badge-cheat-master { background: linear-gradient(135deg, #00E676, #00C853); color: #000; }
-    .badge-hacker { background: linear-gradient(135deg, #1DE9B6, #00BFA5); color: #000; }
+    /* Nuevo tono para Hacker matching al render del espíritu */
+    .badge-hacker { background: linear-gradient(135deg, #3A86FF, #7209B7); color: #FFF; }
     .badge-reaper { background: linear-gradient(135deg, #FF1744, #D50000); color: #FFF; }
     .badge-trick, .badge-trick-treat, .badge-trick-or-treat { background: linear-gradient(135deg, #FF6D00, #DD2C00); color: #FFF; }
 
@@ -384,6 +387,14 @@
       width: 100%;
       text-align: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      cursor: pointer;
+      transition: transform 0.15s ease, filter 0.15s ease;
+      user-select: none;
+    }
+
+    .matrix-header-cell .header-badge:hover {
+      transform: translateY(-2px) scale(1.04);
+      filter: brightness(1.15);
     }
 
     .spirit-info-cell {
@@ -425,6 +436,7 @@
       justify-content: center;
       transition: transform 0.15s ease;
       padding: 2px;
+      touch-action: manipulation;
     }
 
     .mini-btn img {
@@ -468,15 +480,16 @@
       transition: transform 0.15s ease, background-color 0.15s ease;
       user-select: none;
       overflow: hidden;
+      touch-action: manipulation;
     }
 
-    .variant-slot:hover:not(.na):not(.empty-cell):not(.status-inactive) {
+    .variant-slot:hover:not(.na):not(.empty-cell):not(.status-unreleased):not(.status-unavailable) {
       transform: translateY(-2px);
     }
 
     .variant-slot img {
-      width: 82px;
-      height: 82px;
+      width: 78px;
+      height: 78px;
       object-fit: contain;
       filter: drop-shadow(0 4px 10px rgba(0,0,0,0.65));
     }
@@ -503,45 +516,53 @@
     }
 
     .variant-slot.na {
-      background-color: rgba(0, 0, 0, 0.3);
-      border: 1px dashed rgba(255, 255, 255, 0.08);
+      background-color: rgba(0, 0, 0, 0.25);
+      border: 1px dashed rgba(255, 255, 255, 0.12);
       cursor: not-allowed;
-      opacity: 0.3;
+      opacity: 0.5;
     }
 
-    .variant-slot.na::after {
-      content: "⊘";
-      font-size: 1.4rem;
-      color: rgba(255, 255, 255, 0.15);
-    }
-
-    .variant-slot.empty-cell {
-      visibility: hidden;
-      opacity: 0;
-      pointer-events: none;
-      border: none;
-      background: transparent;
-    }
-
-    .variant-slot.status-inactive {
-      opacity: 0.35;
-      filter: grayscale(60%);
+    .variant-slot.status-unreleased, .variant-slot.status-unavailable {
+      background-color: rgba(0, 0, 0, 0.35);
+      border: 1px dashed rgba(239, 68, 68, 0.3);
       cursor: not-allowed;
+      opacity: 0.55;
+      padding-bottom: 4px;
+    }
+
+    .variant-slot.status-unreleased img, .variant-slot.status-unavailable img {
+      height: 64px;
+      width: 64px;
+    }
+
+    .unreleased-label {
+      font-size: 0.62rem;
+      font-weight: 800;
+      color: #EF4444;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: auto;
+      margin-bottom: 2px;
+      z-index: 3;
+      white-space: nowrap;
+      line-height: 1;
     }
 
     .mastered-badge {
       position: absolute;
       top: 6px;
       right: 6px;
-      font-size: 0.95rem;
-      filter: drop-shadow(0 0 4px #FFD700);
       display: flex;
       align-items: center;
+      justify-content: center;
+      z-index: 5;
     }
 
     .mastered-badge img {
-      width: 18px;
-      height: 18px;
+      width: 22px !important;
+      height: 22px !important;
+      object-fit: contain !important;
+      filter: drop-shadow(0 0 4px #FFD700) !important;
     }
 
     .horizontal-view-container {
@@ -558,6 +579,8 @@
       padding: 4px 8px;
       border-bottom: 1px solid var(--border-color);
       padding-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .horizontal-view-header h2 {
@@ -571,27 +594,14 @@
 
     .horizontal-carousel {
       display: flex;
-      flex-direction: row;
+      flex-wrap: wrap;
       gap: 18px;
-      overflow-x: auto;
       padding: 12px 6px 20px 6px;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .horizontal-carousel::-webkit-scrollbar { height: 9px; }
-    .horizontal-carousel::-webkit-scrollbar-track {
-      background: rgba(0, 0, 0, 0.25);
-      border-radius: 6px;
-    }
-    .horizontal-carousel::-webkit-scrollbar-thumb {
-      background: var(--accent-color);
-      border-radius: 6px;
     }
 
     .horizontal-card {
-      flex: 0 0 190px;
-      height: 250px;
+      flex: 0 0 180px;
+      height: 240px;
       background: var(--card-bg);
       border: 1px solid var(--border-color);
       border-radius: 18px;
@@ -601,14 +611,35 @@
       align-items: center;
       justify-content: space-between;
       cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
       position: relative;
       overflow: hidden;
+      touch-action: manipulation;
     }
 
     .horizontal-card:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6), 0 0 20px var(--accent-glow);
+      transform: translateY(-4px);
+    }
+
+    .horizontal-card.status-none {
+      background-color: rgba(185, 28, 28, 0.14);
+      border: 1px solid rgba(239, 68, 68, 0.35);
+    }
+    .horizontal-card.status-none:hover {
+      border-color: #EF4444;
+      box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
+    }
+
+    .horizontal-card.status-collected {
+      background-color: rgba(78, 159, 61, 0.2);
+      border: 2px solid var(--collected-color);
+      box-shadow: 0 0 14px rgba(78, 159, 61, 0.35);
+    }
+
+    .horizontal-card.status-mastered {
+      background-color: rgba(212, 175, 55, 0.2);
+      border: 2px solid var(--mastered-color);
+      box-shadow: 0 0 18px rgba(212, 175, 55, 0.45);
     }
 
     .horizontal-card .card-top {
@@ -630,12 +661,26 @@
       width: 100%;
     }
 
-    .horizontal-card img {
-      width: 110px;
-      height: 110px;
+    .horizontal-card .spirit-main-img {
+      width: 105px;
+      height: 105px;
       object-fit: contain;
       filter: drop-shadow(0 6px 14px rgba(0,0,0,0.7));
       transition: transform 0.2s ease;
+    }
+
+    .horizontal-card .mastered-badge {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      z-index: 10;
+    }
+
+    .horizontal-card .mastered-badge img {
+      width: 22px !important;
+      height: 22px !important;
+      object-fit: contain !important;
+      filter: drop-shadow(0 0 5px #FFD700) !important;
     }
 
     .garden-gallery-container {
@@ -712,10 +757,11 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 8px;
+      padding: 8px 6px 6px 6px;
       transition: transform 0.15s ease;
       overflow: hidden;
       background: #131625;
+      touch-action: manipulation;
     }
 
     .garden-vslot.bg-variant-normal { background: radial-gradient(circle at center, rgba(148, 163, 184, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
@@ -727,18 +773,9 @@
     .garden-vslot.bg-variant-gem { background: radial-gradient(circle at center, rgba(241, 245, 249, 0.35) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-quack { background: radial-gradient(circle at center, rgba(216, 180, 254, 0.35) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-cheat, .garden-vslot.bg-variant-cheat-master { background: radial-gradient(circle at center, rgba(0, 230, 118, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
-    .garden-vslot.bg-variant-hacker { background: radial-gradient(circle at center, rgba(29, 233, 182, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
+    .garden-vslot.bg-variant-hacker { background: radial-gradient(circle at center, rgba(94, 96, 206, 0.32) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-reaper { background: radial-gradient(circle at center, rgba(255, 23, 68, 0.30) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-trick, .garden-vslot.bg-variant-trick-treat, .garden-vslot.bg-variant-trick-or-treat { background: radial-gradient(circle at center, rgba(255, 109, 0, 0.30) 0%, rgba(15, 18, 32, 0.95) 75%); }
-
-    .garden-vslot.empty-space {
-      visibility: hidden;
-      opacity: 0;
-      pointer-events: none;
-      border: none;
-      background: transparent !important;
-      box-shadow: none !important;
-    }
 
     .garden-vslot .badge-container {
       display: flex;
@@ -770,8 +807,8 @@
     }
 
     .garden-vslot img {
-      max-width: 86%;
-      max-height: 86%;
+      max-width: 78%;
+      max-height: 72%;
       width: auto;
       height: auto;
       object-fit: contain;
@@ -782,30 +819,27 @@
     }
 
     .garden-vslot.uncollected-has-img {
-      opacity: 0.45;
-      filter: grayscale(35%);
-      cursor: not-allowed;
-    }
-
-    .garden-vslot.status-inactive {
       opacity: 0.35;
-      filter: grayscale(60%);
+      filter: grayscale(40%);
       cursor: not-allowed;
     }
 
-    .garden-vslot.collected {
+    .garden-vslot.status-unreleased, .garden-vslot.status-unavailable {
+      opacity: 0.5;
+      filter: grayscale(40%);
+      cursor: not-allowed;
+      border: 1px dashed rgba(239, 68, 68, 0.35);
+    }
+
+    .garden-vslot.status-unreleased img, .garden-vslot.status-unavailable img {
+      max-height: 60%;
+    }
+
+    .garden-vslot.collected, .garden-vslot.mastered {
       opacity: 1;
       filter: none;
       border: 2px solid var(--collected-color);
       box-shadow: 0 0 14px rgba(78, 159, 61, 0.4);
-      cursor: pointer;
-    }
-
-    .garden-vslot.mastered {
-      opacity: 1;
-      filter: none;
-      border: 2px solid var(--mastered-color);
-      box-shadow: 0 0 18px rgba(212, 175, 55, 0.5);
       cursor: pointer;
     }
 
@@ -921,30 +955,44 @@
 
     .modal-footer-note { font-size: 0.8rem; color: rgba(255,255,255,0.35); font-style: italic; }
 
+    @media (max-width: 900px) {
+      .garden-gallery-container { grid-template-columns: 1fr; }
+    }
+
     @media (max-width: 768px) {
-      body { padding: 12px 8px; }
-      .container { padding: 18px 12px; border-radius: 14px; }
-      .header h1 { font-size: 1.6rem; text-align: center; }
+      body { padding: 10px 6px; }
+      .container { padding: 16px 10px; border-radius: 14px; }
+      .header h1 { font-size: 1.5rem; text-align: center; }
+      
       .tabs-container { justify-content: center; gap: 8px; }
-      .tab-btn { flex: 1 1 auto; padding: 9px 12px; font-size: 0.85rem; text-align: center; }
+      .tab-btn { flex: 1 1 auto; padding: 10px 14px; font-size: 0.88rem; text-align: center; }
+      
       .actions-bar, .filters-bar { flex-direction: column; align-items: stretch; gap: 10px; }
       .capture-group, .zoom-group { width: 100%; justify-content: space-between; }
-      .search-input, .filter-select, .capture-select, .action-btn { width: 100%; }
-      .matrix-grid { --col-first: 140px; gap: 8px; }
-      .spirit-name { font-size: 0.88rem; }
+      .search-input, .filter-select, .capture-select, .action-btn { width: 100%; min-height: 42px; }
+      
+      .matrix-grid { --col-first: 130px; gap: 6px; }
+      .spirit-name { font-size: 0.85rem; }
       .rarity-pill { font-size: 0.58rem; padding: 2px 6px; }
-      .variant-slot { height: 92px; }
-      .variant-slot img { width: 62px; height: 62px; }
-      .garden-gallery-container { grid-template-columns: 1fr; gap: 16px; }
+      
+      .variant-slot { height: 90px; }
+      .variant-slot img { width: 58px; height: 58px; }
+      
+      .horizontal-carousel { justify-content: center; gap: 12px; }
+      .horizontal-card { flex: 0 0 calc(50% - 10px); min-width: 140px; height: 210px; padding: 10px 8px; }
+      .horizontal-card .spirit-main-img { width: 85px; height: 85px; }
+      .horizontal-card .card-title { font-size: 0.88rem; }
+      
       .garden-card { padding: 16px 12px; border-radius: 18px; }
       .garden-variants-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-      .modal-content { padding: 24px 16px 20px 16px; gap: 14px; max-height: 88vh; overflow-y: auto; border-radius: 22px; }
+      
+      .modal-content { padding: 24px 16px 20px 16px; gap: 14px; max-height: 90vh; overflow-y: auto; border-radius: 22px; }
       .modal-img-frame { width: 190px; height: 190px; border-radius: 24px; }
       .modal-img-frame img { width: 145px; height: 145px; }
-      .modal-title { font-size: 1.6rem; }
-      .modal-desc-main { font-size: 1rem; }
-      .modal-desc-sub { font-size: 0.85rem; }
-      .modal-xp-banner { font-size: 0.9rem; padding: 12px; }
+      .modal-title { font-size: 1.5rem; }
+      .modal-desc-main { font-size: 0.98rem; }
+      .modal-desc-sub { font-size: 0.82rem; }
+      .modal-xp-banner { font-size: 0.88rem; padding: 12px; }
     }
   </style>
 </head>
@@ -1023,16 +1071,16 @@
         <option value="all">All Variants</option>
         <option value="Normal">Normal</option>
         <option value="Gold">Gold</option>
+        <option value="Cheat Master">Cheat Master</option>
+        <option value="Hacker">Hacker</option>
+        <option value="Trick or Treat">Trick or Treat</option>
+        <option value="Holofoil">Holofoil</option>
         <option value="Gummy">Gummy</option>
         <option value="Galaxy">Galaxy</option>
-        <option value="Holofoil">Holofoil</option>
         <option value="Cube">Cube</option>
         <option value="Gem">Gem</option>
         <option value="Quack">Quack</option>
-        <option value="Cheat Master">Cheat Master</option>
-        <option value="Hacker">Hacker</option>
         <option value="Reaper">Reaper</option>
-        <option value="Trick or Treat">Trick or Treat</option>
       </select>
 
       <select id="rarity-filter" class="filter-select" onchange="onFilterChange()">
@@ -1152,7 +1200,7 @@
       "gem": "radial-gradient(circle at center, rgba(241, 245, 249, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "quack": "radial-gradient(circle at center, rgba(216, 180, 254, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "cheat": "radial-gradient(circle at center, rgba(0, 230, 118, 0.35) 0%, rgba(14, 18, 30, 0.95) 80%)",
-      "hacker": "radial-gradient(circle at center, rgba(29, 233, 182, 0.35) 0%, rgba(14, 18, 30, 0.95) 80%)",
+      "hacker": "radial-gradient(circle at center, rgba(94, 96, 206, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "reaper": "radial-gradient(circle at center, rgba(255, 23, 68, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "trick": "radial-gradient(circle at center, rgba(255, 109, 0, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)"
     };
@@ -1168,7 +1216,7 @@
       "gem": "#FFFFFF",
       "quack": "#C084FC",
       "cheat": "#00E676",
-      "hacker": "#1DE9B6",
+      "hacker": "#5E60CE",
       "reaper": "#FF1744",
       "trick": "#FF6D00"
     };
@@ -1209,7 +1257,6 @@
     function persistState() {
       localStorage.setItem('fortnite_spirits_tab', currentTab);
       localStorage.setItem('fortnite_spirits_zoom', currentZoom);
-      localStorage.setItem('fortnite_spirits_search', document.getElementById('search-input')?.value || '');
       localStorage.setItem('fortnite_spirits_variant', document.getElementById('variant-filter')?.value || 'all');
       localStorage.setItem('fortnite_spirits_rarity', document.getElementById('rarity-filter')?.value || 'all');
       localStorage.setItem('fortnite_spirits_status', document.getElementById('status-filter')?.value || 'all');
@@ -1222,10 +1269,32 @@
       renderedPanels.Garden = false;
     }
 
+    function resetVariantFilter() {
+      const searchInput = document.getElementById('search-input');
+      const variantSelect = document.getElementById('variant-filter');
+      if (searchInput) searchInput.value = '';
+      if (variantSelect) variantSelect.value = 'all';
+      persistState();
+      invalidateAllPanels();
+      renderActiveTab();
+    }
+
     function onFilterChange() {
       persistState();
       invalidateAllPanels();
       renderActiveTab();
+    }
+
+    function toggleHeaderVariant(variantName) {
+      const select = document.getElementById('variant-filter');
+      if (!select) return;
+
+      if (select.value === variantName) {
+        select.value = 'all';
+      } else {
+        select.value = variantName;
+      }
+      onFilterChange();
     }
 
     function doesStatusMatchFilter(spirit, vName, currentStatus, filter) {
@@ -1256,16 +1325,17 @@
 
     function isVariantExist(spirit, variantName) {
       const status = getVariantRawStatus(spirit, variantName);
-      return !(status === "Not Exist" || status === "Unreleased");
+      return !(status === "Not Exist" || status === "Unreleased" || status === "Unavailable");
     }
 
     function isVariantInactive(spirit, variantName) {
       const status = getVariantRawStatus(spirit, variantName);
-      return status === "Unavailable" || status === "Blocked";
+      return status === "Unreleased" || status === "Unavailable" || status === "Blocked";
     }
 
     function isVariantDefined(spirit, variantName) {
-      return isVariantExist(spirit, variantName);
+      const status = getVariantRawStatus(spirit, variantName);
+      return status !== "Not Exist";
     }
 
     function getVariantsList() {
@@ -1273,9 +1343,9 @@
         return (typeof S3_VARIANTS !== 'undefined') ? S3_VARIANTS : ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"];
       }
       if (currentTab === 'S4') {
-        return (typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Hacker", "Reaper", "Gummy", "Holofoil", "Trick or Treat"];
+        return (typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Hacker", "Trick or Treat", "Holofoil", "Reaper", "Gummy"];
       }
-      return ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack", "Cheat Master", "Hacker", "Reaper", "Trick or Treat"];
+      return ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack", "Cheat Master", "Hacker", "Trick or Treat", "Reaper"];
     }
 
     function getSpiritsList() {
@@ -1303,6 +1373,9 @@
     function switchTab(tab, element) {
       currentTab = tab;
       
+      const searchInput = document.getElementById('search-input');
+      if (searchInput) searchInput.value = '';
+
       document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
       const activeBtn = element || document.getElementById(`btn-tab-${tab}`);
       if (activeBtn) activeBtn.classList.add('active');
@@ -1326,10 +1399,8 @@
 
       persistState();
       updateProgressUI();
-
-      if (!renderedPanels[tab]) {
-        renderActiveTab();
-      }
+      invalidateAllPanels();
+      renderActiveTab();
     }
 
     function updateProgressUI() {
@@ -1338,9 +1409,13 @@
       let masteredCount = 0;
 
       const spirits = getSpiritsList();
-      const variantsList = getVariantsList();
 
       spirits.forEach(spirit => {
+        const season = spirit._season || 'S3';
+        const variantsList = (season === 'S4')
+          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Hacker", "Trick or Treat", "Holofoil", "Reaper", "Gummy"])
+          : ((typeof S3_VARIANTS !== 'undefined') ? S3_VARIANTS : ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"]);
+
         variantsList.forEach(vName => {
           if (isVariantExist(spirit, vName) && !isVariantInactive(spirit, vName)) {
             totalItems++;
@@ -1365,15 +1440,23 @@
 
     function renderActiveTab(overrideStatusFilter) {
       const selectedVariant = document.getElementById('variant-filter')?.value || 'all';
+      const searchVal = (document.getElementById('search-input')?.value || '').toLowerCase().trim();
       const activePanel = document.getElementById(`panel-${currentTab}`);
       if (!activePanel) return;
 
-      if (selectedVariant !== 'all') {
-        renderHorizontalVariantView(activePanel, selectedVariant, overrideStatusFilter);
-      } else if (currentTab === 'Garden') {
+      if (currentTab === 'Garden') {
         renderGardenGallery(activePanel, overrideStatusFilter);
       } else {
-        renderMatrixTable(activePanel, overrideStatusFilter);
+        const variantsList = getVariantsList();
+        const matchedVariant = variantsList.find(v => v.toLowerCase() === searchVal || (VARIANT_SLUGS[v] && VARIANT_SLUGS[v] === searchVal));
+
+        if (selectedVariant !== 'all') {
+          renderHorizontalVariantView(activePanel, selectedVariant, overrideStatusFilter);
+        } else if (matchedVariant) {
+          renderHorizontalVariantView(activePanel, matchedVariant, overrideStatusFilter);
+        } else {
+          renderMatrixTable(activePanel, overrideStatusFilter);
+        }
       }
 
       renderedPanels[currentTab] = true;
@@ -1387,7 +1470,9 @@
 
       const fallbacks = [
         `assets/${seasonDir}/${spiritSlug}_${variantSlug}.webp`,
+        `assets/unreleased/${spiritSlug}_${variantSlug}.webp`,
         `assets/${seasonDir}/${cleanSlug}_${variantSlug}.webp`,
+        `assets/unreleased/${cleanSlug}_${variantSlug}.webp`,
         `${spiritSlug}_${variantSlug}.webp`
       ];
 
@@ -1421,8 +1506,6 @@
 
       const badgeClass = getVariantBadgeClass(variantName);
       const variantSlug = VARIANT_SLUGS[variantName] || variantName.toLowerCase();
-      const bgGradient = VARIANT_GRADIENTS[variantSlug] || VARIANT_GRADIENTS["normal"];
-      const borderColor = VARIANT_BORDER_COLORS[variantSlug] || "#94A3B8";
 
       let matchingSpirits = [];
 
@@ -1447,7 +1530,21 @@
       });
 
       if (matchingSpirits.length === 0) {
-        container.innerHTML = `<div class="empty-warning" style="text-align:center; padding:40px; color:var(--text-muted);">⚠️ No hay espíritus disponibles para la variante <strong>${variantName}</strong> con los filtros actuales.</div>`;
+        container.innerHTML = `
+          <div class="horizontal-view-container">
+            <div class="horizontal-view-header">
+              <h2>
+                <span>Variant:</span>
+                <span class="header-badge ${badgeClass}" onclick="resetVariantFilter()" title="Click to clear">${variantName} ✕</span>
+              </h2>
+              <button class="action-btn btn-clear" onclick="resetVariantFilter()" style="padding: 6px 14px; font-size: 0.82rem;">
+                ⬅️ Back to Full Table
+              </button>
+            </div>
+            <div class="empty-warning" style="text-align:center; padding:40px; color:var(--text-muted);">
+              ⚠️ No spirits available for variant <strong>${variantName}</strong> with current filters.
+            </div>
+          </div>`;
         return;
       }
 
@@ -1455,10 +1552,13 @@
         <div class="horizontal-view-container">
           <div class="horizontal-view-header">
             <h2>
-              <span>Variante:</span>
-              <span class="header-badge ${badgeClass}">${variantName}</span>
-              <span style="font-size: 0.9rem; color: var(--text-muted);">(${matchingSpirits.length} espíritus)</span>
+              <span>Variant:</span>
+              <span class="header-badge ${badgeClass}" onclick="resetVariantFilter()" title="Click to clear filter">${variantName} ✕</span>
+              <span style="font-size: 0.9rem; color: var(--text-muted);">(${matchingSpirits.length} spirits)</span>
             </h2>
+            <button class="action-btn btn-clear" onclick="resetVariantFilter()" style="padding: 6px 14px; font-size: 0.82rem;">
+              ⬅️ Back to Full Table
+            </button>
           </div>
           <div class="horizontal-carousel">
       `;
@@ -1470,15 +1570,15 @@
         const slotStateClass = `status-${currentStatus}`;
 
         html += `
-          <div class="horizontal-card ${slotStateClass}" style="background: ${bgGradient}; border-color: ${borderColor};" onclick="openSpiritModal('${spiritId}', '${variantName}')">
+          <div class="horizontal-card ${slotStateClass}" onclick="toggleVariantState('${spiritId}', '${variantName}')">
+            ${currentStatus === 'mastered' ? '<span class="mastered-badge"><img src="crown.webp" onerror="this.onerror=null; this.src=\'assets/crown.webp\';" alt="👑"></span>' : ''}
             <div class="card-top">
               <span class="badge-variant ${badgeClass}">${variantName}</span>
               <span class="rarity-pill rarity-${spiritRarity}">${spiritRarity.toUpperCase()}</span>
             </div>
-            <img src="${imgPathPrimary}" alt="${spiritName}" loading="lazy" decoding="async"
+            <img class="spirit-main-img" src="${imgPathPrimary}" alt="${spiritName}" loading="lazy" decoding="async"
                  onerror="handleImgError(this, '${seasonDir}', '${spiritSlug}', '${variantSlug}')">
             <span class="card-title">${spiritName}</span>
-            ${currentStatus === 'mastered' ? '<span class="mastered-badge"><img src="crown.webp" onerror="this.onerror=null; this.src=\'assets/crown.webp\';" alt="👑"></span>' : ''}
           </div>
         `;
       });
@@ -1493,10 +1593,10 @@
 
     function renderMatrixTable(container, overrideStatusFilter) {
       const spirits = getSpiritsList();
-      const fullVariantsList = getVariantsList();
+      const activeVariants = getVariantsList();
 
       if (spirits.length === 0) {
-        container.innerHTML = '<div class="empty-warning">⚠️ No se encontraron espíritus para esta categoría.</div>';
+        container.innerHTML = '<div class="empty-warning">⚠️ No spirits found for this category.</div>';
         return;
       }
 
@@ -1504,17 +1604,9 @@
       const rarityFilter = document.getElementById('rarity-filter')?.value || 'all';
       const statusFilter = overrideStatusFilter !== undefined ? overrideStatusFilter : (document.getElementById('status-filter')?.value || 'all');
 
-      let activeVariants = fullVariantsList;
-
-      if (searchVal) {
-        const matchingVarNames = fullVariantsList.filter(v => v.toLowerCase().includes(searchVal));
-        if (matchingVarNames.length > 0) {
-          activeVariants = fullVariantsList.filter(vName => vName.toLowerCase().includes(searchVal));
-        }
-      }
-
+      let visibleVariants = activeVariants;
       if (statusFilter !== 'all') {
-        activeVariants = activeVariants.filter(vName => 
+        visibleVariants = activeVariants.filter(vName => 
           spirits.some(spirit => {
             const status = userProgress[`${spirit.id}_${vName}`] || 'none';
             return doesStatusMatchFilter(spirit, vName, status, statusFilter);
@@ -1522,12 +1614,12 @@
         );
       }
 
-      let html = `<div class="matrix-grid" style="--col-count: ${activeVariants.length};">`;
+      let html = `<div class="matrix-grid" style="--col-count: ${visibleVariants.length};">`;
 
       html += `<div class="matrix-header-cell spirit-col">SPRITE</div>`;
-      activeVariants.forEach(vName => {
+      visibleVariants.forEach(vName => {
         const badgeClass = getVariantBadgeClass(vName);
-        html += `<div class="matrix-header-cell"><span class="header-badge ${badgeClass}">${vName}</span></div>`;
+        html += `<div class="matrix-header-cell"><span class="header-badge ${badgeClass}" onclick="toggleHeaderVariant('${vName}')" title="Filter by ${vName}">${vName}</span></div>`;
       });
 
       spirits.forEach(spirit => {
@@ -1536,15 +1628,12 @@
         const spiritId = spirit.id || spiritName;
 
         const matchesName = spiritName.toLowerCase().includes(searchVal);
-        const matchesVariant = activeVariants.some(vName => 
-          vName.toLowerCase().includes(searchVal) && isVariantExist(spirit, vName)
-        );
 
-        if (searchVal && !matchesName && !matchesVariant) return;
+        if (searchVal && !matchesName) return;
         if (rarityFilter !== 'all' && spiritRarity.toLowerCase() !== rarityFilter.toLowerCase()) return;
 
         let matchingVariantsCount = 0;
-        activeVariants.forEach(vName => {
+        visibleVariants.forEach(vName => {
           const currentStatus = userProgress[`${spiritId}_${vName}`] || 'none';
           if (doesStatusMatchFilter(spirit, vName, currentStatus, statusFilter)) {
             matchingVariantsCount++;
@@ -1576,7 +1665,7 @@
         const spiritSlug = SPIRIT_SLUGS[spiritName.toLowerCase()] || spiritName.toLowerCase().replace(/\s+/g, '-');
         const seasonDir = spirit._season || currentTab;
 
-        activeVariants.forEach(vName => {
+        visibleVariants.forEach(vName => {
           const exists = isVariantExist(spirit, vName);
           const inactive = isVariantInactive(spirit, vName);
           const key = `${spiritId}_${vName}`;
@@ -1585,8 +1674,18 @@
 
           if (!isMatch) {
             html += `<div class="variant-slot empty-cell"></div>`;
-          } else if (!exists || inactive) {
+          } else if (!exists && !inactive) {
             html += `<div class="variant-slot na"></div>`;
+          } else if (inactive) {
+            const variantSlug = VARIANT_SLUGS[vName] || vName.toLowerCase();
+            const imgPathPrimary = `assets/unreleased/${spiritSlug}_${variantSlug}.webp`;
+            html += `
+              <div class="variant-slot status-unreleased">
+                <img src="${imgPathPrimary}" alt="${spiritName}" loading="lazy" decoding="async"
+                     onerror="handleImgError(this, '${seasonDir}', '${spiritSlug}', '${variantSlug}')">
+                <span class="unreleased-label">Unreleased</span>
+              </div>
+            `;
           } else {
             const variantSlug = VARIANT_SLUGS[vName] || vName.toLowerCase();
             const imgPathPrimary = `assets/${seasonDir}/${spiritSlug}_${variantSlug}.webp`;
@@ -1612,45 +1711,68 @@
 
     function renderGardenGallery(container, overrideStatusFilter) {
       const spirits = getSpiritsList();
-      const canonicalVariantsList = getVariantsList();
 
       const searchVal = (document.getElementById('search-input')?.value || '').toLowerCase().trim();
+      const variantFilter = document.getElementById('variant-filter')?.value || 'all';
       const rarityFilter = document.getElementById('rarity-filter')?.value || 'all';
       const statusFilter = overrideStatusFilter !== undefined ? overrideStatusFilter : (document.getElementById('status-filter')?.value || 'all');
 
-      let html = `<div class="garden-gallery-container">`;
+      let html = '';
+
+      if (variantFilter !== 'all' || searchVal !== '') {
+        const filterTitle = variantFilter !== 'all' ? variantFilter : searchVal;
+        const badgeClass = getVariantBadgeClass(variantFilter !== 'all' ? variantFilter : 'normal');
+        html += `
+          <div class="horizontal-view-header" style="margin-bottom: 20px;">
+            <h2>
+              <span>Garden Filter:</span>
+              <span class="header-badge ${badgeClass}" onclick="resetVariantFilter()" title="Click to clear filter">${filterTitle} ✕</span>
+            </h2>
+            <button class="action-btn btn-clear" onclick="resetVariantFilter()" style="padding: 6px 14px; font-size: 0.82rem;">
+              ⬅️ Back to Full View
+            </button>
+          </div>
+        `;
+      }
+
+      html += `<div class="garden-gallery-container">`;
+
+      let visibleCardCount = 0;
 
       spirits.forEach(spirit => {
         const spiritName = spirit.name || 'Unknown';
         const spiritRarity = (spirit.rarity || 'Rare').toLowerCase();
         const spiritId = spirit.id || spiritName;
+        const seasonDir = spirit._season || 'S3';
+
+        // Obtener el orden estricto de variantes de la temporada correspondiente al espíritu
+        const spiritVariantsList = (seasonDir === 'S4')
+          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Hacker", "Trick or Treat", "Holofoil", "Reaper", "Gummy"])
+          : ((typeof S3_VARIANTS !== 'undefined') ? S3_VARIANTS : ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"]);
 
         const matchesName = spiritName.toLowerCase().includes(searchVal);
-        const matchesVariant = canonicalVariantsList.some(vName => 
+        const matchesVariantSearch = spiritVariantsList.some(vName => 
           vName.toLowerCase().includes(searchVal) && isVariantDefined(spirit, vName)
         );
 
-        if (searchVal && !matchesName && !matchesVariant) return;
+        if (searchVal && !matchesName && !matchesVariantSearch) return;
         if (rarityFilter !== 'all' && spiritRarity !== rarityFilter.toLowerCase()) return;
 
-        const slotsMap = canonicalVariantsList.map((vName, idx) => {
+        const validSlots = spiritVariantsList.filter(vName => {
           const defined = isVariantDefined(spirit, vName);
-          const inactive = isVariantInactive(spirit, vName);
+          if (!defined) return false;
+
           const currentStatus = userProgress[`${spiritId}_${vName}`] || 'none';
           const isMatch = doesStatusMatchFilter(spirit, vName, currentStatus, statusFilter);
-          return { vName, defined, inactive, currentStatus, isMatch, idx };
+          const matchesVariantFilter = (variantFilter === 'all') || (vName.toLowerCase() === variantFilter.toLowerCase());
+          const matchesSearchExact = !searchVal || matchesName || vName.toLowerCase().includes(searchVal);
+
+          return isMatch && matchesVariantFilter && matchesSearchExact;
         });
 
-        const rows = [];
-        for (let i = 0; i < slotsMap.length; i += 4) {
-          rows.push(slotsMap.slice(i, i + 4));
-        }
+        if (validSlots.length === 0) return;
 
-        const activeRows = rows.filter(row => 
-          row.some(slot => slot.defined && (statusFilter === 'all' || slot.isMatch))
-        );
-
-        if (activeRows.length === 0) return;
+        visibleCardCount++;
 
         html += `
           <div class="garden-card card-rarity-${spiritRarity}">
@@ -1662,37 +1784,47 @@
         `;
 
         const spiritSlug = SPIRIT_SLUGS[spiritName.toLowerCase()] || spiritName.toLowerCase().replace(/\s+/g, '-');
-        const seasonDir = spirit._season || 'S3';
         const seasonPinClass = (seasonDir === 'S4') ? 'season-tag-s4' : 'season-tag-s3';
 
-        activeRows.forEach(row => {
-          row.forEach(slot => {
-            const { vName, defined, inactive, currentStatus, isMatch } = slot;
+        validSlots.forEach(vName => {
+          const inactive = isVariantInactive(spirit, vName);
+          const currentStatus = userProgress[`${spiritId}_${vName}`] || 'none';
+          const variantSlug = VARIANT_SLUGS[vName] || vName.toLowerCase();
+          const badgeClass = getVariantBadgeClass(vName);
+          const imgPathPrimary = inactive 
+            ? `assets/unreleased/${spiritSlug}_${variantSlug}.webp`
+            : `assets/${seasonDir}/${spiritSlug}_${variantSlug}.webp`;
+            
+          const isObtained = (currentStatus === 'collected' || currentStatus === 'mastered') && !inactive;
 
-            if (!defined || (!isMatch && statusFilter !== 'all')) {
-              html += `<div class="garden-vslot empty-space"></div>`;
-            } else {
-              const variantSlug = VARIANT_SLUGS[vName] || vName.toLowerCase();
-              const badgeClass = getVariantBadgeClass(vName);
-              const imgPathPrimary = `assets/${seasonDir}/${spiritSlug}_${variantSlug}.webp`;
-              const isObtained = (currentStatus === 'collected' || currentStatus === 'mastered') && !inactive;
-              const clickAttr = (isObtained && !inactive) ? `onclick="openSpiritModal('${spiritId}', '${vName}')"` : '';
-
-              let slotClass = inactive ? 'status-inactive' : (isObtained ? currentStatus : 'uncollected-has-img');
-              const bgVariantClass = `bg-variant-${variantSlug.replace(/\s+/g, '-')}`;
-
-              html += `
-                <div class="garden-vslot ${bgVariantClass} ${slotClass}" ${clickAttr}>
-                  <div class="badge-container">
-                    <span class="badge-variant ${badgeClass}">${vName}</span>
-                    <span class="season-tag ${seasonPinClass}">${seasonDir}</span>
-                  </div>
-                  <img src="${imgPathPrimary}" alt="${spiritName}" loading="lazy" decoding="async"
-                       onerror="handleImgError(this, '${seasonDir}', '${spiritSlug}', '${variantSlug}')">
+          if (inactive) {
+            html += `
+              <div class="garden-vslot bg-variant-${variantSlug.replace(/\s+/g, '-')} status-unreleased">
+                <div class="badge-container">
+                  <span class="badge-variant ${badgeClass}">${vName}</span>
+                  <span class="season-tag ${seasonPinClass}">${seasonDir}</span>
                 </div>
-              `;
-            }
-          });
+                <img src="${imgPathPrimary}" alt="${spiritName}" loading="lazy" decoding="async"
+                     onerror="handleImgError(this, '${seasonDir}', '${spiritSlug}', '${variantSlug}')">
+                <span class="unreleased-label">Unreleased</span>
+              </div>
+            `;
+          } else {
+            const clickAttr = isObtained ? `onclick="openSpiritModal('${spiritId}', '${vName}')"` : '';
+            let slotClass = isObtained ? 'collected' : 'uncollected-has-img';
+            const bgVariantClass = `bg-variant-${variantSlug.replace(/\s+/g, '-')}`;
+
+            html += `
+              <div class="garden-vslot ${bgVariantClass} ${slotClass}" ${clickAttr}>
+                <div class="badge-container">
+                  <span class="badge-variant ${badgeClass}">${vName}</span>
+                  <span class="season-tag ${seasonPinClass}">${seasonDir}</span>
+                </div>
+                <img src="${imgPathPrimary}" alt="${spiritName}" loading="lazy" decoding="async"
+                     onerror="handleImgError(this, '${seasonDir}', '${spiritSlug}', '${variantSlug}')">
+              </div>
+            `;
+          }
         });
 
         html += `
@@ -1702,6 +1834,24 @@
       });
 
       html += `</div>`;
+
+      if (visibleCardCount === 0) {
+        html = `
+          <div class="horizontal-view-header" style="margin-bottom: 20px;">
+            <h2>
+              <span>Garden Filter:</span>
+              <span class="header-badge badge-normal" onclick="resetVariantFilter()" title="Click to clear filter">${variantFilter !== 'all' ? variantFilter : searchVal} ✕</span>
+            </h2>
+            <button class="action-btn btn-clear" onclick="resetVariantFilter()" style="padding: 6px 14px; font-size: 0.82rem;">
+              ⬅️ Back to Full View
+            </button>
+          </div>
+          <div class="empty-warning" style="text-align:center; padding:40px; color:var(--text-muted);">
+            ⚠️ No spirits found matching current filters.
+          </div>
+        `;
+      }
+
       container.innerHTML = html;
     }
 
@@ -1733,7 +1883,11 @@
       const targetSpirit = spirits.find(s => s.id === spiritId);
       if (!targetSpirit) return;
 
-      const variantsList = getVariantsList();
+      const season = targetSpirit._season || 'S3';
+      const variantsList = (season === 'S4')
+        ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Hacker", "Trick or Treat", "Holofoil", "Reaper", "Gummy"])
+        : ((typeof S3_VARIANTS !== 'undefined') ? S3_VARIANTS : ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"]);
+
       variantsList.forEach(vName => {
         if (isVariantExist(targetSpirit, vName) && !isVariantInactive(targetSpirit, vName)) {
           if (targetState === 'none') {
@@ -1753,8 +1907,12 @@
     function masterAllCurrentTab() { setTabState('mastered'); }
     function clearAllCurrentTab() {
       const spirits = getSpiritsList();
-      const variantsList = getVariantsList();
       spirits.forEach(spirit => {
+        const season = spirit._season || 'S3';
+        const variantsList = (season === 'S4')
+          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Hacker", "Trick or Treat", "Holofoil", "Reaper", "Gummy"])
+          : ((typeof S3_VARIANTS !== 'undefined') ? S3_VARIANTS : ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"]);
+
         variantsList.forEach(vName => {
           delete userProgress[`${spirit.id}_${vName}`];
         });
@@ -1766,8 +1924,12 @@
 
     function setTabState(targetState) {
       const spirits = getSpiritsList();
-      const variantsList = getVariantsList();
       spirits.forEach(spirit => {
+        const season = spirit._season || 'S3';
+        const variantsList = (season === 'S4')
+          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Hacker", "Trick or Treat", "Holofoil", "Reaper", "Gummy"])
+          : ((typeof S3_VARIANTS !== 'undefined') ? S3_VARIANTS : ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"]);
+
         variantsList.forEach(vName => {
           if (isVariantExist(spirit, vName) && !isVariantInactive(spirit, vName)) {
             userProgress[`${spirit.id}_${vName}`] = targetState;
@@ -1887,10 +2049,10 @@
           link.href = canvas.toDataURL('image/png');
           link.click();
         } else {
-          alert('html2canvas.min.js no está cargado correctamente.');
+          alert('html2canvas.min.js is not loaded properly.');
         }
       } catch (err) {
-        console.error("Error al exportar captura:", err);
+        console.error("Capture Export Error:", err);
       } finally {
         captureElement.classList.remove('is-capturing');
         btn.innerHTML = originalText;
@@ -1903,14 +2065,15 @@
     }
 
     window.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('search-input');
+      if (searchInput) searchInput.value = '';
+
       const savedTab = localStorage.getItem('fortnite_spirits_tab') || 'S3';
-      const savedSearch = localStorage.getItem('fortnite_spirits_search') || '';
       const savedVariant = localStorage.getItem('fortnite_spirits_variant') || 'all';
       const savedRarity = localStorage.getItem('fortnite_spirits_rarity') || 'all';
       const savedStatus = localStorage.getItem('fortnite_spirits_status') || 'all';
       const savedScope = localStorage.getItem('fortnite_spirits_capture_scope') || 'all';
 
-      if (document.getElementById('search-input')) document.getElementById('search-input').value = savedSearch;
       if (document.getElementById('variant-filter')) document.getElementById('variant-filter').value = savedVariant;
       if (document.getElementById('rarity-filter')) document.getElementById('rarity-filter').value = savedRarity;
       if (document.getElementById('status-filter')) document.getElementById('status-filter').value = savedStatus;

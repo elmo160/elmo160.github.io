@@ -1,7 +1,7 @@
 // Fortnite Spirits Data Config (Auto-generated from Espiritus Database.xlsx)
 
 const S3_VARIANTS = ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"];
-const S4_VARIANTS = ["Normal", "Gold", "Cheat Master", "Hacker", "Reaper", "Gummy", "Holofoil", "Trick or Treat"];
+const S4_VARIANTS = ["Normal", "Gold", "Cheat Master", "Hacker", "Trick or Treat", "Holofoil", "Reaper", "Gummy"];
 
 const SPIRITS_DATA = {
   "S3": [
@@ -2081,7 +2081,7 @@ const SPIRITS_DATA = {
         },
         "Holofoil": {
           "name": "Holofoil JackRabbit",
-          "status": "Not Exist",
+          "status": "Unavailable",
           "cost": "-",
           "rarity": "Legendary"
         },
