@@ -1,7 +1,7 @@
 // Fortnite Spirits Data Config (Auto-generated from Espiritus Database.xlsx)
 
 const S3_VARIANTS = ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"];
-const S4_VARIANTS = ["Normal", "Gold", "Cheat Master", "Hacker", "Trick or Treat", "Holofoil", "Reaper", "Gummy"];
+const S4_VARIANTS = ["Normal", "Gold", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"];
 
 const SPIRITS_DATA = {
   "S3": [
@@ -19,54 +19,14 @@ const SPIRITS_DATA = {
         "Lvl5": "6 Shield"
       },
       "variants": {
-        "Normal": {
-          "name": "Water",
-          "status": "Available S3",
-          "cost": "100",
-          "rarity": "Rare"
-        },
-        "Gold": {
-          "name": "Gold Water",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Gummy": {
-          "name": "Gummy Water",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Galaxy": {
-          "name": "Galaxy Water",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Holofoil": {
-          "name": "Gem Water",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Cube": {
-          "name": "Holofoil Water",
-          "status": "Not Exist",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Gem": {
-          "name": "Cube Water",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Quack": {
-          "name": "Quack Water",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        }
+        "Normal": { "name": "Water", "status": "Available S3", "cost": "100", "rarity": "Rare" },
+        "Gold": { "name": "Gold Water", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Gummy": { "name": "Gummy Water", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Galaxy": { "name": "Galaxy Water", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Holofoil": { "name": "Gem Water", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Cube": { "name": "Holofoil Water", "status": "Not Exist", "cost": "2700", "rarity": "Rare" },
+        "Gem": { "name": "Cube Water", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Quack": { "name": "Quack Water", "status": "Available S3", "cost": "2700", "rarity": "Rare" }
       }
     },
     {
@@ -83,54 +43,14 @@ const SPIRITS_DATA = {
         "Lvl5": "0.2"
       },
       "variants": {
-        "Normal": {
-          "name": "Earth",
-          "status": "Available S3",
-          "cost": "100",
-          "rarity": "Rare"
-        },
-        "Gold": {
-          "name": "Gold Earth",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Gummy": {
-          "name": "Gummy Earth",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Galaxy": {
-          "name": "Galaxy Earth",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Holofoil": {
-          "name": "Gem Earth",
-          "status": "Unreleased",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Cube": {
-          "name": "Holofoil Earth",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Gem": {
-          "name": "Cube Earth",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Quack": {
-          "name": "Quack Earth",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        }
+        "Normal": { "name": "Earth", "status": "Available S3", "cost": "100", "rarity": "Rare" },
+        "Gold": { "name": "Gold Earth", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Gummy": { "name": "Gummy Earth", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Galaxy": { "name": "Galaxy Earth", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Holofoil": { "name": "Gem Earth", "status": "Unreleased", "cost": "2700", "rarity": "Rare" },
+        "Cube": { "name": "Holofoil Earth", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Gem": { "name": "Cube Earth", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Quack": { "name": "Quack Earth", "status": "Available S3", "cost": "2700", "rarity": "Rare" }
       }
     },
     {
@@ -147,54 +67,14 @@ const SPIRITS_DATA = {
         "Lvl5": "50 Damage"
       },
       "variants": {
-        "Normal": {
-          "name": "Fire",
-          "status": "Available S3",
-          "cost": "100",
-          "rarity": "Rare"
-        },
-        "Gold": {
-          "name": "Gold Fire",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Gummy": {
-          "name": "Gummy Fire",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Galaxy": {
-          "name": "Galaxy Fire",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Holofoil": {
-          "name": "Gem Fire",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Cube": {
-          "name": "Holofoil Fire",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Gem": {
-          "name": "Cube Fire",
-          "status": "Not Exist",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Quack": {
-          "name": "Quack Fire",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        }
+        "Normal": { "name": "Fire", "status": "Available S3", "cost": "100", "rarity": "Rare" },
+        "Gold": { "name": "Gold Fire", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Gummy": { "name": "Gummy Fire", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Galaxy": { "name": "Galaxy Fire", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Holofoil": { "name": "Gem Fire", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Cube": { "name": "Holofoil Fire", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Gem": { "name": "Cube Fire", "status": "Not Exist", "cost": "2700", "rarity": "Rare" },
+        "Quack": { "name": "Quack Fire", "status": "Available S3", "cost": "2700", "rarity": "Rare" }
       }
     },
     {
@@ -211,54 +91,14 @@ const SPIRITS_DATA = {
         "Lvl5": "8 Shield"
       },
       "variants": {
-        "Normal": {
-          "name": "Duck",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Epic"
-        },
-        "Gold": {
-          "name": "Gold Duck",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Gummy": {
-          "name": "Gummy Duck",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Galaxy": {
-          "name": "Galaxy Duck",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Holofoil": {
-          "name": "Gem Duck",
-          "status": "Unavailable",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Cube": {
-          "name": "Holofoil Duck",
-          "status": "Unavailable",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Gem": {
-          "name": "Cube Duck",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Quack": {
-          "name": "Quack Duck",
-          "status": "Not Exist",
-          "cost": "4000",
-          "rarity": "Epic"
-        }
+        "Normal": { "name": "Duck", "status": "Available S3", "cost": "2700", "rarity": "Epic" },
+        "Gold": { "name": "Gold Duck", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Gummy": { "name": "Gummy Duck", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Galaxy": { "name": "Galaxy Duck", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Holofoil": { "name": "Gem Duck", "status": "Unavailable", "cost": "4000", "rarity": "Epic" },
+        "Cube": { "name": "Holofoil Duck", "status": "Unavailable", "cost": "4000", "rarity": "Epic" },
+        "Gem": { "name": "Cube Duck", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Quack": { "name": "Quack Duck", "status": "Not Exist", "cost": "4000", "rarity": "Epic" }
       }
     },
     {
@@ -275,54 +115,14 @@ const SPIRITS_DATA = {
         "Lvl5": "5 Seconds"
       },
       "variants": {
-        "Normal": {
-          "name": "Ghost",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Epic"
-        },
-        "Gold": {
-          "name": "Gold Ghost",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Gummy": {
-          "name": "Gummy Ghost",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Galaxy": {
-          "name": "Galaxy Ghost",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Holofoil": {
-          "name": "Gem Ghost",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Cube": {
-          "name": "Holofoil Ghost",
-          "status": "Not Exist",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Gem": {
-          "name": "Cube Ghost",
-          "status": "Not Exist",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Quack": {
-          "name": "Quack Ghost",
-          "status": "Not Exist",
-          "cost": "4000",
-          "rarity": "Epic"
-        }
+        "Normal": { "name": "Ghost", "status": "Available S3", "cost": "2700", "rarity": "Epic" },
+        "Gold": { "name": "Gold Ghost", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Gummy": { "name": "Gummy Ghost", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Galaxy": { "name": "Galaxy Ghost", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Holofoil": { "name": "Gem Ghost", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Cube": { "name": "Holofoil Ghost", "status": "Not Exist", "cost": "4000", "rarity": "Epic" },
+        "Gem": { "name": "Cube Ghost", "status": "Not Exist", "cost": "4000", "rarity": "Epic" },
+        "Quack": { "name": "Quack Ghost", "status": "Not Exist", "cost": "4000", "rarity": "Epic" }
       }
     },
     {
@@ -333,54 +133,14 @@ const SPIRITS_DATA = {
       "desc_level": "Loot value increases at each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "Dream",
-          "status": "Available S3",
-          "cost": "4500",
-          "rarity": "Legendary"
-        },
-        "Gold": {
-          "name": "Gold Dream",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Gummy": {
-          "name": "Gummy Dream",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Galaxy": {
-          "name": "Galaxy Dream",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Holofoil": {
-          "name": "Gem Dream",
-          "status": "Not Exist",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Cube": {
-          "name": "Holofoil Dream",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Gem": {
-          "name": "Cube Dream",
-          "status": "Unreleased",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Quack": {
-          "name": "Quack Dream",
-          "status": "Not Exist",
-          "cost": "6750",
-          "rarity": "Legendary"
-        }
+        "Normal": { "name": "Dream", "status": "Available S3", "cost": "4500", "rarity": "Legendary" },
+        "Gold": { "name": "Gold Dream", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Gummy": { "name": "Gummy Dream", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Galaxy": { "name": "Galaxy Dream", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Holofoil": { "name": "Gem Dream", "status": "Not Exist", "cost": "6750", "rarity": "Legendary" },
+        "Cube": { "name": "Holofoil Dream", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Gem": { "name": "Cube Dream", "status": "Unreleased", "cost": "6750", "rarity": "Legendary" },
+        "Quack": { "name": "Quack Dream", "status": "Not Exist", "cost": "6750", "rarity": "Legendary" }
       }
     },
     {
@@ -397,54 +157,14 @@ const SPIRITS_DATA = {
         "Lvl5": "30 Healing"
       },
       "variants": {
-        "Normal": {
-          "name": "Demon",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Epic"
-        },
-        "Gold": {
-          "name": "Gold Demon",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Gummy": {
-          "name": "Gummy Demon",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Galaxy": {
-          "name": "Galaxy Demon",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Holofoil": {
-          "name": "Gem Demon",
-          "status": "Unavailable",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Cube": {
-          "name": "Holofoil Demon",
-          "status": "Unavailable",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Gem": {
-          "name": "Cube Demon",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Quack": {
-          "name": "Quack Demon",
-          "status": "Not Exist",
-          "cost": "4000",
-          "rarity": "Epic"
-        }
+        "Normal": { "name": "Demon", "status": "Available S3", "cost": "2700", "rarity": "Epic" },
+        "Gold": { "name": "Gold Demon", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Gummy": { "name": "Gummy Demon", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Galaxy": { "name": "Galaxy Demon", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Holofoil": { "name": "Gem Demon", "status": "Unavailable", "cost": "4000", "rarity": "Epic" },
+        "Cube": { "name": "Holofoil Demon", "status": "Unavailable", "cost": "4000", "rarity": "Epic" },
+        "Gem": { "name": "Cube Demon", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Quack": { "name": "Quack Demon", "status": "Not Exist", "cost": "4000", "rarity": "Epic" }
       }
     },
     {
@@ -455,54 +175,14 @@ const SPIRITS_DATA = {
       "desc_level": "Infinite ammo or not",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "Punk",
-          "status": "Available S3",
-          "cost": "4500",
-          "rarity": "Legendary"
-        },
-        "Gold": {
-          "name": "Gold Punk",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Gummy": {
-          "name": "Gummy Punk",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Galaxy": {
-          "name": "Galaxy Punk",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Holofoil": {
-          "name": "Gem Punk",
-          "status": "Unavailable",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Cube": {
-          "name": "Holofoil Punk",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Gem": {
-          "name": "Cube Punk",
-          "status": "Unavailable",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Quack": {
-          "name": "Quack Punk",
-          "status": "Not Exist",
-          "cost": "6750",
-          "rarity": "Legendary"
-        }
+        "Normal": { "name": "Punk", "status": "Available S3", "cost": "4500", "rarity": "Legendary" },
+        "Gold": { "name": "Gold Punk", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Gummy": { "name": "Gummy Punk", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Galaxy": { "name": "Galaxy Punk", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Holofoil": { "name": "Gem Punk", "status": "Unavailable", "cost": "6750", "rarity": "Legendary" },
+        "Cube": { "name": "Holofoil Punk", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Gem": { "name": "Cube Punk", "status": "Unavailable", "cost": "6750", "rarity": "Legendary" },
+        "Quack": { "name": "Quack Punk", "status": "Not Exist", "cost": "6750", "rarity": "Legendary" }
       }
     },
     {
@@ -519,54 +199,14 @@ const SPIRITS_DATA = {
         "Lvl5": "120 bonus damage"
       },
       "variants": {
-        "Normal": {
-          "name": "King",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Epic"
-        },
-        "Gold": {
-          "name": "Gold King",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Gummy": {
-          "name": "Gummy King",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Galaxy": {
-          "name": "Galaxy King",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Holofoil": {
-          "name": "Gem King",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Cube": {
-          "name": "Holofoil King",
-          "status": "Unavailable",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Gem": {
-          "name": "Cube King",
-          "status": "Unavailable",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Quack": {
-          "name": "Quack King",
-          "status": "Not Exist",
-          "cost": "4000",
-          "rarity": "Epic"
-        }
+        "Normal": { "name": "King", "status": "Available S3", "cost": "2700", "rarity": "Epic" },
+        "Gold": { "name": "Gold King", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Gummy": { "name": "Gummy King", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Galaxy": { "name": "Galaxy King", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Holofoil": { "name": "Gem King", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Cube": { "name": "Holofoil King", "status": "Unavailable", "cost": "4000", "rarity": "Epic" },
+        "Gem": { "name": "Cube King", "status": "Unavailable", "cost": "4000", "rarity": "Epic" },
+        "Quack": { "name": "Quack King", "status": "Not Exist", "cost": "4000", "rarity": "Epic" }
       }
     },
     {
@@ -583,54 +223,14 @@ const SPIRITS_DATA = {
         "Lvl5": "0.6"
       },
       "variants": {
-        "Normal": {
-          "name": "Burnt Peanut",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Mythic"
-        },
-        "Gold": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        },
-        "Gummy": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        },
-        "Galaxy": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        },
-        "Holofoil": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        },
-        "Cube": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        },
-        "Gem": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        },
-        "Quack": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        }
+        "Normal": { "name": "Burnt Peanut", "status": "Available S3", "cost": "6750", "rarity": "Mythic" },
+        "Gold": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Gummy": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Galaxy": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Holofoil": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Cube": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Gem": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Quack": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" }
       }
     },
     {
@@ -647,54 +247,14 @@ const SPIRITS_DATA = {
         "Lvl5": "10 Seconds"
       },
       "variants": {
-        "Normal": {
-          "name": "Zero Point",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Mythic"
-        },
-        "Gold": {
-          "name": "Gold Zero Point",
-          "status": "Available S3",
-          "cost": "10000",
-          "rarity": "Mythic"
-        },
-        "Gummy": {
-          "name": "Gummy Zero Point",
-          "status": "Available S3",
-          "cost": "10000",
-          "rarity": "Mythic"
-        },
-        "Galaxy": {
-          "name": "Galaxy Zero Point",
-          "status": "Available S3",
-          "cost": "10000",
-          "rarity": "Mythic"
-        },
-        "Holofoil": {
-          "name": "Gem Zero Point",
-          "status": "Available S3",
-          "cost": "10000",
-          "rarity": "Mythic"
-        },
-        "Cube": {
-          "name": "Holofoil Zero Point",
-          "status": "Available S3",
-          "cost": "10000",
-          "rarity": "Mythic"
-        },
-        "Gem": {
-          "name": "Cube Zero Point",
-          "status": "Available S3",
-          "cost": "10000",
-          "rarity": "Mythic"
-        },
-        "Quack": {
-          "name": "Quack Zero Point",
-          "status": "Available S3",
-          "cost": "10000",
-          "rarity": "Mythic"
-        }
+        "Normal": { "name": "Zero Point", "status": "Available S3", "cost": "6750", "rarity": "Mythic" },
+        "Gold": { "name": "Gold Zero Point", "status": "Available S3", "cost": "10000", "rarity": "Mythic" },
+        "Gummy": { "name": "Gummy Zero Point", "status": "Available S3", "cost": "10000", "rarity": "Mythic" },
+        "Galaxy": { "name": "Galaxy Zero Point", "status": "Available S3", "cost": "10000", "rarity": "Mythic" },
+        "Holofoil": { "name": "Gem Zero Point", "status": "Available S3", "cost": "10000", "rarity": "Mythic" },
+        "Cube": { "name": "Holofoil Zero Point", "status": "Available S3", "cost": "10000", "rarity": "Mythic" },
+        "Gem": { "name": "Cube Zero Point", "status": "Available S3", "cost": "10000", "rarity": "Mythic" },
+        "Quack": { "name": "Quack Zero Point", "status": "Available S3", "cost": "10000", "rarity": "Mythic" }
       }
     },
     {
@@ -711,54 +271,14 @@ const SPIRITS_DATA = {
         "Lvl5": "200% Swim Speed / 50% Movement Speed"
       },
       "variants": {
-        "Normal": {
-          "name": "Fishy",
-          "status": "Available S3",
-          "cost": "1800",
-          "rarity": "Rare"
-        },
-        "Gold": {
-          "name": "Gold Fishy",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Gummy": {
-          "name": "Gummy Fishy",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Galaxy": {
-          "name": "Galaxy Fishy",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Holofoil": {
-          "name": "Gem Fishy",
-          "status": "Not Exist",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Cube": {
-          "name": "Holofoil Fishy",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Gem": {
-          "name": "Cube Fishy",
-          "status": "Not Exist",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Quack": {
-          "name": "Quack Fishy",
-          "status": "Not Exist",
-          "cost": "2700",
-          "rarity": "Rare"
-        }
+        "Normal": { "name": "Fishy", "status": "Available S3", "cost": "1800", "rarity": "Rare" },
+        "Gold": { "name": "Gold Fishy", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Gummy": { "name": "Gummy Fishy", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Galaxy": { "name": "Galaxy Fishy", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Holofoil": { "name": "Gem Fishy", "status": "Not Exist", "cost": "2700", "rarity": "Rare" },
+        "Cube": { "name": "Holofoil Fishy", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Gem": { "name": "Cube Fishy", "status": "Not Exist", "cost": "2700", "rarity": "Rare" },
+        "Quack": { "name": "Quack Fishy", "status": "Not Exist", "cost": "2700", "rarity": "Rare" }
       }
     },
     {
@@ -775,54 +295,14 @@ const SPIRITS_DATA = {
         "Lvl5": "10 Seconds"
       },
       "variants": {
-        "Normal": {
-          "name": "Striker",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Epic"
-        },
-        "Gold": {
-          "name": "Gold Striker",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Gummy": {
-          "name": "Gummy Striker",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Galaxy": {
-          "name": "Galaxy Striker",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Holofoil": {
-          "name": "Gem Striker",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Cube": {
-          "name": "Holofoil Striker",
-          "status": "Not Exist",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Gem": {
-          "name": "Cube Striker",
-          "status": "Not Exist",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Quack": {
-          "name": "Quack Striker",
-          "status": "Not Exist",
-          "cost": "4000",
-          "rarity": "Epic"
-        }
+        "Normal": { "name": "Striker", "status": "Available S3", "cost": "2700", "rarity": "Epic" },
+        "Gold": { "name": "Gold Striker", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Gummy": { "name": "Gummy Striker", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Galaxy": { "name": "Galaxy Striker", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Holofoil": { "name": "Gem Striker", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Cube": { "name": "Holofoil Striker", "status": "Not Exist", "cost": "4000", "rarity": "Epic" },
+        "Gem": { "name": "Cube Striker", "status": "Not Exist", "cost": "4000", "rarity": "Epic" },
+        "Quack": { "name": "Quack Striker", "status": "Not Exist", "cost": "4000", "rarity": "Epic" }
       }
     },
     {
@@ -839,54 +319,14 @@ const SPIRITS_DATA = {
         "Lvl5": "75 Damage"
       },
       "variants": {
-        "Normal": {
-          "name": "Aura",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Epic"
-        },
-        "Gold": {
-          "name": "Gold Aura",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Gummy": {
-          "name": "Gummy Aura",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Galaxy": {
-          "name": "Galaxy Aura",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Holofoil": {
-          "name": "Gem Aura",
-          "status": "Not Exist",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Cube": {
-          "name": "Holofoil Aura",
-          "status": "Not Exist",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Gem": {
-          "name": "Cube Aura",
-          "status": "Available S3",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Quack": {
-          "name": "Quack Aura",
-          "status": "Not Exist",
-          "cost": "4000",
-          "rarity": "Epic"
-        }
+        "Normal": { "name": "Aura", "status": "Available S3", "cost": "2700", "rarity": "Epic" },
+        "Gold": { "name": "Gold Aura", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Gummy": { "name": "Gummy Aura", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Galaxy": { "name": "Galaxy Aura", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Holofoil": { "name": "Gem Aura", "status": "Not Exist", "cost": "4000", "rarity": "Epic" },
+        "Cube": { "name": "Holofoil Aura", "status": "Not Exist", "cost": "4000", "rarity": "Epic" },
+        "Gem": { "name": "Cube Aura", "status": "Available S3", "cost": "4000", "rarity": "Epic" },
+        "Quack": { "name": "Quack Aura", "status": "Not Exist", "cost": "4000", "rarity": "Epic" }
       }
     },
     {
@@ -903,54 +343,14 @@ const SPIRITS_DATA = {
         "Lvl5": "25 HP/Shield"
       },
       "variants": {
-        "Normal": {
-          "name": "Boss",
-          "status": "Available S3",
-          "cost": "4500",
-          "rarity": "Legendary"
-        },
-        "Gold": {
-          "name": "Gold Boss",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Gummy": {
-          "name": "Gummy Boss",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Galaxy": {
-          "name": "Galaxy Boss",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Holofoil": {
-          "name": "Gem Boss",
-          "status": "Unreleased",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Cube": {
-          "name": "Holofoil Boss",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Gem": {
-          "name": "Cube Boss",
-          "status": "Unreleased",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Quack": {
-          "name": "Quack Boss",
-          "status": "Not Exist",
-          "cost": "6750",
-          "rarity": "Legendary"
-        }
+        "Normal": { "name": "Boss", "status": "Available S3", "cost": "4500", "rarity": "Legendary" },
+        "Gold": { "name": "Gold Boss", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Gummy": { "name": "Gummy Boss", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Galaxy": { "name": "Galaxy Boss", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Holofoil": { "name": "Gem Boss", "status": "Unreleased", "cost": "6750", "rarity": "Legendary" },
+        "Cube": { "name": "Holofoil Boss", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Gem": { "name": "Cube Boss", "status": "Unreleased", "cost": "6750", "rarity": "Legendary" },
+        "Quack": { "name": "Quack Boss", "status": "Not Exist", "cost": "6750", "rarity": "Legendary" }
       }
     },
     {
@@ -967,54 +367,14 @@ const SPIRITS_DATA = {
         "Lvl5": "5 Seconds"
       },
       "variants": {
-        "Normal": {
-          "name": "Grim Reaper",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Mythic"
-        },
-        "Gold": {
-          "name": "Gold Grim Reaper",
-          "status": "Available S3",
-          "cost": "10000",
-          "rarity": "Mythic"
-        },
-        "Gummy": {
-          "name": "Gummy Grim Reaper",
-          "status": "Available S3",
-          "cost": "10000",
-          "rarity": "Mythic"
-        },
-        "Galaxy": {
-          "name": "Galaxy Grim Reaper",
-          "status": "Available S3",
-          "cost": "10000",
-          "rarity": "Mythic"
-        },
-        "Holofoil": {
-          "name": "Gem Grim Reaper",
-          "status": "Available S3",
-          "cost": "10000",
-          "rarity": "Mythic"
-        },
-        "Cube": {
-          "name": "Holofoil Grim Reaper",
-          "status": "Available S3",
-          "cost": "10000",
-          "rarity": "Mythic"
-        },
-        "Gem": {
-          "name": "Cube Grim Reaper",
-          "status": "Available S3",
-          "cost": "10000",
-          "rarity": "Mythic"
-        },
-        "Quack": {
-          "name": "Quack Grim Reaper",
-          "status": "Not Exist",
-          "cost": "10000",
-          "rarity": "Mythic"
-        }
+        "Normal": { "name": "Grim Reaper", "status": "Available S3", "cost": "6750", "rarity": "Mythic" },
+        "Gold": { "name": "Gold Grim Reaper", "status": "Available S3", "cost": "10000", "rarity": "Mythic" },
+        "Gummy": { "name": "Gummy Grim Reaper", "status": "Available S3", "cost": "10000", "rarity": "Mythic" },
+        "Galaxy": { "name": "Galaxy Grim Reaper", "status": "Available S3", "cost": "10000", "rarity": "Mythic" },
+        "Holofoil": { "name": "Gem Grim Reaper", "status": "Available S3", "cost": "10000", "rarity": "Mythic" },
+        "Cube": { "name": "Holofoil Grim Reaper", "status": "Available S3", "cost": "10000", "rarity": "Mythic" },
+        "Gem": { "name": "Cube Grim Reaper", "status": "Available S3", "cost": "10000", "rarity": "Mythic" },
+        "Quack": { "name": "Quack Grim Reaper", "status": "Not Exist", "cost": "10000", "rarity": "Mythic" }
       }
     },
     {
@@ -1025,54 +385,14 @@ const SPIRITS_DATA = {
       "desc_level": "Jump height increased with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "Air",
-          "status": "Available S3",
-          "cost": "100",
-          "rarity": "Rare"
-        },
-        "Gold": {
-          "name": "Gold Air",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Gummy": {
-          "name": "Gummy Air",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Galaxy": {
-          "name": "Galaxy Air",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Holofoil": {
-          "name": "Gem Air",
-          "status": "Available S3",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Cube": {
-          "name": "Holofoil Air",
-          "status": "Not Exist",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Gem": {
-          "name": "Cube Air",
-          "status": "Not Exist",
-          "cost": "2700",
-          "rarity": "Rare"
-        },
-        "Quack": {
-          "name": "Quack Air",
-          "status": "Not Exist",
-          "cost": "2700",
-          "rarity": "Rare"
-        }
+        "Normal": { "name": "Air", "status": "Available S3", "cost": "100", "rarity": "Rare" },
+        "Gold": { "name": "Gold Air", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Gummy": { "name": "Gummy Air", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Galaxy": { "name": "Galaxy Air", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Holofoil": { "name": "Gem Air", "status": "Available S3", "cost": "2700", "rarity": "Rare" },
+        "Cube": { "name": "Holofoil Air", "status": "Not Exist", "cost": "2700", "rarity": "Rare" },
+        "Gem": { "name": "Cube Air", "status": "Not Exist", "cost": "2700", "rarity": "Rare" },
+        "Quack": { "name": "Quack Air", "status": "Not Exist", "cost": "2700", "rarity": "Rare" }
       }
     },
     {
@@ -1089,54 +409,14 @@ const SPIRITS_DATA = {
         "Lvl5": "30 Seconds"
       },
       "variants": {
-        "Normal": {
-          "name": "Seven",
-          "status": "Available S3",
-          "cost": "4500",
-          "rarity": "Legendary"
-        },
-        "Gold": {
-          "name": "Gold Seven",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Gummy": {
-          "name": "Gummy Seven",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Galaxy": {
-          "name": "Galaxy Seven",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Holofoil": {
-          "name": "Gem Seven",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Cube": {
-          "name": "Holofoil Seven",
-          "status": "Not Exist",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Gem": {
-          "name": "Cube Seven",
-          "status": "Not Exist",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Quack": {
-          "name": "Quack Seven",
-          "status": "Not Exist",
-          "cost": "6750",
-          "rarity": "Legendary"
-        }
+        "Normal": { "name": "Seven", "status": "Available S3", "cost": "4500", "rarity": "Legendary" },
+        "Gold": { "name": "Gold Seven", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Gummy": { "name": "Gummy Seven", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Galaxy": { "name": "Galaxy Seven", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Holofoil": { "name": "Gem Seven", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Cube": { "name": "Holofoil Seven", "status": "Not Exist", "cost": "6750", "rarity": "Legendary" },
+        "Gem": { "name": "Cube Seven", "status": "Not Exist", "cost": "6750", "rarity": "Legendary" },
+        "Quack": { "name": "Quack Seven", "status": "Not Exist", "cost": "6750", "rarity": "Legendary" }
       }
     },
     {
@@ -1147,54 +427,14 @@ const SPIRITS_DATA = {
       "desc_level": "",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "Batman",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Mythic"
-        },
-        "Gold": {
-          "name": "Gold Batman",
-          "status": "Available S3",
-          "cost": "10000",
-          "rarity": "Mythic"
-        },
-        "Gummy": {
-          "name": "Gummy Batman",
-          "status": "Available S3",
-          "cost": "10000",
-          "rarity": "Mythic"
-        },
-        "Galaxy": {
-          "name": "Galaxy Batman",
-          "status": "Available S3",
-          "cost": "10000",
-          "rarity": "Mythic"
-        },
-        "Holofoil": {
-          "name": "Gem Batman",
-          "status": "Available S3",
-          "cost": "10000",
-          "rarity": "Mythic"
-        },
-        "Cube": {
-          "name": "Holofoil Batman",
-          "status": "Available S3",
-          "cost": "10000",
-          "rarity": "Mythic"
-        },
-        "Gem": {
-          "name": "Cube Batman",
-          "status": "Not Exist",
-          "cost": "10000",
-          "rarity": "Mythic"
-        },
-        "Quack": {
-          "name": "Quack Batman",
-          "status": "Not Exist",
-          "cost": "10000",
-          "rarity": "Mythic"
-        }
+        "Normal": { "name": "Batman", "status": "Available S3", "cost": "6750", "rarity": "Mythic" },
+        "Gold": { "name": "Gold Batman", "status": "Available S3", "cost": "10000", "rarity": "Mythic" },
+        "Gummy": { "name": "Gummy Batman", "status": "Available S3", "cost": "10000", "rarity": "Mythic" },
+        "Galaxy": { "name": "Galaxy Batman", "status": "Available S3", "cost": "10000", "rarity": "Mythic" },
+        "Holofoil": { "name": "Gem Batman", "status": "Available S3", "cost": "10000", "rarity": "Mythic" },
+        "Cube": { "name": "Holofoil Batman", "status": "Available S3", "cost": "10000", "rarity": "Mythic" },
+        "Gem": { "name": "Cube Batman", "status": "Not Exist", "cost": "10000", "rarity": "Mythic" },
+        "Quack": { "name": "Quack Batman", "status": "Not Exist", "cost": "10000", "rarity": "Mythic" }
       }
     },
     {
@@ -1205,54 +445,14 @@ const SPIRITS_DATA = {
       "desc_level": "",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "Vini Jr.",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Mythic"
-        },
-        "Gold": {
-          "name": "Gold Vini Jr.",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        },
-        "Gummy": {
-          "name": "Gummy Vini Jr.",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        },
-        "Galaxy": {
-          "name": "Galaxy Vini Jr.",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        },
-        "Holofoil": {
-          "name": "Holofoil Vini Jr.",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        },
-        "Cube": {
-          "name": "Cube Vini Jr.",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        },
-        "Gem": {
-          "name": "Gem Vini Jr.",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        },
-        "Quack": {
-          "name": "Quack Vini Jr.",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        }
+        "Normal": { "name": "Vini Jr.", "status": "Available S3", "cost": "6750", "rarity": "Mythic" },
+        "Gold": { "name": "Gold Vini Jr.", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Gummy": { "name": "Gummy Vini Jr.", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Galaxy": { "name": "Galaxy Vini Jr.", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Holofoil": { "name": "Holofoil Vini Jr.", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Cube": { "name": "Cube Vini Jr.", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Gem": { "name": "Gem Vini Jr.", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Quack": { "name": "Quack Vini Jr.", "status": "Not Exist", "cost": "-", "rarity": "Mythic" }
       }
     },
     {
@@ -1263,54 +463,14 @@ const SPIRITS_DATA = {
       "desc_level": "",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "Pollo",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Mythic"
-        },
-        "Gold": {
-          "name": "Gold Pollo",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        },
-        "Gummy": {
-          "name": "Gummy Pollo",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        },
-        "Galaxy": {
-          "name": "Galaxy Pollo",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        },
-        "Holofoil": {
-          "name": "Holofoil Pollo",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        },
-        "Cube": {
-          "name": "Cube Pollo",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        },
-        "Gem": {
-          "name": "Gem Pollo",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        },
-        "Quack": {
-          "name": "Quack Pollo",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        }
+        "Normal": { "name": "Pollo", "status": "Available S3", "cost": "6750", "rarity": "Mythic" },
+        "Gold": { "name": "Gold Pollo", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Gummy": { "name": "Gummy Pollo", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Galaxy": { "name": "Galaxy Pollo", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Holofoil": { "name": "Holofoil Pollo", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Cube": { "name": "Cube Pollo", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Gem": { "name": "Gem Pollo", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Quack": { "name": "Quack Pollo", "status": "Not Exist", "cost": "-", "rarity": "Mythic" }
       }
     },
     {
@@ -1327,54 +487,14 @@ const SPIRITS_DATA = {
         "Lvl5": "80m"
       },
       "variants": {
-        "Normal": {
-          "name": "Peely",
-          "status": "Available S3",
-          "cost": "4500",
-          "rarity": "Legendary"
-        },
-        "Gold": {
-          "name": "Gold Peely",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Gummy": {
-          "name": "Gummy Peely",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Galaxy": {
-          "name": "Galaxy Peely",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Holofoil": {
-          "name": "Gem Peely",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Cube": {
-          "name": "Holofoil Peely",
-          "status": "Not Exist",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Gem": {
-          "name": "Cube Peely",
-          "status": "Not Exist",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Quack": {
-          "name": "Quack  Peely",
-          "status": "Not Exist",
-          "cost": "6750",
-          "rarity": "Legendary"
-        }
+        "Normal": { "name": "Peely", "status": "Available S3", "cost": "4500", "rarity": "Legendary" },
+        "Gold": { "name": "Gold Peely", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Gummy": { "name": "Gummy Peely", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Galaxy": { "name": "Galaxy Peely", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Holofoil": { "name": "Gem Peely", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Cube": { "name": "Holofoil Peely", "status": "Not Exist", "cost": "6750", "rarity": "Legendary" },
+        "Gem": { "name": "Cube Peely", "status": "Not Exist", "cost": "6750", "rarity": "Legendary" },
+        "Quack": { "name": "Quack  Peely", "status": "Not Exist", "cost": "6750", "rarity": "Legendary" }
       }
     },
     {
@@ -1391,54 +511,14 @@ const SPIRITS_DATA = {
         "Lvl5": "0.2"
       },
       "variants": {
-        "Normal": {
-          "name": "Llama",
-          "status": "Available S3",
-          "cost": "4500",
-          "rarity": "Legendary"
-        },
-        "Gold": {
-          "name": "Gold Llama",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Gummy": {
-          "name": "Gummy Llama",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Galaxy": {
-          "name": "Galaxy Llama",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Holofoil": {
-          "name": "Gem Llama",
-          "status": "Not Exist",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Cube": {
-          "name": "Holofoil Llama",
-          "status": "Not Exist",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Gem": {
-          "name": "Cube Llama",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Legendary"
-        },
-        "Quack": {
-          "name": "Quack  Llama",
-          "status": "Not Exist",
-          "cost": "6750",
-          "rarity": "Legendary"
-        }
+        "Normal": { "name": "Llama", "status": "Available S3", "cost": "4500", "rarity": "Legendary" },
+        "Gold": { "name": "Gold Llama", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Gummy": { "name": "Gummy Llama", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Galaxy": { "name": "Galaxy Llama", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Holofoil": { "name": "Gem Llama", "status": "Not Exist", "cost": "6750", "rarity": "Legendary" },
+        "Cube": { "name": "Holofoil Llama", "status": "Not Exist", "cost": "6750", "rarity": "Legendary" },
+        "Gem": { "name": "Cube Llama", "status": "Available S3", "cost": "6750", "rarity": "Legendary" },
+        "Quack": { "name": "Quack  Llama", "status": "Not Exist", "cost": "6750", "rarity": "Legendary" }
       }
     },
     {
@@ -1455,54 +535,14 @@ const SPIRITS_DATA = {
         "Lvl5": "5 Seconds"
       },
       "variants": {
-        "Normal": {
-          "name": "John Wick",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Mythic"
-        },
-        "Gold": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        },
-        "Gummy": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        },
-        "Galaxy": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        },
-        "Holofoil": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        },
-        "Cube": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        },
-        "Gem": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        },
-        "Quack": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        }
+        "Normal": { "name": "John Wick", "status": "Available S3", "cost": "6750", "rarity": "Mythic" },
+        "Gold": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Gummy": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Galaxy": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Holofoil": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Cube": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Gem": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Quack": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" }
       }
     },
     {
@@ -1519,54 +559,14 @@ const SPIRITS_DATA = {
         "Lvl5": "100 Health"
       },
       "variants": {
-        "Normal": {
-          "name": "Ironmouse",
-          "status": "Available S3",
-          "cost": "6750",
-          "rarity": "Mythic"
-        },
-        "Gold": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        },
-        "Gummy": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        },
-        "Galaxy": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        },
-        "Holofoil": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        },
-        "Cube": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        },
-        "Gem": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        },
-        "Quack": {
-          "name": "",
-          "status": "Not Exist",
-          "cost": "",
-          "rarity": ""
-        }
+        "Normal": { "name": "Ironmouse", "status": "Available S3", "cost": "6750", "rarity": "Mythic" },
+        "Gold": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Gummy": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Galaxy": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Holofoil": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Cube": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Gem": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Quack": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" }
       }
     }
   ],
@@ -1579,54 +579,14 @@ const SPIRITS_DATA = {
       "desc_level": "Time between bush activating decreases with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "bush",
-          "status": "Available S4",
-          "cost": "100",
-          "rarity": "Rare"
-        },
-        "Gold": {
-          "name": "Gold bush",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Cheat Master": {
-          "name": "Cheat Master bush",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Hacker": {
-          "name": "Hacker bush",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Reaper": {
-          "name": "Reaper bush",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Gummy": {
-          "name": "Gummy bush",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Holofoil": {
-          "name": "Holofoil bush",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Trick or Treat": {
-          "name": "Trick or Treat bush",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        }
+        "Normal": { "name": "bush", "status": "Available S4", "cost": "100", "rarity": "Rare" },
+        "Gold": { "name": "Gold bush", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Cheat Master": { "name": "Cheat Master bush", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Hacker": { "name": "Hacker bush", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Bounty Hunter": { "name": "Bounty Hunter bush", "status": "Unavailable", "cost": "-", "rarity": "Rare" },
+        "Trick or Treat": { "name": "Trick or Treat bush", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
+        "Gummy": { "name": "Gummy bush", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
+        "Holofoil": { "name": "Holofoil bush", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
       }
     },
     {
@@ -1637,54 +597,14 @@ const SPIRITS_DATA = {
       "desc_level": "",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "adventure",
-          "status": "Available S4",
-          "cost": "100",
-          "rarity": "Rare"
-        },
-        "Gold": {
-          "name": "Gold adventure",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Cheat Master": {
-          "name": "Cheat Master adventure",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Hacker": {
-          "name": "Hacker adventure",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Reaper": {
-          "name": "Reaper adventure",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Gummy": {
-          "name": "Gummy adventure",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Holofoil": {
-          "name": "Holofoil adventure",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Trick or Treat": {
-          "name": "Trick or Treat adventure",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        }
+        "Normal": { "name": "adventure", "status": "Available S4", "cost": "100", "rarity": "Rare" },
+        "Gold": { "name": "Gold adventure", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Cheat Master": { "name": "Cheat Master adventure", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Hacker": { "name": "Hacker adventure", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Bounty Hunter": { "name": "Bounty Hunter adventure", "status": "Unavailable", "cost": "-", "rarity": "Rare" },
+        "Trick or Treat": { "name": "Trick or Treat adventure", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
+        "Gummy": { "name": "Gummy adventure", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
+        "Holofoil": { "name": "Holofoil adventure", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
       }
     },
     {
@@ -1695,54 +615,14 @@ const SPIRITS_DATA = {
       "desc_level": "Increase amount healed with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "Jonesy",
-          "status": "Available S4",
-          "cost": "100",
-          "rarity": "Rare"
-        },
-        "Gold": {
-          "name": "Gold Jonesy",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Cheat Master": {
-          "name": "Cheat Master Jonesy",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Hacker": {
-          "name": "Hacker Jonesy",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Reaper": {
-          "name": "Reaper Jonesy",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Gummy": {
-          "name": "Gummy Jonesy",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Holofoil": {
-          "name": "Holofoil Jonesy",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Trick or Treat": {
-          "name": "Trick or Treat Jonesy",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        }
+        "Normal": { "name": "Jonesy", "status": "Available S4", "cost": "100", "rarity": "Rare" },
+        "Gold": { "name": "Gold Jonesy", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Cheat Master": { "name": "Cheat Master Jonesy", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Hacker": { "name": "Hacker Jonesy", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Bounty Hunter": { "name": "Bounty Hunter Jonesy", "status": "Unavailable", "cost": "-", "rarity": "Rare" },
+        "Trick or Treat": { "name": "Trick or Treat Jonesy", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
+        "Gummy": { "name": "Gummy Jonesy", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
+        "Holofoil": { "name": "Holofoil Jonesy", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
       }
     },
     {
@@ -1753,54 +633,14 @@ const SPIRITS_DATA = {
       "desc_level": "",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "8 Bit",
-          "status": "Available S4",
-          "cost": "1250",
-          "rarity": "Rare"
-        },
-        "Gold": {
-          "name": "Gold 8 Bit",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Cheat Master": {
-          "name": "Cheat Master 8 Bit",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Hacker": {
-          "name": "Hacker 8 Bit",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Reaper": {
-          "name": "Reaper 8 Bit",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Gummy": {
-          "name": "Gummy 8 Bit",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Holofoil": {
-          "name": "Holofoil 8 Bit",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Trick or Treat": {
-          "name": "Trick or Treat 8 Bit",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        }
+        "Normal": { "name": "8 Bit", "status": "Available S4", "cost": "1250", "rarity": "Rare" },
+        "Gold": { "name": "Gold 8 Bit", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Cheat Master": { "name": "Cheat Master 8 Bit", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Hacker": { "name": "Hacker 8 Bit", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Bounty Hunter": { "name": "Bounty Hunter 8 Bit", "status": "Unavailable", "cost": "-", "rarity": "Rare" },
+        "Trick or Treat": { "name": "Trick or Treat 8 Bit", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
+        "Gummy": { "name": "Gummy 8 Bit", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
+        "Holofoil": { "name": "Holofoil 8 Bit", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
       }
     },
     {
@@ -1811,54 +651,14 @@ const SPIRITS_DATA = {
       "desc_level": "Accuracy increases with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "Killswitch",
-          "status": "Available S4",
-          "cost": "1250",
-          "rarity": "Epic"
-        },
-        "Gold": {
-          "name": "Gold Killswitch",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Epic"
-        },
-        "Cheat Master": {
-          "name": "Cheat Master Killswitch",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Epic"
-        },
-        "Hacker": {
-          "name": "Hacker Killswitch",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Epic"
-        },
-        "Reaper": {
-          "name": "Reaper Killswitch",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Epic"
-        },
-        "Gummy": {
-          "name": "Gummy Killswitch",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Epic"
-        },
-        "Holofoil": {
-          "name": "Holofoil Killswitch",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Epic"
-        },
-        "Trick or Treat": {
-          "name": "Trick or Treat Killswitch",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Epic"
-        }
+        "Normal": { "name": "Killswitch", "status": "Available S4", "cost": "1250", "rarity": "Epic" },
+        "Gold": { "name": "Gold Killswitch", "status": "Available S4", "cost": "1500", "rarity": "Epic" },
+        "Cheat Master": { "name": "Cheat Master Killswitch", "status": "Available S4", "cost": "1500", "rarity": "Epic" },
+        "Hacker": { "name": "Hacker Killswitch", "status": "Available S4", "cost": "1500", "rarity": "Epic" },
+        "Bounty Hunter": { "name": "Bounty Hunter Killswitch", "status": "Unavailable", "cost": "-", "rarity": "Epic" },
+        "Trick or Treat": { "name": "Trick or Treat Killswitch", "status": "Not Exist", "cost": "-", "rarity": "Epic" },
+        "Gummy": { "name": "Gummy Killswitch", "status": "Not Exist", "cost": "-", "rarity": "Epic" },
+        "Holofoil": { "name": "Holofoil Killswitch", "status": "Not Exist", "cost": "-", "rarity": "Epic" }
       }
     },
     {
@@ -1869,54 +669,14 @@ const SPIRITS_DATA = {
       "desc_level": "Sprint faster with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "Sonic",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Epic"
-        },
-        "Gold": {
-          "name": "Gold Sonic",
-          "status": "Available S4",
-          "cost": "1800",
-          "rarity": "Epic"
-        },
-        "Cheat Master": {
-          "name": "Cheat Master Sonic",
-          "status": "Available S4",
-          "cost": "1800",
-          "rarity": "Epic"
-        },
-        "Hacker": {
-          "name": "Hacker Sonic",
-          "status": "Available S4",
-          "cost": "1800",
-          "rarity": "Epic"
-        },
-        "Reaper": {
-          "name": "Reaper Sonic",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Epic"
-        },
-        "Gummy": {
-          "name": "Gummy Sonic",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Epic"
-        },
-        "Holofoil": {
-          "name": "Holofoil Sonic",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Epic"
-        },
-        "Trick or Treat": {
-          "name": "Trick or Treat Sonic",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Epic"
-        }
+        "Normal": { "name": "Sonic", "status": "Available S4", "cost": "1500", "rarity": "Epic" },
+        "Gold": { "name": "Gold Sonic", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
+        "Cheat Master": { "name": "Cheat Master Sonic", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
+        "Hacker": { "name": "Hacker Sonic", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
+        "Bounty Hunter": { "name": "Bounty Hunter Sonic", "status": "Unavailable", "cost": "-", "rarity": "Epic" },
+        "Trick or Treat": { "name": "Trick or Treat Sonic", "status": "Not Exist", "cost": "-", "rarity": "Epic" },
+        "Gummy": { "name": "Gummy Sonic", "status": "Not Exist", "cost": "-", "rarity": "Epic" },
+        "Holofoil": { "name": "Holofoil Sonic", "status": "Not Exist", "cost": "-", "rarity": "Epic" }
       }
     },
     {
@@ -1927,54 +687,14 @@ const SPIRITS_DATA = {
       "desc_level": "Hover speed increased with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "Tails",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Epic"
-        },
-        "Gold": {
-          "name": "Gold Tails",
-          "status": "Available S4",
-          "cost": "1800",
-          "rarity": "Epic"
-        },
-        "Cheat Master": {
-          "name": "Cheat Master Tails",
-          "status": "Available S4",
-          "cost": "1800",
-          "rarity": "Epic"
-        },
-        "Hacker": {
-          "name": "Hacker Tails",
-          "status": "Available S4",
-          "cost": "1800",
-          "rarity": "Epic"
-        },
-        "Reaper": {
-          "name": "Reaper Tails",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Epic"
-        },
-        "Gummy": {
-          "name": "Gummy Tails",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Epic"
-        },
-        "Holofoil": {
-          "name": "Holofoil Tails",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Epic"
-        },
-        "Trick or Treat": {
-          "name": "Trick or Treat Tails",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Epic"
-        }
+        "Normal": { "name": "Tails", "status": "Available S4", "cost": "1500", "rarity": "Epic" },
+        "Gold": { "name": "Gold Tails", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
+        "Cheat Master": { "name": "Cheat Master Tails", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
+        "Hacker": { "name": "Hacker Tails", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
+        "Bounty Hunter": { "name": "Bounty Hunter Tails", "status": "Unavailable", "cost": "-", "rarity": "Epic" },
+        "Trick or Treat": { "name": "Trick or Treat Tails", "status": "Not Exist", "cost": "-", "rarity": "Epic" },
+        "Gummy": { "name": "Gummy Tails", "status": "Not Exist", "cost": "-", "rarity": "Epic" },
+        "Holofoil": { "name": "Holofoil Tails", "status": "Not Exist", "cost": "-", "rarity": "Epic" }
       }
     },
     {
@@ -1985,54 +705,14 @@ const SPIRITS_DATA = {
       "desc_level": "Automatic reload gets faster with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "Shadow",
-          "status": "Available S4",
-          "cost": "2700",
-          "rarity": "Epic"
-        },
-        "Gold": {
-          "name": "Gold Shadow",
-          "status": "Available S4",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Cheat Master": {
-          "name": "Cheat Master Shadow",
-          "status": "Available S4",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Hacker": {
-          "name": "Hacker Shadow",
-          "status": "Available S4",
-          "cost": "4000",
-          "rarity": "Epic"
-        },
-        "Reaper": {
-          "name": "Reaper Shadow",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Epic"
-        },
-        "Gummy": {
-          "name": "Gummy Shadow",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Epic"
-        },
-        "Holofoil": {
-          "name": "Holofoil Shadow",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Epic"
-        },
-        "Trick or Treat": {
-          "name": "Trick or Treat Shadow",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Epic"
-        }
+        "Normal": { "name": "Shadow", "status": "Available S4", "cost": "2700", "rarity": "Epic" },
+        "Gold": { "name": "Gold Shadow", "status": "Available S4", "cost": "4000", "rarity": "Epic" },
+        "Cheat Master": { "name": "Cheat Master Shadow", "status": "Available S4", "cost": "4000", "rarity": "Epic" },
+        "Hacker": { "name": "Hacker Shadow", "status": "Available S4", "cost": "4000", "rarity": "Epic" },
+        "Bounty Hunter": { "name": "Bounty Hunter Shadow", "status": "Unavailable", "cost": "-", "rarity": "Epic" },
+        "Trick or Treat": { "name": "Trick or Treat Shadow", "status": "Not Exist", "cost": "-", "rarity": "Epic" },
+        "Gummy": { "name": "Gummy Shadow", "status": "Not Exist", "cost": "-", "rarity": "Epic" },
+        "Holofoil": { "name": "Holofoil Shadow", "status": "Not Exist", "cost": "-", "rarity": "Epic" }
       }
     },
     {
@@ -2043,54 +723,14 @@ const SPIRITS_DATA = {
       "desc_level": "Cooldown between jumps decreases with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "JackRabbit",
-          "status": "Available S4",
-          "cost": "1750",
-          "rarity": "Legendary"
-        },
-        "Gold": {
-          "name": "Gold JackRabbit",
-          "status": "Available S4",
-          "cost": "2100",
-          "rarity": "Legendary"
-        },
-        "Cheat Master": {
-          "name": "Cheat Master JackRabbit",
-          "status": "Available S4",
-          "cost": "2100",
-          "rarity": "Legendary"
-        },
-        "Hacker": {
-          "name": "Hacker JackRabbit",
-          "status": "Available S4",
-          "cost": "2100",
-          "rarity": "Legendary"
-        },
-        "Reaper": {
-          "name": "Reaper JackRabbit",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Legendary"
-        },
-        "Gummy": {
-          "name": "Gummy JackRabbit",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Legendary"
-        },
-        "Holofoil": {
-          "name": "Holofoil JackRabbit",
-          "status": "Unavailable",
-          "cost": "-",
-          "rarity": "Legendary"
-        },
-        "Trick or Treat": {
-          "name": "Trick or Treat JackRabbit",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Legendary"
-        }
+        "Normal": { "name": "JackRabbit", "status": "Available S4", "cost": "1750", "rarity": "Legendary" },
+        "Gold": { "name": "Gold JackRabbit", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
+        "Cheat Master": { "name": "Cheat Master JackRabbit", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
+        "Hacker": { "name": "Hacker JackRabbit", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
+        "Bounty Hunter": { "name": "Bounty Hunter JackRabbit", "status": "Unavailable", "cost": "-", "rarity": "Legendary" },
+        "Trick or Treat": { "name": "Trick or Treat JackRabbit", "status": "Not Exist", "cost": "-", "rarity": "Legendary" },
+        "Gummy": { "name": "Gummy JackRabbit", "status": "Not Exist", "cost": "-", "rarity": "Legendary" },
+        "Holofoil": { "name": "Holofoil JackRabbit", "status": "Unavailable", "cost": "-", "rarity": "Legendary" }
       }
     },
     {
@@ -2101,54 +741,14 @@ const SPIRITS_DATA = {
       "desc_level": "New variants unlocked after mastering!",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "Crown",
-          "status": "Available S4",
-          "cost": "2000",
-          "rarity": "Mythic"
-        },
-        "Gold": {
-          "name": "Gold Crown",
-          "status": "Available S4",
-          "cost": "2400",
-          "rarity": "Mythic"
-        },
-        "Cheat Master": {
-          "name": "Cheat Master Crown",
-          "status": "Available S4",
-          "cost": "2400",
-          "rarity": "Mythic"
-        },
-        "Hacker": {
-          "name": "Hacker Crown",
-          "status": "Available S4",
-          "cost": "2400",
-          "rarity": "Mythic"
-        },
-        "Reaper": {
-          "name": "Reaper Crown",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        },
-        "Gummy": {
-          "name": "Gummy Crown",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        },
-        "Holofoil": {
-          "name": "Holofoil Crown",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        },
-        "Trick or Treat": {
-          "name": "Trick or Treat Crown",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        }
+        "Normal": { "name": "Crown", "status": "Available S4", "cost": "2000", "rarity": "Mythic" },
+        "Gold": { "name": "Gold Crown", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
+        "Cheat Master": { "name": "Cheat Master Crown", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
+        "Hacker": { "name": "Hacker Crown", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
+        "Bounty Hunter": { "name": "Bounty Hunter Crown", "status": "Unavailable", "cost": "-", "rarity": "Mythic" },
+        "Trick or Treat": { "name": "Trick or Treat Crown", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Gummy": { "name": "Gummy Crown", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Holofoil": { "name": "Holofoil Crown", "status": "Not Exist", "cost": "-", "rarity": "Mythic" }
       }
     },
     {
@@ -2159,54 +759,14 @@ const SPIRITS_DATA = {
       "desc_level": "Item quality increases with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "Klombo",
-          "status": "Available S4",
-          "cost": "2000",
-          "rarity": "Mythic"
-        },
-        "Gold": {
-          "name": "Gold Klombo",
-          "status": "Available S4",
-          "cost": "2400",
-          "rarity": "Mythic"
-        },
-        "Cheat Master": {
-          "name": "Cheat Master Klombo",
-          "status": "Available S4",
-          "cost": "2400",
-          "rarity": "Mythic"
-        },
-        "Hacker": {
-          "name": "Hacker Klombo",
-          "status": "Available S4",
-          "cost": "2400",
-          "rarity": "Mythic"
-        },
-        "Reaper": {
-          "name": "Reaper Klombo",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        },
-        "Gummy": {
-          "name": "Gummy Klombo",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        },
-        "Holofoil": {
-          "name": "Holofoil Klombo",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        },
-        "Trick or Treat": {
-          "name": "Trick or Treat Klombo",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Mythic"
-        }
+        "Normal": { "name": "Klombo", "status": "Available S4", "cost": "2000", "rarity": "Mythic" },
+        "Gold": { "name": "Gold Klombo", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
+        "Cheat Master": { "name": "Cheat Master Klombo", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
+        "Hacker": { "name": "Hacker Klombo", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
+        "Bounty Hunter": { "name": "Bounty Hunter Klombo", "status": "Unavailable", "cost": "-", "rarity": "Mythic" },
+        "Trick or Treat": { "name": "Trick or Treat Klombo", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Gummy": { "name": "Gummy Klombo", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Holofoil": { "name": "Holofoil Klombo", "status": "Not Exist", "cost": "-", "rarity": "Mythic" }
       }
     },
     {
@@ -2217,54 +777,14 @@ const SPIRITS_DATA = {
       "desc_level": "Reduces damage to trigger overdrive with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "Storm Scout",
-          "status": "Available S4",
-          "cost": "1250",
-          "rarity": "Rare"
-        },
-        "Gold": {
-          "name": "Gold Storm Scout",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Cheat Master": {
-          "name": "Cheat Master Storm Scout",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Hacker": {
-          "name": "Hacker Storm Scout",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Reaper": {
-          "name": "Reaper Storm Scout",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Gummy": {
-          "name": "Gummy Storm Scout",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Holofoil": {
-          "name": "Holofoil Storm Scout",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Trick or Treat": {
-          "name": "Trick or Treat Storm Scout",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        }
+        "Normal": { "name": "Storm Scout", "status": "Available S4", "cost": "1250", "rarity": "Rare" },
+        "Gold": { "name": "Gold Storm Scout", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Cheat Master": { "name": "Cheat Master Storm Scout", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Hacker": { "name": "Hacker Storm Scout", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Bounty Hunter": { "name": "Bounty Hunter Storm Scout", "status": "Unavailable", "cost": "-", "rarity": "Rare" },
+        "Trick or Treat": { "name": "Trick or Treat Storm Scout", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
+        "Gummy": { "name": "Gummy Storm Scout", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
+        "Holofoil": { "name": "Holofoil Storm Scout", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
       }
     },
     {
@@ -2275,54 +795,14 @@ const SPIRITS_DATA = {
       "desc_level": "Overdrive lasts longer with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "Onigiri",
-          "status": "Available S4",
-          "cost": "1250",
-          "rarity": "Rare"
-        },
-        "Gold": {
-          "name": "Gold Onigiri",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Cheat Master": {
-          "name": "Cheat Master Onigiri",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Hacker": {
-          "name": "Hacker Onigiri",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Reaper": {
-          "name": "Reaper Onigiri",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Gummy": {
-          "name": "Gummy Onigiri",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Holofoil": {
-          "name": "Holofoil Onigiri",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Trick or Treat": {
-          "name": "Trick or Treat Onigiri",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        }
+        "Normal": { "name": "Onigiri", "status": "Available S4", "cost": "1250", "rarity": "Rare" },
+        "Gold": { "name": "Gold Onigiri", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Cheat Master": { "name": "Cheat Master Onigiri", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Hacker": { "name": "Hacker Onigiri", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Bounty Hunter": { "name": "Bounty Hunter Onigiri", "status": "Unavailable", "cost": "-", "rarity": "Rare" },
+        "Trick or Treat": { "name": "Trick or Treat Onigiri", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
+        "Gummy": { "name": "Gummy Onigiri", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
+        "Holofoil": { "name": "Holofoil Onigiri", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
       }
     },
     {
@@ -2333,54 +813,14 @@ const SPIRITS_DATA = {
       "desc_level": "",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "Overshield",
-          "status": "Available S4",
-          "cost": "1500",
-          "rarity": "Rare"
-        },
-        "Gold": {
-          "name": "Gold Overshield",
-          "status": "Available S4",
-          "cost": "1800",
-          "rarity": "Rare"
-        },
-        "Cheat Master": {
-          "name": "Cheat Master Overshield",
-          "status": "Available S4",
-          "cost": "1800",
-          "rarity": "Rare"
-        },
-        "Hacker": {
-          "name": "Hacker Overshield",
-          "status": "Available S4",
-          "cost": "1800",
-          "rarity": "Rare"
-        },
-        "Reaper": {
-          "name": "Reaper Overshield",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Gummy": {
-          "name": "Gummy Overshield",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Holofoil": {
-          "name": "Holofoil Overshield",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Trick or Treat": {
-          "name": "Trick or Treat Overshield",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        }
+        "Normal": { "name": "Overshield", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Gold": { "name": "Gold Overshield", "status": "Available S4", "cost": "1800", "rarity": "Rare" },
+        "Cheat Master": { "name": "Cheat Master Overshield", "status": "Available S4", "cost": "1800", "rarity": "Rare" },
+        "Hacker": { "name": "Hacker Overshield", "status": "Available S4", "cost": "1800", "rarity": "Rare" },
+        "Bounty Hunter": { "name": "Bounty Hunter Overshield", "status": "Unavailable", "cost": "-", "rarity": "Rare" },
+        "Trick or Treat": { "name": "Trick or Treat Overshield", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
+        "Gummy": { "name": "Gummy Overshield", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
+        "Holofoil": { "name": "Holofoil Overshield", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
       }
     },
     {
@@ -2391,54 +831,14 @@ const SPIRITS_DATA = {
       "desc_level": "Mark more often and in a larger radius with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "X-Ray",
-          "status": "Available S4",
-          "cost": "1750",
-          "rarity": "Legendary"
-        },
-        "Gold": {
-          "name": "Gold X-Ray",
-          "status": "Available S4",
-          "cost": "2100",
-          "rarity": "Legendary"
-        },
-        "Cheat Master": {
-          "name": "Cheat Master X-Ray",
-          "status": "Available S4",
-          "cost": "2100",
-          "rarity": "Legendary"
-        },
-        "Hacker": {
-          "name": "Hacker X-Ray",
-          "status": "Available S4",
-          "cost": "2100",
-          "rarity": "Legendary"
-        },
-        "Reaper": {
-          "name": "Reaper X-Ray",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Legendary"
-        },
-        "Gummy": {
-          "name": "Gummy X-Ray",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Legendary"
-        },
-        "Holofoil": {
-          "name": "Holofoil X-Ray",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Legendary"
-        },
-        "Trick or Treat": {
-          "name": "Trick or Treat X-Ray",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Legendary"
-        }
+        "Normal": { "name": "X-Ray", "status": "Available S4", "cost": "1750", "rarity": "Legendary" },
+        "Gold": { "name": "Gold X-Ray", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
+        "Cheat Master": { "name": "Cheat Master X-Ray", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
+        "Hacker": { "name": "Hacker X-Ray", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
+        "Bounty Hunter": { "name": "Bounty Hunter X-Ray", "status": "Unavailable", "cost": "-", "rarity": "Legendary" },
+        "Trick or Treat": { "name": "Trick or Treat X-Ray", "status": "Not Exist", "cost": "-", "rarity": "Legendary" },
+        "Gummy": { "name": "Gummy X-Ray", "status": "Not Exist", "cost": "-", "rarity": "Legendary" },
+        "Holofoil": { "name": "Holofoil X-Ray", "status": "Not Exist", "cost": "-", "rarity": "Legendary" }
       }
     },
     {
@@ -2449,54 +849,104 @@ const SPIRITS_DATA = {
       "desc_level": "Slide farther with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": {
-          "name": "Megaman",
-          "status": "Available S4",
-          "cost": "1750",
-          "rarity": "Rare"
-        },
-        "Gold": {
-          "name": "Gold Megaman",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Cheat Master": {
-          "name": "Cheat Master Megaman",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Hacker": {
-          "name": "Hacker Megaman",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Reaper": {
-          "name": "Reaper Megaman",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Gummy": {
-          "name": "Gummy Megaman",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Holofoil": {
-          "name": "Holofoil Megaman",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        },
-        "Trick or Treat": {
-          "name": "Trick or Treat Megaman",
-          "status": "Not Exist",
-          "cost": "-",
-          "rarity": "Rare"
-        }
+        "Normal": { "name": "Megaman", "status": "Available S4", "cost": "1750", "rarity": "Rare" },
+        "Gold": { "name": "Gold Megaman", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
+        "Cheat Master": { "name": "Cheat Master Megaman", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
+        "Hacker": { "name": "Hacker Megaman", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
+        "Bounty Hunter": { "name": "Bounty Hunter Megaman", "status": "Unavailable", "cost": "-", "rarity": "Rare" },
+        "Trick or Treat": { "name": "Trick or Treat Megaman", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
+        "Gummy": { "name": "Gummy Megaman", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
+        "Holofoil": { "name": "Holofoil Megaman", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
+      }
+    },
+    {
+      "id": "birthday",
+      "name": "Birthday",
+      "rarity": "Rare",
+      "desc_sprite": "Opening chests has a chance to spawn a piece of cake.",
+      "desc_level": "Eliminations can spawn cake at max level. Chance to spawn cake increases with each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Birthday", "status": "Available S4", "cost": "1250", "rarity": "Rare" },
+        "Gold": { "name": "Gold Birthday", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Cheat Master": { "name": "Cheat Master Birthday", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Hacker": { "name": "Hacker Birthday", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
+        "Bounty Hunter": { "name": "Bounty Hunter Birthday", "status": "Unavailable", "cost": "-", "rarity": "Rare" },
+        "Trick or Treat": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Gummy": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Holofoil": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" }
+      }
+    },
+    {
+      "id": "pond",
+      "name": "Pond",
+      "rarity": "Epic",
+      "desc_sprite": "(Active) - Jump shortly after landing to trigger a Super Jump, if charges are present. Gain charges over time.",
+      "desc_level": "Super jump strength increases and cooldown decreases with each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Pond", "status": "Available S4", "cost": "1500", "rarity": "Epic" },
+        "Gold": { "name": "Gold Pond", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
+        "Cheat Master": { "name": "Cheat Master Pond", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
+        "Hacker": { "name": "Hacker Pond", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
+        "Bounty Hunter": { "name": "Bounty Hunter Pond", "status": "Unavailable", "cost": "-", "rarity": "Epic" },
+        "Trick or Treat": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Gummy": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Holofoil": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" }
+      }
+    },
+    {
+      "id": "morgana",
+      "name": "Morgana",
+      "rarity": "Epic",
+      "desc_sprite": "Increases the effectiveness of healing items.",
+      "desc_level": "Healing effectiveness increases with each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Morgana", "status": "Available S4", "cost": "1500", "rarity": "Epic" },
+        "Gold": { "name": "Gold Morgana", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
+        "Cheat Master": { "name": "Cheat Master Morgana", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
+        "Hacker": { "name": "Hacker Morgana", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
+        "Bounty Hunter": { "name": "Bounty Hunter Morgana", "status": "Unavailable", "cost": "-", "rarity": "Epic" },
+        "Trick or Treat": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Gummy": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Holofoil": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" }
+      }
+    },
+    {
+      "id": "blinky",
+      "name": "Blinky",
+      "rarity": "Legendary",
+      "desc_sprite": "Grants cloak for a duration when you take damage.",
+      "desc_level": "Cloak duration increases with each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Blinky", "status": "Available S4", "cost": "1750", "rarity": "Legendary" },
+        "Gold": { "name": "Gold Blinky", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
+        "Cheat Master": { "name": "Cheat Master Blinky", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
+        "Hacker": { "name": "Hacker Blinky", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
+        "Bounty Hunter": { "name": "Bounty Hunter Blinky", "status": "Unavailable", "cost": "-", "rarity": "Legendary" },
+        "Trick or Treat": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Gummy": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Holofoil": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" }
+      }
+    },
+    {
+      "id": "crash",
+      "name": "Crash Bandicoot",
+      "rarity": "Legendary",
+      "desc_sprite": "(Active - Jump In Air) Triggers a whirlwind attack, damaging and knocking back nearby enemies.",
+      "desc_level": "Damage increases and cooldown decreases with each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Crash Bandicoot", "status": "Available S4", "cost": "1750", "rarity": "Legendary" },
+        "Gold": { "name": "Gold Crash Bandicoot", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
+        "Cheat Master": { "name": "Cheat Master Crash Bandicoot", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
+        "Hacker": { "name": "Hacker Crash Bandicoot", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
+        "Bounty Hunter": { "name": "Bounty Hunter Crash Bandicoot", "status": "Unavailable", "cost": "-", "rarity": "Legendary" },
+        "Trick or Treat": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Gummy": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Holofoil": { "name": "", "status": "Not Exist", "cost": "", "rarity": "" }
       }
     }
   ]
