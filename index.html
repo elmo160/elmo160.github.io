@@ -523,12 +523,12 @@
 
     .variant-slot.status-unreleased, .variant-slot.status-unavailable {
       background-color: rgba(0, 0, 0, 0.35);
-      border: 1px dashed rgba(239, 68, 68, 0.3);
-      cursor: not-allowed;
-      opacity: 0.55;
+	  border: 1px dashed rgba(239, 68, 68, 0.3);
+	  cursor: not-allowed;
+	  opacity: 0.55;
 	  padding: 6px;
 	  justify-content: space-between;
-    }
+	}
 
     .variant-slot.status-unreleased img, .variant-slot.status-unavailable img {
       height: 78px;
@@ -1073,7 +1073,7 @@
         <option value="Normal">Normal</option>
         <option value="Gold">Gold</option>
         <option value="Cheat Master">Cheat Master</option>
-        <option value="Hacker">Hacker</option>
+        <option value="Loot Hacker">Loot Hacker</option>
         <option value="Bounty Hunter">Bounty Hunter</option>
         <option value="Trick or Treat">Trick or Treat</option>
         <option value="Holofoil">Holofoil</option>
@@ -1173,7 +1173,8 @@
       "Gem": "gem",
       "Quack": "quack",
       "Cheat Master": "cheat",
-      "Hacker": "hacker",
+      "Loot Hacker": "hacker",
+	  "Hacker": "hacker",
       "Bounty Hunter": "bounty",
       "Bounty": "bounty",
       "Trick or Treat": "trick",
@@ -1191,7 +1192,7 @@
       "Gem": "Take 30% less Fall damage",
       "Quack": "Gives 50% Sprite XP to all other Sprites in your inventory",
       "Cheat Master": "Button mash! All inputs are correct when entering cheat codes found in the world.",
-      "Hacker": "Increases chances of spawning items from your Loot Hacks.",
+      "Loot Hacker": "Increases chances of spawning items from your Loot Hacks.",
       "Bounty Hunter": "Chance to find sprites when eliminating opponents. Only gains sprite XP from eliminations, unless sprite has special XP rules.",
       "Trick or Treat": "Chance to find Candy when opening containers.",
       "Trick Treat": "Chance to find Candy when opening containers."
@@ -1208,7 +1209,7 @@
       "gem": "radial-gradient(circle at center, rgba(241, 245, 249, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "quack": "radial-gradient(circle at center, rgba(216, 180, 254, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "cheat": "radial-gradient(circle at center, rgba(0, 230, 118, 0.35) 0%, rgba(14, 18, 30, 0.95) 80%)",
-      "hacker": "radial-gradient(circle at center, rgba(94, 96, 206, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
+      "Loot Hacker": "radial-gradient(circle at center, rgba(94, 96, 206, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "bounty": "radial-gradient(circle at center, rgba(224, 64, 251, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "trick": "radial-gradient(circle at center, rgba(255, 109, 0, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)"
     };
@@ -1224,7 +1225,7 @@
       "gem": "#FFFFFF",
       "quack": "#C084FC",
       "cheat": "#00E676",
-      "hacker": "#5E60CE",
+      "Loot Hacker": "#5E60CE",
       "bounty": "#E040FB",
       "trick": "#FF6D00"
     };
@@ -1351,9 +1352,9 @@
         return (typeof S3_VARIANTS !== 'undefined') ? S3_VARIANTS : ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"];
       }
       if (currentTab === 'S4') {
-        return (typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"];
+        return (typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Loot Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"];
       }
-      return ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat"];
+      return ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack", "Cheat Master", "Loot Hacker", "Bounty Hunter", "Trick or Treat"];
     }
 
     function getSpiritsList() {
@@ -1421,7 +1422,7 @@
       spirits.forEach(spirit => {
         const season = spirit._season || 'S3';
         const variantsList = (season === 'S4')
-          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"])
+          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Loot Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"])
           : ((typeof S3_VARIANTS !== 'undefined') ? S3_VARIANTS : ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"]);
 
         variantsList.forEach(vName => {
@@ -1754,7 +1755,7 @@
         const seasonDir = spirit._season || 'S3';
 
         const spiritVariantsList = (seasonDir === 'S4')
-          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"])
+          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Loot Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"])
           : ((typeof S3_VARIANTS !== 'undefined') ? S3_VARIANTS : ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"]);
 
         const matchesName = spiritName.toLowerCase().includes(searchVal);
@@ -1892,7 +1893,7 @@
 
       const season = targetSpirit._season || 'S3';
       const variantsList = (season === 'S4')
-        ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"])
+        ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Loot Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"])
         : ((typeof S3_VARIANTS !== 'undefined') ? S3_VARIANTS : ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"]);
 
       variantsList.forEach(vName => {
@@ -1917,7 +1918,7 @@
       spirits.forEach(spirit => {
         const season = spirit._season || 'S3';
         const variantsList = (season === 'S4')
-          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"])
+          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Loot Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"])
           : ((typeof S3_VARIANTS !== 'undefined') ? S3_VARIANTS : ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"]);
 
         variantsList.forEach(vName => {
@@ -1934,7 +1935,7 @@
       spirits.forEach(spirit => {
         const season = spirit._season || 'S3';
         const variantsList = (season === 'S4')
-          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"])
+          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Loot Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"])
           : ((typeof S3_VARIANTS !== 'undefined') ? S3_VARIANTS : ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"]);
 
         variantsList.forEach(vName => {
