@@ -1139,7 +1139,7 @@
   <script src="html2canvas.min.js"></script>
 
   <script>
-    const SPIRIT_SLUGS = {
+const SPIRIT_SLUGS = {
       "8 bit": "8bit",
       "burnt peanut": "peanut",
       "zero point": "zp",
@@ -1160,7 +1160,14 @@
       "morgana": "morgana",
       "blinky": "blinky",
       "crash bandicoot": "crash",
-      "crash": "crash"
+      "crash": "crash",
+      "dumpster dive": "dumpster",
+      "dumpster": "dumpster",
+      "vampire": "vampire",
+      "the deer": "deer",
+      "deer": "deer",
+      "spooky dash": "spooky",
+      "spooky": "spooky"
     };
 
     const VARIANT_SLUGS = {
@@ -1863,7 +1870,7 @@
       container.innerHTML = html;
     }
 
-    function toggleVariantState(spiritId, variant) {
+	  function toggleVariantState(spiritId, variant, el) {
       if (currentTab === 'Garden') return;
 
       const spirits = getSpiritsList();
@@ -1872,18 +1879,41 @@
 
       const key = `${spiritId}_${variant}`;
       const currentState = userProgress[key] || 'none';
+      let nextState = 'none';
 
       if (currentState === 'none') {
+        nextState = 'collected';
         userProgress[key] = 'collected';
       } else if (currentState === 'collected') {
+        nextState = 'mastered';
         userProgress[key] = 'mastered';
       } else {
         delete userProgress[key];
       }
 
       saveProgress();
-      invalidateAllPanels();
-      renderActiveTab();
+
+      // Si tenemos el elemento directo en el DOM, actualizamos solo su clase e icono de corona
+      const targetSlot = el || (event && event.currentTarget);
+      if (targetSlot) {
+        targetSlot.classList.remove('status-none', 'status-collected', 'status-mastered');
+        targetSlot.classList.add(`status-${nextState}`);
+
+        let crownBadge = targetSlot.querySelector('.mastered-badge');
+        if (nextState === 'mastered') {
+          if (!crownBadge) {
+            crownBadge = document.createElement('span');
+            crownBadge.className = 'mastered-badge';
+            crownBadge.innerHTML = `<img src="crown.webp" onerror="this.onerror=null; this.src='assets/crown.webp';" alt="👑">`;
+            targetSlot.appendChild(crownBadge);
+          }
+        } else if (crownBadge) {
+          crownBadge.remove();
+        }
+      } else {
+        invalidateAllPanels();
+        renderActiveTab();
+      }
     }
 
     function setSpiritState(spiritId, targetState) {
