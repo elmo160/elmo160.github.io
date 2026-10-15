@@ -838,8 +838,8 @@ const SPIRITS_DATA = {
         "Gold": { "name": "Gold Megaman", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
         "Cheat Master": { "name": "Cheat Master Megaman", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
         "Hacker": { "name": "Hacker Megaman", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
-        "Bounty Hunter": { "name": "Bounty Hunter Megaman", "status": "Available S4", "cost": "1750", "rarity": "Rare" },
-        "Trick or Treat": { "name": "Trick or Treat Megaman", "status": "Available S4", "cost": "1750", "rarity": "Rare" },
+        "Bounty Hunter": { "name": "Bounty Hunter Megaman", "status": "Not Exist", "cost": "1750", "rarity": "Rare" },
+        "Trick or Treat": { "name": "Trick or Treat Megaman", "status": "Not Exist", "cost": "1750", "rarity": "Rare" },
         "Quack": { "name": "Quack Megaman", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
       }
     },
