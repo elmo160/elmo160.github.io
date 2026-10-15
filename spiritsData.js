@@ -1,7 +1,7 @@
 // Fortnite Spirits Data Config (Auto-generated from Espiritus Database.xlsx)
 
 const S3_VARIANTS = ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"];
-const S4_VARIANTS = ["Normal", "Gold", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"];
+const S4_VARIANTS = ["Normal", "Gold", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat", "Quack"];
 
 const SPIRITS_DATA = {
   "S3": [
@@ -585,8 +585,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker bush", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
         "Bounty Hunter": { "name": "Bounty Hunter bush", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
         "Trick or Treat": { "name": "Trick or Treat bush", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
-        "Gummy": { "name": "Gummy bush", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
-        "Holofoil": { "name": "Holofoil bush", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
+        "Quack": { "name": "Quack bush", "status": "Available S4", "cost": "1500", "rarity": "Rare" }
       }
     },
     {
@@ -603,8 +602,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker adventure", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
         "Bounty Hunter": { "name": "Bounty Hunter adventure", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
         "Trick or Treat": { "name": "Trick or Treat adventure", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
-        "Gummy": { "name": "Gummy adventure", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
-        "Holofoil": { "name": "Holofoil adventure", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
+        "Quack": { "name": "Quack adventure", "status": "Available S4", "cost": "1500", "rarity": "Rare" }
       }
     },
     {
@@ -621,8 +619,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker Jonesy", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
         "Bounty Hunter": { "name": "Bounty Hunter Jonesy", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
         "Trick or Treat": { "name": "Trick or Treat Jonesy", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
-        "Gummy": { "name": "Gummy Jonesy", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
-        "Holofoil": { "name": "Holofoil Jonesy", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
+        "Quack": { "name": "Quack Jonesy", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
       }
     },
     {
@@ -639,8 +636,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker 8 Bit", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
         "Bounty Hunter": { "name": "Bounty Hunter 8 Bit", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
         "Trick or Treat": { "name": "Trick or Treat 8 Bit", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
-        "Gummy": { "name": "Gummy 8 Bit", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
-        "Holofoil": { "name": "Holofoil 8 Bit", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
+        "Quack": { "name": "Quack 8 Bit", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
       }
     },
     {
@@ -657,8 +653,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker Killswitch", "status": "Available S4", "cost": "1500", "rarity": "Epic" },
         "Bounty Hunter": { "name": "Bounty Hunter Killswitch", "status": "Available S4", "cost": "1500", "rarity": "Epic" },
         "Trick or Treat": { "name": "Trick or Treat Killswitch", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
-        "Gummy": { "name": "Gummy Killswitch", "status": "Not Exist", "cost": "-", "rarity": "Epic" },
-        "Holofoil": { "name": "Holofoil Killswitch", "status": "Not Exist", "cost": "-", "rarity": "Epic" }
+        "Quack": { "name": "Quack Killswitch", "status": "Not Exist", "cost": "-", "rarity": "Epic" }
       }
     },
     {
@@ -675,8 +670,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker Sonic", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
         "Bounty Hunter": { "name": "Bounty Hunter Sonic", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
         "Trick or Treat": { "name": "Trick or Treat Sonic", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
-        "Gummy": { "name": "Gummy Sonic", "status": "Not Exist", "cost": "-", "rarity": "Epic" },
-        "Holofoil": { "name": "Holofoil Sonic", "status": "Not Exist", "cost": "-", "rarity": "Epic" }
+        "Quack": { "name": "Quack Sonic", "status": "Not Exist", "cost": "-", "rarity": "Epic" }
       }
     },
     {
@@ -693,8 +687,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker Tails", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
         "Bounty Hunter": { "name": "Bounty Hunter Tails", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
         "Trick or Treat": { "name": "Trick or Treat Tails", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
-        "Gummy": { "name": "Gummy Tails", "status": "Not Exist", "cost": "-", "rarity": "Epic" },
-        "Holofoil": { "name": "Holofoil Tails", "status": "Not Exist", "cost": "-", "rarity": "Epic" }
+        "Quack": { "name": "Quack Tails", "status": "Not Exist", "cost": "-", "rarity": "Epic" }
       }
     },
     {
@@ -711,8 +704,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker Shadow", "status": "Available S4", "cost": "4000", "rarity": "Epic" },
         "Bounty Hunter": { "name": "Bounty Hunter Shadow", "status": "Available S4", "cost": "4000", "rarity": "Epic" },
         "Trick or Treat": { "name": "Trick or Treat Shadow", "status": "Available S4", "cost": "4000", "rarity": "Epic" },
-        "Gummy": { "name": "Gummy Shadow", "status": "Not Exist", "cost": "-", "rarity": "Epic" },
-        "Holofoil": { "name": "Holofoil Shadow", "status": "Not Exist", "cost": "-", "rarity": "Epic" }
+        "Quack": { "name": "Quack Shadow", "status": "Not Exist", "cost": "-", "rarity": "Epic" }
       }
     },
     {
@@ -729,8 +721,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker JackRabbit", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
         "Bounty Hunter": { "name": "Bounty Hunter JackRabbit", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
         "Trick or Treat": { "name": "Trick or Treat JackRabbit", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
-        "Gummy": { "name": "Gummy JackRabbit", "status": "Not Exist", "cost": "-", "rarity": "Legendary" },
-        "Holofoil": { "name": "Holofoil JackRabbit", "status": "Unavailable", "cost": "-", "rarity": "Legendary" }
+        "Quack": { "name": "Quack JackRabbit", "status": "Not Exist", "cost": "-", "rarity": "Legendary" }
       }
     },
     {
@@ -747,8 +738,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker Crown", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
         "Bounty Hunter": { "name": "Bounty Hunter Crown", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
         "Trick or Treat": { "name": "Trick or Treat Crown", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
-        "Gummy": { "name": "Gummy Crown", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
-        "Holofoil": { "name": "Holofoil Crown", "status": "Not Exist", "cost": "-", "rarity": "Mythic" }
+        "Quack": { "name": "Quack Crown", "status": "Not Exist", "cost": "-", "rarity": "Mythic" }
       }
     },
     {
@@ -765,8 +755,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker Klombo", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
         "Bounty Hunter": { "name": "Bounty Hunter Klombo", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
         "Trick or Treat": { "name": "Trick or Treat Klombo", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
-        "Gummy": { "name": "Gummy Klombo", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
-        "Holofoil": { "name": "Holofoil Klombo", "status": "Not Exist", "cost": "-", "rarity": "Mythic" }
+        "Quack": { "name": "Quack Klombo", "status": "Available S4", "cost": "2400", "rarity": "Mythic" }
       }
     },
     {
@@ -783,8 +772,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker Storm Scout", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
         "Bounty Hunter": { "name": "Bounty Hunter Storm Scout", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
         "Trick or Treat": { "name": "Trick or Treat Storm Scout", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
-        "Gummy": { "name": "Gummy Storm Scout", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
-        "Holofoil": { "name": "Holofoil Storm Scout", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
+        "Quack": { "name": "Quack Storm Scout", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
       }
     },
     {
@@ -801,8 +789,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker Onigiri", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
         "Bounty Hunter": { "name": "Bounty Hunter Onigiri", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
         "Trick or Treat": { "name": "Trick or Treat Onigiri", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
-        "Gummy": { "name": "Gummy Onigiri", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
-        "Holofoil": { "name": "Holofoil Onigiri", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
+        "Quack": { "name": "Quack Onigiri", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
       }
     },
     {
@@ -819,8 +806,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker Overshield", "status": "Available S4", "cost": "1800", "rarity": "Rare" },
         "Bounty Hunter": { "name": "Bounty Hunter Overshield", "status": "Available S4", "cost": "1800", "rarity": "Rare" },
         "Trick or Treat": { "name": "Trick or Treat Overshield", "status": "Available S4", "cost": "1800", "rarity": "Rare" },
-        "Gummy": { "name": "Gummy Overshield", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
-        "Holofoil": { "name": "Holofoil Overshield", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
+        "Quack": { "name": "Quack Overshield", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
       }
     },
     {
@@ -837,8 +823,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker X-Ray", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
         "Bounty Hunter": { "name": "Bounty Hunter X-Ray", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
         "Trick or Treat": { "name": "Trick or Treat X-Ray", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
-        "Gummy": { "name": "Gummy X-Ray", "status": "Not Exist", "cost": "-", "rarity": "Legendary" },
-        "Holofoil": { "name": "Holofoil X-Ray", "status": "Not Exist", "cost": "-", "rarity": "Legendary" }
+        "Quack": { "name": "Quack X-Ray", "status": "Not Exist", "cost": "-", "rarity": "Legendary" }
       }
     },
     {
@@ -853,10 +838,9 @@ const SPIRITS_DATA = {
         "Gold": { "name": "Gold Megaman", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
         "Cheat Master": { "name": "Cheat Master Megaman", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
         "Hacker": { "name": "Hacker Megaman", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
-        "Bounty Hunter": { "name": "Bounty Hunter Megaman", "status": "Not Exist", "cost": "1750", "rarity": "Rare" },
-        "Trick or Treat": { "name": "Trick or Treat Megaman", "status": "Not Exist", "cost": "1750", "rarity": "Rare" },
-        "Gummy": { "name": "Gummy Megaman", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
-        "Holofoil": { "name": "Holofoil Megaman", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
+        "Bounty Hunter": { "name": "Bounty Hunter Megaman", "status": "Available S4", "cost": "1750", "rarity": "Rare" },
+        "Trick or Treat": { "name": "Trick or Treat Megaman", "status": "Available S4", "cost": "1750", "rarity": "Rare" },
+        "Quack": { "name": "Quack Megaman", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
       }
     },
     {
@@ -873,8 +857,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker Birthday", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
         "Bounty Hunter": { "name": "Bounty Hunter Birthday", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
         "Trick or Treat": { "name": "Trick or Treat Birthday", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
-        "Gummy": { "name": "Gummy Birthday", "status": "Not Exist", "cost": "-", "rarity": "Rare" },
-        "Holofoil": { "name": "Holofoil Birthday", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
+        "Quack": { "name": "Quack Birthday", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
       }
     },
     {
@@ -891,8 +874,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker Pond", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
         "Bounty Hunter": { "name": "Bounty Hunter Pond", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
         "Trick or Treat": { "name": "Trick or Treat Pond", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
-        "Gummy": { "name": "Gummy Pond", "status": "Not Exist", "cost": "-", "rarity": "Epic" },
-        "Holofoil": { "name": "Holofoil Pond", "status": "Not Exist", "cost": "-", "rarity": "Epic" }
+        "Quack": { "name": "Quack Pond", "status": "Not Exist", "cost": "-", "rarity": "Epic" }
       }
     },
     {
@@ -909,8 +891,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker Morgana", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
         "Bounty Hunter": { "name": "Bounty Hunter Morgana", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
         "Trick or Treat": { "name": "Trick or Treat Morgana", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
-        "Gummy": { "name": "Gummy Morgana", "status": "Not Exist", "cost": "-", "rarity": "Epic" },
-        "Holofoil": { "name": "Holofoil Morgana", "status": "Not Exist", "cost": "-", "rarity": "Epic" }
+        "Quack": { "name": "Quack Morgana", "status": "Not Exist", "cost": "-", "rarity": "Epic" }
       }
     },
     {
@@ -927,8 +908,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker Blinky", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
         "Bounty Hunter": { "name": "Bounty Hunter Blinky", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
         "Trick or Treat": { "name": "Trick or Treat Blinky", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
-        "Gummy": { "name": "Gummy Blinky", "status": "Not Exist", "cost": "-", "rarity": "Legendary" },
-        "Holofoil": { "name": "Holofoil Blinky", "status": "Not Exist", "cost": "-", "rarity": "Legendary" }
+        "Quack": { "name": "Quack Blinky", "status": "Not Exist", "cost": "-", "rarity": "Legendary" }
       }
     },
     {
@@ -945,8 +925,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker Crash Bandicoot", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
         "Bounty Hunter": { "name": "Bounty Hunter Crash Bandicoot", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
         "Trick or Treat": { "name": "Trick or Treat Crash Bandicoot", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
-        "Gummy": { "name": "Gummy Crash Bandicoot", "status": "Not Exist", "cost": "-", "rarity": "Legendary" },
-        "Holofoil": { "name": "Holofoil Crash Bandicoot", "status": "Not Exist", "cost": "-", "rarity": "Legendary" }
+        "Quack": { "name": "Quack Crash Bandicoot", "status": "Not Exist", "cost": "-", "rarity": "Legendary" }
       }
     },
     {
@@ -963,8 +942,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker Dumpster Dive", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
         "Bounty Hunter": { "name": "Bounty Hunter Dumpster Dive", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
         "Trick or Treat": { "name": "Trick or Treat Dumpster Dive", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
-        "Gummy": { "name": "Gummy Dumpster Dive", "status": "Not Exist", "cost": "-", "rarity": "Epic" },
-        "Holofoil": { "name": "Holofoil Dumpster Dive", "status": "Not Exist", "cost": "-", "rarity": "Epic" }
+        "Quack": { "name": "Quack Dumpster Dive", "status": "Not Exist", "cost": "-", "rarity": "Epic" }
       }
     },
     {
@@ -981,8 +959,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker Vampire", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
         "Bounty Hunter": { "name": "Bounty Hunter Vampire", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
         "Trick or Treat": { "name": "Trick or Treat Vampire", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
-        "Gummy": { "name": "Gummy Vampire", "status": "Not Exist", "cost": "-", "rarity": "Legendary" },
-        "Holofoil": { "name": "Holofoil Vampire", "status": "Not Exist", "cost": "-", "rarity": "Legendary" }
+        "Quack": { "name": "Quack Vampire", "status": "Not Exist", "cost": "-", "rarity": "Legendary" }
       }
     },
     {
@@ -999,8 +976,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker The Deer", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
         "Bounty Hunter": { "name": "Bounty Hunter The Deer", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
         "Trick or Treat": { "name": "Trick or Treat The Deer", "status": "Available S4", "cost": "2100", "rarity": "Legendary" },
-        "Gummy": { "name": "Gummy The Deer", "status": "Not Exist", "cost": "-", "rarity": "Legendary" },
-        "Holofoil": { "name": "Holofoil The Deer", "status": "Not Exist", "cost": "-", "rarity": "Legendary" }
+        "Quack": { "name": "Quack The Deer", "status": "Not Exist", "cost": "-", "rarity": "Legendary" }
       }
     },
     {
@@ -1017,8 +993,41 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker Spooky Dash", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
         "Bounty Hunter": { "name": "Bounty Hunter Spooky Dash", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
         "Trick or Treat": { "name": "Trick or Treat Spooky Dash", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
-        "Gummy": { "name": "Gummy Spooky Dash", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
-        "Holofoil": { "name": "Holofoil Spooky Dash", "status": "Not Exist", "cost": "-", "rarity": "Mythic" }
+        "Quack": { "name": "Quack Spooky Dash", "status": "Available S4", "cost": "2400", "rarity": "Mythic" }
+      }
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "rarity": "Epic",
+      "desc_sprite": "Chance to spawn bees at the hit location upon dealing damage with a ranged weapon",
+      "desc_level": "",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Honey", "status": "Available S4", "cost": "1500", "rarity": "Epic" },
+        "Gold": { "name": "Gold Honey", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
+        "Cheat Master": { "name": "Cheat Master Honey", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
+        "Hacker": { "name": "Hacker Honey", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
+        "Bounty Hunter": { "name": "Bounty Hunter Honey", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
+        "Trick or Treat": { "name": "Trick or Treat Honey", "status": "Available S4", "cost": "1800", "rarity": "Epic" },
+        "Quack": { "name": "Quack Honey", "status": "Not Exist", "cost": "-", "rarity": "Epic" }
+      }
+    },
+    {
+      "id": "wish",
+      "name": "One Wish Willow",
+      "rarity": "Mythic",
+      "desc_sprite": "Extract other players equipped Sprites when eliminating them. Push everything away when damaged. Gets upset when removed and marks you on the map",
+      "desc_level": "",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "One Wish Willow", "status": "Available S4", "cost": "2000", "rarity": "Mythic" },
+        "Gold": { "name": "Gold One Wish Willow", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
+        "Cheat Master": { "name": "Cheat Master One Wish Willow", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
+        "Hacker": { "name": "Hacker One Wish Willow", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
+        "Bounty Hunter": { "name": "Bounty Hunter One Wish Willow", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
+        "Trick or Treat": { "name": "Trick or Treat One Wish Willow", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
+        "Quack": { "name": "Quack One Wish Willow", "status": "Not Exist", "cost": "-", "rarity": "Mythic" }
       }
     }
   ]
