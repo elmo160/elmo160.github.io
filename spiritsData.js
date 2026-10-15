@@ -619,7 +619,7 @@ const SPIRITS_DATA = {
         "Hacker": { "name": "Hacker Jonesy", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
         "Bounty Hunter": { "name": "Bounty Hunter Jonesy", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
         "Trick or Treat": { "name": "Trick or Treat Jonesy", "status": "Available S4", "cost": "1500", "rarity": "Rare" },
-        "Quack": { "name": "Quack Jonesy", "status": "Not Exist", "cost": "-", "rarity": "Rare" }
+        "Quack": { "name": "Quack Jonesy", "status": "Available S4", "cost": "-", "rarity": "Rare" }
       }
     },
     {
