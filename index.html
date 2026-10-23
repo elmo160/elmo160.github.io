@@ -326,7 +326,7 @@
     .badge-gem { background: linear-gradient(135deg, #FFFFFF, #94A3B8); color: #0F172A; }
     .badge-quack { background: linear-gradient(135deg, #E9D5FF, #A855F7); color: #3B0764; }
     .badge-cheat, .badge-cheat-master { background: linear-gradient(135deg, #00E676, #00C853); color: #000; }
-    .badge-hacker { background: linear-gradient(135deg, #3A86FF, #7209B7); color: #FFF; }
+    .badge-hacker, .badge-loot-hacker { background: linear-gradient(135deg, #3A86FF, #7209B7); color: #FFF; }
     .badge-bounty, .badge-bounty-hunter { background: linear-gradient(135deg, #E040FB, #6A00F4); color: #FFF; }
     .badge-trick, .badge-trick-treat, .badge-trick-or-treat { background: linear-gradient(135deg, #FF6D00, #DD2C00); color: #FFF; }
 
@@ -523,17 +523,17 @@
 
     .variant-slot.status-unreleased, .variant-slot.status-unavailable {
       background-color: rgba(0, 0, 0, 0.35);
-	  border: 1px dashed rgba(239, 68, 68, 0.3);
-	  cursor: not-allowed;
-	  opacity: 0.55;
-	  padding: 6px;
-	  justify-content: space-between;
-	}
+      border: 1px dashed rgba(239, 68, 68, 0.3);
+      cursor: not-allowed;
+      opacity: 0.55;
+      padding: 6px;
+      justify-content: space-between;
+    }
 
     .variant-slot.status-unreleased img, .variant-slot.status-unavailable img {
       height: 78px;
       width: 78px;
-	  margin: auto 0;
+      margin: auto 0;
     }
 
     .unreleased-label {
@@ -774,7 +774,7 @@
     .garden-vslot.bg-variant-gem { background: radial-gradient(circle at center, rgba(241, 245, 249, 0.35) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-quack { background: radial-gradient(circle at center, rgba(216, 180, 254, 0.35) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-cheat, .garden-vslot.bg-variant-cheat-master { background: radial-gradient(circle at center, rgba(0, 230, 118, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
-    .garden-vslot.bg-variant-hacker { background: radial-gradient(circle at center, rgba(94, 96, 206, 0.32) 0%, rgba(15, 18, 32, 0.95) 75%); }
+    .garden-vslot.bg-variant-hacker, .garden-vslot.bg-variant-loot-hacker { background: radial-gradient(circle at center, rgba(94, 96, 206, 0.32) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-bounty, .garden-vslot.bg-variant-bounty-hunter { background: radial-gradient(circle at center, rgba(224, 64, 251, 0.35) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-trick, .garden-vslot.bg-variant-trick-treat, .garden-vslot.bg-variant-trick-or-treat { background: radial-gradient(circle at center, rgba(255, 109, 0, 0.30) 0%, rgba(15, 18, 32, 0.95) 75%); }
 
@@ -1073,7 +1073,7 @@
         <option value="Normal">Normal</option>
         <option value="Gold">Gold</option>
         <option value="Cheat Master">Cheat Master</option>
-        <option value="Loot Hacker">Loot Hacker</option>
+        <option value="Hacker">Hacker</option>
         <option value="Bounty Hunter">Bounty Hunter</option>
         <option value="Trick or Treat">Trick or Treat</option>
         <option value="Holofoil">Holofoil</option>
@@ -1139,11 +1139,9 @@
   <script src="html2canvas.min.js"></script>
 
   <script>
-  
     const S4_VARIANTS_FALLBACK = ["Normal", "Gold", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat", "Quack"];
-  
-  
-const SPIRIT_SLUGS = {
+
+    const SPIRIT_SLUGS = {
       "8 bit": "8bit",
       "burnt peanut": "peanut",
       "zero point": "zp",
@@ -1187,8 +1185,8 @@ const SPIRIT_SLUGS = {
       "Gem": "gem",
       "Quack": "quack",
       "Cheat Master": "cheat",
+      "Hacker": "hacker",
       "Loot Hacker": "hacker",
-	  "Hacker": "hacker",
       "Bounty Hunter": "bounty",
       "Bounty": "bounty",
       "Trick or Treat": "trick",
@@ -1206,6 +1204,7 @@ const SPIRIT_SLUGS = {
       "Gem": "Take 30% less Fall damage",
       "Quack": "Gives 50% Sprite XP to all other Sprites in your inventory",
       "Cheat Master": "Button mash! All inputs are correct when entering cheat codes found in the world.",
+      "Hacker": "Increases chances of spawning items from your Loot Hacks.",
       "Loot Hacker": "Increases chances of spawning items from your Loot Hacks.",
       "Bounty Hunter": "Chance to find sprites when eliminating opponents. Only gains sprite XP from eliminations, unless sprite has special XP rules.",
       "Trick or Treat": "Chance to find Candy when opening containers.",
@@ -1223,7 +1222,7 @@ const SPIRIT_SLUGS = {
       "gem": "radial-gradient(circle at center, rgba(241, 245, 249, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "quack": "radial-gradient(circle at center, rgba(216, 180, 254, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "cheat": "radial-gradient(circle at center, rgba(0, 230, 118, 0.35) 0%, rgba(14, 18, 30, 0.95) 80%)",
-      "Loot Hacker": "radial-gradient(circle at center, rgba(94, 96, 206, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
+      "hacker": "radial-gradient(circle at center, rgba(94, 96, 206, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "bounty": "radial-gradient(circle at center, rgba(224, 64, 251, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "trick": "radial-gradient(circle at center, rgba(255, 109, 0, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)"
     };
@@ -1239,7 +1238,7 @@ const SPIRIT_SLUGS = {
       "gem": "#FFFFFF",
       "quack": "#C084FC",
       "cheat": "#00E676",
-      "Loot Hacker": "#5E60CE",
+      "hacker": "#5E60CE",
       "bounty": "#E040FB",
       "trick": "#FF6D00"
     };
@@ -1366,9 +1365,9 @@ const SPIRIT_SLUGS = {
         return (typeof S3_VARIANTS !== 'undefined') ? S3_VARIANTS : ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"];
       }
       if (currentTab === 'S4') {
-        return (typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Loot Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"];
+        return (typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : S4_VARIANTS_FALLBACK;
       }
-      return ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack", "Cheat Master", "Loot Hacker", "Bounty Hunter", "Trick or Treat"];
+      return ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat"];
     }
 
     function getSpiritsList() {
@@ -1436,7 +1435,7 @@ const SPIRIT_SLUGS = {
       spirits.forEach(spirit => {
         const season = spirit._season || 'S3';
         const variantsList = (season === 'S4')
-          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Loot Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"])
+          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : S4_VARIANTS_FALLBACK)
           : ((typeof S3_VARIANTS !== 'undefined') ? S3_VARIANTS : ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"]);
 
         variantsList.forEach(vName => {
@@ -1593,7 +1592,7 @@ const SPIRIT_SLUGS = {
         const slotStateClass = `status-${currentStatus}`;
 
         html += `
-          <div class="horizontal-card ${slotStateClass}" onclick="toggleVariantState('${spiritId}', '${variantName}')">
+          <div class="horizontal-card ${slotStateClass}" onclick="toggleVariantState('${spiritId}', '${variantName}', this)">
             ${currentStatus === 'mastered' ? '<span class="mastered-badge"><img src="crown.webp" onerror="this.onerror=null; this.src=\'assets/crown.webp\';" alt="👑"></span>' : ''}
             <div class="card-top">
               <span class="badge-variant ${badgeClass}">${variantName}</span>
@@ -1714,7 +1713,7 @@ const SPIRIT_SLUGS = {
             const imgPathPrimary = `assets/${seasonDir}/${spiritSlug}_${variantSlug}.webp`;
             const masteredIconHTML = `<span class="mastered-badge"><img src="crown.webp" onerror="this.onerror=null; this.src='assets/crown.webp'; this.onerror=function(){this.replaceWith('👑');};" alt="👑"></span>`;
 
-            const clickAction = `onclick="toggleVariantState('${spiritId}', '${vName}')"`;
+            const clickAction = `onclick="toggleVariantState('${spiritId}', '${vName}', this)"`;
             const slotStateClass = `status-${currentStatus}`;
 
             html += `
@@ -1769,7 +1768,7 @@ const SPIRIT_SLUGS = {
         const seasonDir = spirit._season || 'S3';
 
         const spiritVariantsList = (seasonDir === 'S4')
-          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Loot Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"])
+          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : S4_VARIANTS_FALLBACK)
           : ((typeof S3_VARIANTS !== 'undefined') ? S3_VARIANTS : ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"]);
 
         const matchesName = spiritName.toLowerCase().includes(searchVal);
@@ -1877,7 +1876,7 @@ const SPIRIT_SLUGS = {
       container.innerHTML = html;
     }
 
-	  function toggleVariantState(spiritId, variant, el) {
+    function toggleVariantState(spiritId, variant, el) {
       if (currentTab === 'Garden') return;
 
       const spirits = getSpiritsList();
@@ -1900,7 +1899,7 @@ const SPIRIT_SLUGS = {
 
       saveProgress();
 
-      // Si tenemos el elemento directo en el DOM, actualizamos solo su clase e icono de corona
+      // Solución al parpadeo: actualiza únicamente el slot en el DOM sin recargar la cuadrícula
       const targetSlot = el || (event && event.currentTarget);
       if (targetSlot) {
         targetSlot.classList.remove('status-none', 'status-collected', 'status-mastered');
@@ -1930,7 +1929,7 @@ const SPIRIT_SLUGS = {
 
       const season = targetSpirit._season || 'S3';
       const variantsList = (season === 'S4')
-        ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Loot Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"])
+        ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : S4_VARIANTS_FALLBACK)
         : ((typeof S3_VARIANTS !== 'undefined') ? S3_VARIANTS : ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"]);
 
       variantsList.forEach(vName => {
@@ -1955,7 +1954,7 @@ const SPIRIT_SLUGS = {
       spirits.forEach(spirit => {
         const season = spirit._season || 'S3';
         const variantsList = (season === 'S4')
-          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Loot Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"])
+          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : S4_VARIANTS_FALLBACK)
           : ((typeof S3_VARIANTS !== 'undefined') ? S3_VARIANTS : ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"]);
 
         variantsList.forEach(vName => {
@@ -1972,7 +1971,7 @@ const SPIRIT_SLUGS = {
       spirits.forEach(spirit => {
         const season = spirit._season || 'S3';
         const variantsList = (season === 'S4')
-          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : ["Normal", "Gold", "Cheat Master", "Loot Hacker", "Bounty Hunter", "Trick or Treat", "Gummy", "Holofoil"])
+          ? ((typeof S4_VARIANTS !== 'undefined') ? S4_VARIANTS : S4_VARIANTS_FALLBACK)
           : ((typeof S3_VARIANTS !== 'undefined') ? S3_VARIANTS : ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"]);
 
         variantsList.forEach(vName => {
@@ -2035,13 +2034,18 @@ const SPIRIT_SLUGS = {
         handleImgError(this, season, spiritSlug, variantSlug);
       };
 
-      document.getElementById('modal-desc-main').textContent = spirit.desc_sprite || "Replenish shields while standing in water!";
+      document.getElementById('modal-desc-main').textContent = spirit.desc_sprite || "";
       
-      let subDesc = spirit.desc_level || "Increases in power at each Level Up per tick:";
+      // Corrección de la descripción de nivel: solo muestra si tiene texto real
+      let subDesc = (spirit.desc_level && spirit.desc_level.trim() !== '') ? spirit.desc_level : '';
       if (spirit.levels && Object.keys(spirit.levels).length > 0) {
-        subDesc += " " + Object.entries(spirit.levels).map(([k, v]) => `${k}: ${v}`).join(' | ');
+        const levelsText = Object.entries(spirit.levels).map(([k, v]) => `${k}: ${v}`).join(' | ');
+        subDesc = subDesc ? `${subDesc} ${levelsText}` : levelsText;
       }
-      document.getElementById('modal-desc-sub').textContent = subDesc;
+      
+      const descSubEl = document.getElementById('modal-desc-sub');
+      descSubEl.textContent = subDesc;
+      descSubEl.style.display = subDesc ? 'block' : 'none';
 
       const xpBanner = document.getElementById('modal-xp-banner');
       xpBanner.textContent = VARIANT_DESCRIPTIONS[variantName] || "Standard Sprite Variant perk applied.";
