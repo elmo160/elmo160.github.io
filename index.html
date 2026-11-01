@@ -328,6 +328,8 @@
     }
     .badge-normal { background: linear-gradient(135deg, #475569, #94A3B8); color: #FFF; }
     .badge-gold { background: linear-gradient(135deg, #FFB300, #F57F17); color: #000; }
+    .badge-fortune { background: linear-gradient(135deg, #F59E0B, #D97706); color: #FFF; }
+    .badge-cursed { background: linear-gradient(135deg, #8B5CF6, #4C1D95); color: #FFF; }
     .badge-gummy { background: linear-gradient(135deg, #FF4081, #F50057); color: #FFF; }
     .badge-galaxy { background: linear-gradient(135deg, #7C4DFF, #651FFF); color: #FFF; }
     .badge-holofoil, .badge-holo { background: linear-gradient(135deg, #00E676, #00B0FF); color: #000; }
@@ -778,6 +780,8 @@
 
     .garden-vslot.bg-variant-normal { background: radial-gradient(circle at center, rgba(148, 163, 184, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-gold { background: radial-gradient(circle at center, rgba(255, 179, 0, 0.30) 0%, rgba(15, 18, 32, 0.95) 75%); }
+    .garden-vslot.bg-variant-fortune { background: radial-gradient(circle at center, rgba(245, 158, 11, 0.35) 0%, rgba(15, 18, 32, 0.95) 75%); }
+    .garden-vslot.bg-variant-cursed { background: radial-gradient(circle at center, rgba(139, 92, 246, 0.35) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-gummy { background: radial-gradient(circle at center, rgba(255, 64, 129, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-galaxy { background: radial-gradient(circle at center, rgba(124, 77, 255, 0.32) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-holo, .garden-vslot.bg-variant-holofoil { background: radial-gradient(circle at center, rgba(0, 230, 118, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
@@ -1091,6 +1095,8 @@
       <select id="variant-filter" class="filter-select" onchange="onFilterChange()">
         <option value="all">All Variants</option>
         <option value="Normal">Normal</option>
+        <option value="Fortune">Fortune</option>
+        <option value="Cursed">Cursed</option>
         <option value="Gold">Gold</option>
         <option value="Ruby">Ruby</option>
         <option value="Shadow">Shadow</option>
@@ -1163,7 +1169,7 @@
 
   <script>
     const S4_VARIANTS_FALLBACK = ["Normal", "Gold", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat", "Quack"];
-    const S5_VARIANTS_FALLBACK = ["Normal", "Gold", "Ruby", "Shadow"];
+    const S5_VARIANTS_FALLBACK = ["Normal", "Fortune", "Cursed"];
 
     const SPIRIT_SLUGS = {
       // S3 & S4
@@ -1199,36 +1205,35 @@
       "one wish willow": "wish",
       "wish": "wish",
 
-      // Season 5 Piratas
-      "treasure map": "map",
-      "map": "map",
-      "treasure chest": "chest",
-      "cat chest": "chest",
-      "chest": "chest",
-      "peely bone": "peelybone",
-      "peely": "peely",
-      "pirate captain": "captain",
-      "captain": "captain",
-      "pirate sailor": "sailor",
-      "sailor": "sailor",
-      "lil pirate": "lilpirate",
-      "sea slug": "slug",
-      "slug": "slug",
-      "shades": "shades",
-      "sunglasses": "shades",
-      "star pillow": "pillow",
-      "cloaked": "cloaked",
-      "bowtie": "bowtie",
-      "iron chest": "ironchest",
+      // Season 5
+      "baarry o'fish": "baarry",
+      "baarry ofish": "baarry",
+      "transponder snail": "snail",
+      "re-pete": "repete",
+      "repete": "repete",
+      "halfpeel'd": "halfpeel",
+      "halfpeeld": "halfpeel",
       "lil' flacko": "flacko",
       "lil flacko": "flacko",
-      "flacko": "flacko"
-
+      "flacko": "flacko",
+      "lil' uzi vert jr.": "uzi",
+      "lil uzi vert jr.": "uzi",
+      "lil' squibbly": "squibbly",
+      "lil squibbly": "squibbly",
+      "sweet dreams": "dreams",
+      "plundarrgh": "plundarrgh",
+      "compass": "compass",
+      "chester": "chester",
+      "treasure map": "map",
+      "map": "map",
+      "kelper": "kelper"
     };
 
     const VARIANT_SLUGS = {
       "Normal": "normal",
       "Gold": "gold",
+      "Fortune": "fortune",
+      "Cursed": "cursed",
       "Ruby": "ruby",
       "Shadow": "shadow",
       "Gummy": "gummy",
@@ -1249,6 +1254,8 @@
     const VARIANT_DESCRIPTIONS = {
       "Normal": "Standard Sprite Variant",
       "Gold": "Gain 3x bonus XP from eliminations",
+      "Fortune": "Increases gold/resource collection and chest rewards",
+      "Cursed": "High risk, high reward variant effect",
       "Ruby": "Special Pirate Gem Variant perk",
       "Shadow": "Special Shadow Realm Variant perk",
       "Gummy": "Gain 20% more Sprite Dust upon Extraction",
@@ -1269,6 +1276,8 @@
     const VARIANT_GRADIENTS = {
       "normal": "radial-gradient(circle at center, rgba(148, 163, 184, 0.35) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "gold": "radial-gradient(circle at center, rgba(255, 179, 0, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
+      "fortune": "radial-gradient(circle at center, rgba(245, 158, 11, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
+      "cursed": "radial-gradient(circle at center, rgba(139, 92, 246, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "ruby": "radial-gradient(circle at center, rgba(217, 4, 41, 0.45) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "shadow": "radial-gradient(circle at center, rgba(43, 45, 66, 0.50) 0%, rgba(10, 8, 20, 0.95) 80%)",
       "gummy": "radial-gradient(circle at center, rgba(255, 64, 129, 0.35) 0%, rgba(14, 18, 30, 0.95) 80%)",
@@ -1287,6 +1296,8 @@
     const VARIANT_BORDER_COLORS = {
       "normal": "#94A3B8",
       "gold": "#FFB300",
+      "fortune": "#F59E0B",
+      "cursed": "#8B5CF6",
       "ruby": "#D90429",
       "shadow": "#4A4E69",
       "gummy": "#FF4081",
@@ -1430,7 +1441,7 @@
       if (currentTab === 'S5') {
         return (typeof S5_VARIANTS !== 'undefined') ? S5_VARIANTS : S5_VARIANTS_FALLBACK;
       }
-      return ["Normal", "Gold", "Ruby", "Shadow", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat"];
+      return ["Normal", "Gold", "Fortune", "Cursed", "Ruby", "Shadow", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat"];
     }
 
     function getSpiritsList() {

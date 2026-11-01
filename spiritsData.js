@@ -1081,8 +1081,8 @@ const SPIRITS_DATA = {
       "levels": {},
       "variants": {
         "Normal": { "name": "Transponder Snail", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Transponder Snail", "status": "Available S5", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Transponder Snail", "status": "Available S5", "cost": "", "rarity": "" }
+        "Fortune": { "name": "Fortune Transponder Snail", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Transponder Snail", "status": "Not Exist", "cost": "", "rarity": "" }
       }
     },
     {
@@ -1159,8 +1159,8 @@ const SPIRITS_DATA = {
       "levels": {},
       "variants": {
         "Normal": { "name": "Sweet Dreams", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Sweet Dreams", "status": "Available S5", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Sweet Dreams", "status": "Available S5", "cost": "", "rarity": "" }
+        "Fortune": { "name": "Fortune Sweet Dreams", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Sweet Dreams", "status": "Not Exist", "cost": "", "rarity": "" }
       }
     },
     {
