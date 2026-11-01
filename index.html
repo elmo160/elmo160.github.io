@@ -328,8 +328,8 @@
     }
     .badge-normal { background: linear-gradient(135deg, #475569, #94A3B8); color: #FFF; }
     .badge-gold { background: linear-gradient(135deg, #FFB300, #F57F17); color: #000; }
-    .badge-fortune { background: linear-gradient(135deg, #F59E0B, #D97706); color: #FFF; }
-    .badge-cursed { background: linear-gradient(135deg, #8B5CF6, #4C1D95); color: #FFF; }
+    .badge-fortune { background: linear-gradient(135deg, #E11D48, #9F1239); color: #FFF; }
+    .badge-cursed { background: linear-gradient(135deg, #0D9488, #2563EB, #D97706); color: #FFF; }
     .badge-gummy { background: linear-gradient(135deg, #FF4081, #F50057); color: #FFF; }
     .badge-galaxy { background: linear-gradient(135deg, #7C4DFF, #651FFF); color: #FFF; }
     .badge-holofoil, .badge-holo { background: linear-gradient(135deg, #00E676, #00B0FF); color: #000; }
@@ -780,9 +780,8 @@
 
     .garden-vslot.bg-variant-normal { background: radial-gradient(circle at center, rgba(148, 163, 184, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-gold { background: radial-gradient(circle at center, rgba(255, 179, 0, 0.30) 0%, rgba(15, 18, 32, 0.95) 75%); }
-    .garden-vslot.bg-variant-fortune { background: radial-gradient(circle at center, rgba(245, 158, 11, 0.35) 0%, rgba(15, 18, 32, 0.95) 75%); }
-    .garden-vslot.bg-variant-cursed { background: radial-gradient(circle at center, rgba(139, 92, 246, 0.35) 0%, rgba(15, 18, 32, 0.95) 75%); }
-    .garden-vslot.bg-variant-gummy { background: radial-gradient(circle at center, rgba(255, 64, 129, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
+	.garden-vslot.bg-variant-fortune { background: radial-gradient(circle at center, rgba(225, 29, 72, 0.40) 0%, rgba(15, 18, 32, 0.95) 75%); }
+    .garden-vslot.bg-variant-cursed { background: radial-gradient(circle at center, rgba(13, 148, 136, 0.40) 0%, rgba(15, 18, 32, 0.95) 75%); }   .garden-vslot.bg-variant-gummy { background: radial-gradient(circle at center, rgba(255, 64, 129, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-galaxy { background: radial-gradient(circle at center, rgba(124, 77, 255, 0.32) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-holo, .garden-vslot.bg-variant-holofoil { background: radial-gradient(circle at center, rgba(0, 230, 118, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-cube { background: radial-gradient(circle at center, rgba(170, 0, 255, 0.32) 0%, rgba(15, 18, 32, 0.95) 75%); }
@@ -792,8 +791,6 @@
     .garden-vslot.bg-variant-hacker, .garden-vslot.bg-variant-loot-hacker { background: radial-gradient(circle at center, rgba(94, 96, 206, 0.32) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-bounty, .garden-vslot.bg-variant-bounty-hunter { background: radial-gradient(circle at center, rgba(224, 64, 251, 0.35) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-trick, .garden-vslot.bg-variant-trick-treat, .garden-vslot.bg-variant-trick-or-treat { background: radial-gradient(circle at center, rgba(255, 109, 0, 0.30) 0%, rgba(15, 18, 32, 0.95) 75%); }
-    .garden-vslot.bg-variant-ruby { background: radial-gradient(circle at center, rgba(217, 4, 41, 0.35) 0%, rgba(15, 18, 32, 0.95) 75%); }
-    .garden-vslot.bg-variant-shadow { background: radial-gradient(circle at center, rgba(43, 45, 66, 0.45) 0%, rgba(10, 8, 20, 0.95) 75%); }
 
     .garden-vslot .badge-container {
       display: flex;
@@ -1276,9 +1273,8 @@
     const VARIANT_GRADIENTS = {
       "normal": "radial-gradient(circle at center, rgba(148, 163, 184, 0.35) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "gold": "radial-gradient(circle at center, rgba(255, 179, 0, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
-      "fortune": "radial-gradient(circle at center, rgba(245, 158, 11, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
-      "cursed": "radial-gradient(circle at center, rgba(139, 92, 246, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
-      "ruby": "radial-gradient(circle at center, rgba(217, 4, 41, 0.45) 0%, rgba(14, 18, 30, 0.95) 80%)",
+	  "fortune": "radial-gradient(circle at center, rgba(225, 29, 72, 0.45) 0%, rgba(14, 18, 30, 0.95) 80%)",
+	  "cursed": "radial-gradient(circle at center, rgba(13, 148, 136, 0.45) 0%, rgba(14, 18, 30, 0.95) 80%)",      "ruby": "radial-gradient(circle at center, rgba(217, 4, 41, 0.45) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "shadow": "radial-gradient(circle at center, rgba(43, 45, 66, 0.50) 0%, rgba(10, 8, 20, 0.95) 80%)",
       "gummy": "radial-gradient(circle at center, rgba(255, 64, 129, 0.35) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "galaxy": "radial-gradient(circle at center, rgba(124, 77, 255, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
@@ -1296,8 +1292,8 @@
     const VARIANT_BORDER_COLORS = {
       "normal": "#94A3B8",
       "gold": "#FFB300",
-      "fortune": "#F59E0B",
-      "cursed": "#8B5CF6",
+      "fortune": "#E11D48",
+	  "cursed": "#0D9488",
       "ruby": "#D90429",
       "shadow": "#4A4E69",
       "gummy": "#FF4081",
