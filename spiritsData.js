@@ -1036,7 +1036,7 @@ const SPIRITS_DATA = {
     {
       "id": "baarry",
       "name": "Baarry O'Fish",
-      "rarity": "",
+      "rarity": "Rare",
       "desc_sprite": "Reduces tactical sprint stamina drain when in water.",
       "desc_level": "Gain Slap at max level!",
       "levels": {},
@@ -1049,7 +1049,7 @@ const SPIRITS_DATA = {
     {
       "id": "plundarrgh",
       "name": "Plundarrgh",
-      "rarity": "",
+      "rarity": "Mythic",
       "desc_sprite": "Opening Chest grants increased pickaxe speed and movement speed.",
       "desc_level": "",
       "levels": {},
@@ -1062,7 +1062,7 @@ const SPIRITS_DATA = {
     {
       "id": "compass",
       "name": "Compass",
-      "rarity": "",
+      "rarity": "Rare",
       "desc_sprite": "Reveals nearby treasure chests, treasure maps, and wanted posters",
       "desc_level": "",
       "levels": {},
@@ -1075,7 +1075,7 @@ const SPIRITS_DATA = {
     {
       "id": "snail",
       "name": "Transponder Snail",
-      "rarity": "",
+      "rarity": "Legendary",
       "desc_sprite": "Grants extra resources on pickup, with Teammates who also have this Sprite equipped receiving some extra resources as well!",
       "desc_level": "Increased amount of resources received at each Level Up!",
       "levels": {},
@@ -1088,7 +1088,7 @@ const SPIRITS_DATA = {
     {
       "id": "repete",
       "name": "Re-Pete",
-      "rarity": "",
+      "rarity": "Rare",
       "desc_sprite": "Increases reload speed, with a chance that reloading refunds ammo.",
       "desc_level": "Reload faster and higher chance of ammo refunds with each Level Up!",
       "levels": {},
@@ -1101,7 +1101,7 @@ const SPIRITS_DATA = {
     {
       "id": "halfpeel",
       "name": "Halfpeel'd",
-      "rarity": "",
+      "rarity": "Rare",
       "desc_sprite": "Marks eliminations on the map.",
       "desc_level": "Effect radius increases with each level up!",
       "levels": {},
@@ -1114,7 +1114,7 @@ const SPIRITS_DATA = {
     {
       "id": "flacko",
       "name": "Lil' Flacko",
-      "rarity": "",
+      "rarity": "Legendary",
       "desc_sprite": "Creates a small shockwave on landing, knocking back enemies.",
       "desc_level": "Increased knockback strength with each Level Up!",
       "levels": {},
@@ -1127,7 +1127,7 @@ const SPIRITS_DATA = {
     {
       "id": "uzi",
       "name": "Lil' Uzi Vert Jr.",
-      "rarity": "",
+      "rarity": "Legendary",
       "desc_sprite": "Generates a Chug Splash effect when restoring shields.",
       "desc_level": "Decreased cooldown with each Level Up!",
       "levels": {},
@@ -1140,7 +1140,7 @@ const SPIRITS_DATA = {
     {
       "id": "squibbly",
       "name": "Lil' Squibbly",
-      "rarity": "",
+      "rarity": "Epic",
       "desc_sprite": "Jumping into a fishing hole fishes it and gives some bonus loot.",
       "desc_level": "Get more loot as you level up.",
       "levels": {},
@@ -1153,7 +1153,7 @@ const SPIRITS_DATA = {
     {
       "id": "dreams",
       "name": "Sweet Dreams",
-      "rarity": "",
+      "rarity": "Mythic",
       "desc_sprite": "Grants a random item at each level, exploding with Mythic loot at Max Level.",
       "desc_level": "Loot value increases at each Level Up!",
       "levels": {},
@@ -1166,7 +1166,7 @@ const SPIRITS_DATA = {
     {
       "id": "chester",
       "name": "Chester",
-      "rarity": "",
+      "rarity": "Epic",
       "desc_sprite": "Grants a chance to spawn extra loot from Treasure Chests and nullifies fall damage.",
       "desc_level": "Increased chance of spawning an extra loot item with each Level Up!",
       "levels": {},
@@ -1179,7 +1179,7 @@ const SPIRITS_DATA = {
     {
       "id": "map",
       "name": "Treasure Map",
-      "rarity": "",
+      "rarity": "Epic",
       "desc_sprite": "Spawns a Treasure Map on Sprite Mastery.",
       "desc_level": "",
       "levels": {},
@@ -1192,7 +1192,7 @@ const SPIRITS_DATA = {
     {
       "id": "kelper",
       "name": "Kelper",
-      "rarity": "",
+      "rarity": "Epic",
       "desc_sprite": "Restores health over time when in water.",
       "desc_level": "Increased amount of health with each Level Up!",
       "levels": {},
