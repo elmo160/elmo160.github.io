@@ -1047,19 +1047,6 @@ const SPIRITS_DATA = {
       }
     },
     {
-      "id": "plundarrgh",
-      "name": "Plundarrgh",
-      "rarity": "Mythic",
-      "desc_sprite": "Opening Chest grants increased pickaxe speed and movement speed.",
-      "desc_level": "",
-      "levels": {},
-      "variants": {
-        "Normal": { "name": "Plundarrgh", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Plundarrgh", "status": "Available S5", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Plundarrgh", "status": "Available S5", "cost": "", "rarity": "" }
-      }
-    },
-    {
       "id": "compass",
       "name": "Compass",
       "rarity": "Rare",
@@ -1070,19 +1057,6 @@ const SPIRITS_DATA = {
         "Normal": { "name": "Compass", "status": "Available S5", "cost": "", "rarity": "" },
         "Fortune": { "name": "Fortune Compass", "status": "Available S5", "cost": "", "rarity": "" },
         "Cursed": { "name": "Cursed Compass", "status": "Available S5", "cost": "", "rarity": "" }
-      }
-    },
-    {
-      "id": "snail",
-      "name": "Transponder Snail",
-      "rarity": "Legendary",
-      "desc_sprite": "Grants extra resources on pickup, with Teammates who also have this Sprite equipped receiving some extra resources as well!",
-      "desc_level": "Increased amount of resources received at each Level Up!",
-      "levels": {},
-      "variants": {
-        "Normal": { "name": "Transponder Snail", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Transponder Snail", "status": "Not Exist", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Transponder Snail", "status": "Not Exist", "cost": "", "rarity": "" }
       }
     },
     {
@@ -1109,58 +1083,6 @@ const SPIRITS_DATA = {
         "Normal": { "name": "Halfpeel'd", "status": "Available S5", "cost": "", "rarity": "" },
         "Fortune": { "name": "Fortune Halfpeel'd", "status": "Available S5", "cost": "", "rarity": "" },
         "Cursed": { "name": "Cursed Halfpeel'd", "status": "Available S5", "cost": "", "rarity": "" }
-      }
-    },
-    {
-      "id": "flacko",
-      "name": "Lil' Flacko",
-      "rarity": "Legendary",
-      "desc_sprite": "Creates a small shockwave on landing, knocking back enemies.",
-      "desc_level": "Increased knockback strength with each Level Up!",
-      "levels": {},
-      "variants": {
-        "Normal": { "name": "Lil' Flacko", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Lil' Flacko", "status": "Available S5", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Lil' Flacko", "status": "Available S5", "cost": "", "rarity": "" }
-      }
-    },
-    {
-      "id": "uzi",
-      "name": "Lil' Uzi Vert Jr.",
-      "rarity": "Legendary",
-      "desc_sprite": "Generates a Chug Splash effect when restoring shields.",
-      "desc_level": "Decreased cooldown with each Level Up!",
-      "levels": {},
-      "variants": {
-        "Normal": { "name": "Lil' Uzi Vert Jr.", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Lil' Uzi Vert Jr.", "status": "Available S5", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Lil' Uzi Vert Jr.", "status": "Available S5", "cost": "", "rarity": "" }
-      }
-    },
-    {
-      "id": "squibbly",
-      "name": "Lil' Squibbly",
-      "rarity": "Epic",
-      "desc_sprite": "Jumping into a fishing hole fishes it and gives some bonus loot.",
-      "desc_level": "Get more loot as you level up.",
-      "levels": {},
-      "variants": {
-        "Normal": { "name": "Lil' Squibbly", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Lil' Squibbly", "status": "Available S5", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Lil' Squibbly", "status": "Available S5", "cost": "", "rarity": "" }
-      }
-    },
-    {
-      "id": "dreams",
-      "name": "Sweet Dreams",
-      "rarity": "Mythic",
-      "desc_sprite": "Grants a random item at each level, exploding with Mythic loot at Max Level.",
-      "desc_level": "Loot value increases at each Level Up!",
-      "levels": {},
-      "variants": {
-        "Normal": { "name": "Sweet Dreams", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Sweet Dreams", "status": "Not Exist", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Sweet Dreams", "status": "Not Exist", "cost": "", "rarity": "" }
       }
     },
     {
@@ -1200,6 +1122,84 @@ const SPIRITS_DATA = {
         "Normal": { "name": "Kelper", "status": "Available S5", "cost": "", "rarity": "" },
         "Fortune": { "name": "Fortune Kelper", "status": "Available S5", "cost": "", "rarity": "" },
         "Cursed": { "name": "Cursed Kelper", "status": "Available S5", "cost": "", "rarity": "" }
+      }
+    },
+    {
+      "id": "squibbly",
+      "name": "Lil' Squibbly",
+      "rarity": "Epic",
+      "desc_sprite": "Jumping into a fishing hole fishes it and gives some bonus loot.",
+      "desc_level": "Get more loot as you level up.",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Lil' Squibbly", "status": "Available S5", "cost": "", "rarity": "" },
+        "Fortune": { "name": "Fortune Lil' Squibbly", "status": "Available S5", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Lil' Squibbly", "status": "Available S5", "cost": "", "rarity": "" }
+      }
+    },
+    {
+      "id": "flacko",
+      "name": "Lil' Flacko",
+      "rarity": "Legendary",
+      "desc_sprite": "Creates a small shockwave on landing, knocking back enemies.",
+      "desc_level": "Increased knockback strength with each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Lil' Flacko", "status": "Available S5", "cost": "", "rarity": "" },
+        "Fortune": { "name": "Fortune Lil' Flacko", "status": "Available S5", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Lil' Flacko", "status": "Available S5", "cost": "", "rarity": "" }
+      }
+    },
+    {
+      "id": "uzi",
+      "name": "Lil' Uzi Vert Jr.",
+      "rarity": "Legendary",
+      "desc_sprite": "Generates a Chug Splash effect when restoring shields.",
+      "desc_level": "Decreased cooldown with each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Lil' Uzi Vert Jr.", "status": "Available S5", "cost": "", "rarity": "" },
+        "Fortune": { "name": "Fortune Lil' Uzi Vert Jr.", "status": "Available S5", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Lil' Uzi Vert Jr.", "status": "Available S5", "cost": "", "rarity": "" }
+      }
+    },
+    {	
+      "id": "snail",
+      "name": "Transponder Snail",
+      "rarity": "Legendary",
+      "desc_sprite": "Grants extra resources on pickup, with Teammates who also have this Sprite equipped receiving some extra resources as well!",
+      "desc_level": "Increased amount of resources received at each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Transponder Snail", "status": "Available S5", "cost": "", "rarity": "" },
+        "Fortune": { "name": "Fortune Transponder Snail", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Transponder Snail", "status": "Not Exist", "cost": "", "rarity": "" }
+      }
+    },
+    {		
+      "id": "plundarrgh",
+      "name": "Plundarrgh",
+      "rarity": "Mythic",
+      "desc_sprite": "Opening Chest grants increased pickaxe speed and movement speed.",
+      "desc_level": "",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Plundarrgh", "status": "Available S5", "cost": "", "rarity": "" },
+        "Fortune": { "name": "Fortune Plundarrgh", "status": "Available S5", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Plundarrgh", "status": "Available S5", "cost": "", "rarity": "" }
+	  }
+    },
+    {
+	  "id": "dreams",
+      "name": "Sweet Dreams",
+      "rarity": "Mythic",
+      "desc_sprite": "Grants a random item at each level, exploding with Mythic loot at Max Level.",
+      "desc_level": "Loot value increases at each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Sweet Dreams", "status": "Available S5", "cost": "", "rarity": "" },
+        "Fortune": { "name": "Fortune Sweet Dreams", "status": "Not Exist", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Sweet Dreams", "status": "Not Exist", "cost": "", "rarity": "" }	
       }
     }
   ]
