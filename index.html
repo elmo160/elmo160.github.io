@@ -340,8 +340,6 @@
     .badge-hacker, .badge-loot-hacker { background: linear-gradient(135deg, #3A86FF, #7209B7); color: #FFF; }
     .badge-bounty, .badge-bounty-hunter { background: linear-gradient(135deg, #E040FB, #6A00F4); color: #FFF; }
     .badge-trick, .badge-trick-treat, .badge-trick-or-treat { background: linear-gradient(135deg, #FF6D00, #DD2C00); color: #FFF; }
-    .badge-ruby { background: linear-gradient(135deg, #D90429, #EF233C); color: #FFF; }
-    .badge-shadow { background: linear-gradient(135deg, #2B2D42, #141124); color: #B8C0E0; border: 1px solid #4A4E69; }
 
     .matrix-table-container {
       background-color: rgba(0, 0, 0, 0.25);
@@ -1095,8 +1093,6 @@
         <option value="Fortune">Fortune</option>
         <option value="Cursed">Cursed</option>
         <option value="Gold">Gold</option>
-        <option value="Ruby">Ruby</option>
-        <option value="Shadow">Shadow</option>
         <option value="Cheat Master">Cheat Master</option>
         <option value="Hacker">Hacker</option>
         <option value="Bounty Hunter">Bounty Hunter</option>
@@ -1231,8 +1227,6 @@
       "Gold": "gold",
       "Fortune": "fortune",
       "Cursed": "cursed",
-      "Ruby": "ruby",
-      "Shadow": "shadow",
       "Gummy": "gummy",
       "Galaxy": "galaxy",
       "Holofoil": "holo",
@@ -1253,8 +1247,6 @@
       "Gold": "Gain 3x bonus XP from eliminations",
       "Fortune": "Increases gold/resource collection and chest rewards",
       "Cursed": "High risk, high reward variant effect",
-      "Ruby": "Special Pirate Gem Variant perk",
-      "Shadow": "Special Shadow Realm Variant perk",
       "Gummy": "Gain 20% more Sprite Dust upon Extraction",
       "Galaxy": "Gain 30% more Ammo whenever picked up in the world",
       "Holofoil": "5% chance for your squad to find rare Sprite Variants from looting chests",
@@ -1274,8 +1266,7 @@
       "normal": "radial-gradient(circle at center, rgba(148, 163, 184, 0.35) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "gold": "radial-gradient(circle at center, rgba(255, 179, 0, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
 	  "fortune": "radial-gradient(circle at center, rgba(225, 29, 72, 0.45) 0%, rgba(14, 18, 30, 0.95) 80%)",
-	  "cursed": "radial-gradient(circle at center, rgba(13, 148, 136, 0.45) 0%, rgba(14, 18, 30, 0.95) 80%)",      "ruby": "radial-gradient(circle at center, rgba(217, 4, 41, 0.45) 0%, rgba(14, 18, 30, 0.95) 80%)",
-      "shadow": "radial-gradient(circle at center, rgba(43, 45, 66, 0.50) 0%, rgba(10, 8, 20, 0.95) 80%)",
+	  "cursed": "radial-gradient(circle at center, rgba(13, 148, 136, 0.45) 0%, rgba(14, 18, 30, 0.95) 80%)",  
       "gummy": "radial-gradient(circle at center, rgba(255, 64, 129, 0.35) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "galaxy": "radial-gradient(circle at center, rgba(124, 77, 255, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "holo": "radial-gradient(circle at center, rgba(0, 230, 118, 0.35) 0%, rgba(14, 18, 30, 0.95) 80%)",
@@ -1294,8 +1285,6 @@
       "gold": "#FFB300",
       "fortune": "#E11D48",
 	  "cursed": "#0D9488",
-      "ruby": "#D90429",
-      "shadow": "#4A4E69",
       "gummy": "#FF4081",
       "galaxy": "#7C4DFF",
       "holo": "#00E676",
@@ -1437,7 +1426,7 @@
       if (currentTab === 'S5') {
         return (typeof S5_VARIANTS !== 'undefined') ? S5_VARIANTS : S5_VARIANTS_FALLBACK;
       }
-      return ["Normal", "Gold", "Fortune", "Cursed", "Ruby", "Shadow", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat"];
+      return ["Normal", "Gold", "Fortune", "Cursed", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat"];
     }
 
     function getSpiritsList() {
