@@ -1,7 +1,8 @@
-// Fortnite Spirits Data Config (Auto-generated from Espiritus Database.xlsx)
+// Fortnite Spirits Data Config (S3, S4 & S5)
 
 const S3_VARIANTS = ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"];
 const S4_VARIANTS = ["Normal", "Gold", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat", "Quack"];
+const S5_VARIANTS = ["Normal", "Fortune", "Cursed"];
 
 const SPIRITS_DATA = {
   "S3": [
@@ -1028,6 +1029,177 @@ const SPIRITS_DATA = {
         "Bounty Hunter": { "name": "Bounty Hunter One Wish Willow", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
         "Trick or Treat": { "name": "Trick or Treat One Wish Willow", "status": "Available S4", "cost": "2400", "rarity": "Mythic" },
         "Quack": { "name": "Quack One Wish Willow", "status": "Not Exist", "cost": "-", "rarity": "Mythic" }
+      }
+    }
+  ],
+  "S5": [
+    {
+      "id": "baarry",
+      "name": "Baarry O'Fish",
+      "rarity": "",
+      "desc_sprite": "Reduces tactical sprint stamina drain when in water.",
+      "desc_level": "Gain Slap at max level!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Baarry O'Fish", "status": "Available S5", "cost": "", "rarity": "" },
+        "Fortune": { "name": "Fortune Baarry O'Fish", "status": "Available S5", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Baarry O'Fish", "status": "Available S5", "cost": "", "rarity": "" }
+      }
+    },
+    {
+      "id": "plundarrgh",
+      "name": "Plundarrgh",
+      "rarity": "",
+      "desc_sprite": "Opening Chest grants increased pickaxe speed and movement speed.",
+      "desc_level": "",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Plundarrgh", "status": "Available S5", "cost": "", "rarity": "" },
+        "Fortune": { "name": "Fortune Plundarrgh", "status": "Available S5", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Plundarrgh", "status": "Available S5", "cost": "", "rarity": "" }
+      }
+    },
+    {
+      "id": "compass",
+      "name": "Compass",
+      "rarity": "",
+      "desc_sprite": "Reveals nearby treasure chests, treasure maps, and wanted posters",
+      "desc_level": "",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Compass", "status": "Available S5", "cost": "", "rarity": "" },
+        "Fortune": { "name": "Fortune Compass", "status": "Available S5", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Compass", "status": "Available S5", "cost": "", "rarity": "" }
+      }
+    },
+    {
+      "id": "snail",
+      "name": "Transponder Snail",
+      "rarity": "",
+      "desc_sprite": "Grants extra resources on pickup, with Teammates who also have this Sprite equipped receiving some extra resources as well!",
+      "desc_level": "Increased amount of resources received at each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Transponder Snail", "status": "Available S5", "cost": "", "rarity": "" },
+        "Fortune": { "name": "Fortune Transponder Snail", "status": "Available S5", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Transponder Snail", "status": "Available S5", "cost": "", "rarity": "" }
+      }
+    },
+    {
+      "id": "repete",
+      "name": "Re-Pete",
+      "rarity": "",
+      "desc_sprite": "Increases reload speed, with a chance that reloading refunds ammo.",
+      "desc_level": "Reload faster and higher chance of ammo refunds with each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Re-Pete", "status": "Available S5", "cost": "", "rarity": "" },
+        "Fortune": { "name": "Fortune Re-Pete", "status": "Available S5", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Re-Pete", "status": "Available S5", "cost": "", "rarity": "" }
+      }
+    },
+    {
+      "id": "halfpeel",
+      "name": "Halfpeel'd",
+      "rarity": "",
+      "desc_sprite": "Marks eliminations on the map.",
+      "desc_level": "Effect radius increases with each level up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Halfpeel'd", "status": "Available S5", "cost": "", "rarity": "" },
+        "Fortune": { "name": "Fortune Halfpeel'd", "status": "Available S5", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Halfpeel'd", "status": "Available S5", "cost": "", "rarity": "" }
+      }
+    },
+    {
+      "id": "flacko",
+      "name": "Lil' Flacko",
+      "rarity": "",
+      "desc_sprite": "Creates a small shockwave on landing, knocking back enemies.",
+      "desc_level": "Increased knockback strength with each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Lil' Flacko", "status": "Available S5", "cost": "", "rarity": "" },
+        "Fortune": { "name": "Fortune Lil' Flacko", "status": "Available S5", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Lil' Flacko", "status": "Available S5", "cost": "", "rarity": "" }
+      }
+    },
+    {
+      "id": "uzi",
+      "name": "Lil' Uzi Vert Jr.",
+      "rarity": "",
+      "desc_sprite": "Generates a Chug Splash effect when restoring shields.",
+      "desc_level": "Decreased cooldown with each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Lil' Uzi Vert Jr.", "status": "Available S5", "cost": "", "rarity": "" },
+        "Fortune": { "name": "Fortune Lil' Uzi Vert Jr.", "status": "Available S5", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Lil' Uzi Vert Jr.", "status": "Available S5", "cost": "", "rarity": "" }
+      }
+    },
+    {
+      "id": "squibbly",
+      "name": "Lil' Squibbly",
+      "rarity": "",
+      "desc_sprite": "Jumping into a fishing hole fishes it and gives some bonus loot.",
+      "desc_level": "Get more loot as you level up.",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Lil' Squibbly", "status": "Available S5", "cost": "", "rarity": "" },
+        "Fortune": { "name": "Fortune Lil' Squibbly", "status": "Available S5", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Lil' Squibbly", "status": "Available S5", "cost": "", "rarity": "" }
+      }
+    },
+    {
+      "id": "dreams",
+      "name": "Sweet Dreams",
+      "rarity": "",
+      "desc_sprite": "Grants a random item at each level, exploding with Mythic loot at Max Level.",
+      "desc_level": "Loot value increases at each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Sweet Dreams", "status": "Available S5", "cost": "", "rarity": "" },
+        "Fortune": { "name": "Fortune Sweet Dreams", "status": "Available S5", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Sweet Dreams", "status": "Available S5", "cost": "", "rarity": "" }
+      }
+    },
+    {
+      "id": "chester",
+      "name": "Chester",
+      "rarity": "",
+      "desc_sprite": "Grants a chance to spawn extra loot from Treasure Chests and nullifies fall damage.",
+      "desc_level": "Increased chance of spawning an extra loot item with each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Chester", "status": "Available S5", "cost": "", "rarity": "" },
+        "Fortune": { "name": "Fortune Chester", "status": "Available S5", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Chester", "status": "Available S5", "cost": "", "rarity": "" }
+      }
+    },
+    {
+      "id": "map",
+      "name": "Treasure Map",
+      "rarity": "",
+      "desc_sprite": "Spawns a Treasure Map on Sprite Mastery.",
+      "desc_level": "",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Treasure Map", "status": "Available S5", "cost": "", "rarity": "" },
+        "Fortune": { "name": "Fortune Treasure Map", "status": "Available S5", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Treasure Map", "status": "Available S5", "cost": "", "rarity": "" }
+      }
+    },
+    {
+      "id": "kelper",
+      "name": "Kelper",
+      "rarity": "",
+      "desc_sprite": "Restores health over time when in water.",
+      "desc_level": "Increased amount of health with each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Kelper", "status": "Available S5", "cost": "", "rarity": "" },
+        "Fortune": { "name": "Fortune Kelper", "status": "Available S5", "cost": "", "rarity": "" },
+        "Cursed": { "name": "Cursed Kelper", "status": "Available S5", "cost": "", "rarity": "" }
       }
     }
   ]
