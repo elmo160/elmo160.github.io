@@ -328,8 +328,8 @@
     }
     .badge-normal { background: linear-gradient(135deg, #475569, #94A3B8); color: #FFF; }
     .badge-gold { background: linear-gradient(135deg, #FFB300, #F57F17); color: #000; }
-    .badge-fortune { background: linear-gradient(135deg, #E11D48, #9F1239); color: #FFF; }
-    .badge-cursed { background: linear-gradient(135deg, #0D9488, #2563EB, #D97706); color: #FFF; }
+    .badge-fortune { background: linear-gradient(135deg, #B91C1C, #EF4444, #F59E0B, #991B1B); color: #FFF; }
+    .badge-cursed { background: linear-gradient(135deg, #059669, #0284C7, #4B5563, #D97706); color: #FFF; }
     .badge-gummy { background: linear-gradient(135deg, #FF4081, #F50057); color: #FFF; }
     .badge-galaxy { background: linear-gradient(135deg, #7C4DFF, #651FFF); color: #FFF; }
     .badge-holofoil, .badge-holo { background: linear-gradient(135deg, #00E676, #00B0FF); color: #000; }
@@ -778,8 +778,9 @@
 
     .garden-vslot.bg-variant-normal { background: radial-gradient(circle at center, rgba(148, 163, 184, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-gold { background: radial-gradient(circle at center, rgba(255, 179, 0, 0.30) 0%, rgba(15, 18, 32, 0.95) 75%); }
-	.garden-vslot.bg-variant-fortune { background: radial-gradient(circle at center, rgba(225, 29, 72, 0.40) 0%, rgba(15, 18, 32, 0.95) 75%); }
-    .garden-vslot.bg-variant-cursed { background: radial-gradient(circle at center, rgba(13, 148, 136, 0.40) 0%, rgba(15, 18, 32, 0.95) 75%); }   .garden-vslot.bg-variant-gummy { background: radial-gradient(circle at center, rgba(255, 64, 129, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
+	.garden-vslot.bg-variant-fortune { background: radial-gradient(circle at center, rgba(239, 68, 68, 0.40) 0%, rgba(245, 158, 11, 0.20) 45%, rgba(15, 18, 32, 0.95) 85%); }
+    .garden-vslot.bg-variant-cursed { background: radial-gradient(circle at center, rgba(5, 150, 105, 0.35) 0%, rgba(30, 41, 59, 0.65) 50%, rgba(10, 12, 22, 0.95) 85%); }	
+	.garden-vslot.bg-variant-gummy { background: radial-gradient(circle at center, rgba(255, 64, 129, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-galaxy { background: radial-gradient(circle at center, rgba(124, 77, 255, 0.32) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-holo, .garden-vslot.bg-variant-holofoil { background: radial-gradient(circle at center, rgba(0, 230, 118, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-cube { background: radial-gradient(circle at center, rgba(170, 0, 255, 0.32) 0%, rgba(15, 18, 32, 0.95) 75%); }
@@ -1219,6 +1220,8 @@
       "chester": "chester",
       "treasure map": "map",
       "map": "map",
+	  "Exmarks": "map",
+	  "Wayfinder": "compass",
       "kelper": "kelper"
     };
 
@@ -1265,8 +1268,8 @@
     const VARIANT_GRADIENTS = {
       "normal": "radial-gradient(circle at center, rgba(148, 163, 184, 0.35) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "gold": "radial-gradient(circle at center, rgba(255, 179, 0, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
-	  "fortune": "radial-gradient(circle at center, rgba(225, 29, 72, 0.45) 0%, rgba(14, 18, 30, 0.95) 80%)",
-	  "cursed": "radial-gradient(circle at center, rgba(13, 148, 136, 0.45) 0%, rgba(14, 18, 30, 0.95) 80%)",  
+	  "fortune": "radial-gradient(circle at center, rgba(239, 68, 68, 0.45) 0%, rgba(245, 158, 11, 0.22) 50%, rgba(14, 18, 30, 0.95) 85%)",	  
+	  "cursed": "radial-gradient(circle at center, rgba(5, 150, 105, 0.38) 0%, rgba(51, 65, 85, 0.55) 50%, rgba(10, 12, 20, 0.95) 85%)", 
       "gummy": "radial-gradient(circle at center, rgba(255, 64, 129, 0.35) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "galaxy": "radial-gradient(circle at center, rgba(124, 77, 255, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "holo": "radial-gradient(circle at center, rgba(0, 230, 118, 0.35) 0%, rgba(14, 18, 30, 0.95) 80%)",
@@ -1283,8 +1286,8 @@
     const VARIANT_BORDER_COLORS = {
       "normal": "#94A3B8",
       "gold": "#FFB300",
-      "fortune": "#E11D48",
-	  "cursed": "#0D9488",
+      "fortune": "#EF4444",
+	  "cursed": "#059669",
       "gummy": "#FF4081",
       "galaxy": "#7C4DFF",
       "holo": "#00E676",
