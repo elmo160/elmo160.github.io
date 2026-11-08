@@ -1048,7 +1048,7 @@ const SPIRITS_DATA = {
     },
     {
       "id": "compass",
-      "name": "Compass",
+      "name": "Wayfinder",
       "rarity": "Rare",
       "desc_sprite": "Reveals nearby treasure chests, treasure maps, and wanted posters",
       "desc_level": "",
@@ -1100,7 +1100,7 @@ const SPIRITS_DATA = {
     },
     {
       "id": "map",
-      "name": "Treasure Map",
+      "name": "Exmarks",
       "rarity": "Epic",
       "desc_sprite": "Spawns a Treasure Map on Sprite Mastery.",
       "desc_level": "",
