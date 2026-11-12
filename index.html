@@ -778,9 +778,9 @@
 
     .garden-vslot.bg-variant-normal { background: radial-gradient(circle at center, rgba(148, 163, 184, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-gold { background: radial-gradient(circle at center, rgba(255, 179, 0, 0.30) 0%, rgba(15, 18, 32, 0.95) 75%); }
-	.garden-vslot.bg-variant-fortune { background: radial-gradient(circle at center, rgba(239, 68, 68, 0.40) 0%, rgba(245, 158, 11, 0.20) 45%, rgba(15, 18, 32, 0.95) 85%); }
-    .garden-vslot.bg-variant-cursed { background: radial-gradient(circle at center, rgba(5, 150, 105, 0.35) 0%, rgba(30, 41, 59, 0.65) 50%, rgba(10, 12, 22, 0.95) 85%); }	
-	.garden-vslot.bg-variant-gummy { background: radial-gradient(circle at center, rgba(255, 64, 129, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
+    .garden-vslot.bg-variant-fortune { background: radial-gradient(circle at center, rgba(239, 68, 68, 0.40) 0%, rgba(245, 158, 11, 0.20) 45%, rgba(15, 18, 32, 0.95) 85%); }
+    .garden-vslot.bg-variant-cursed { background: radial-gradient(circle at center, rgba(5, 150, 105, 0.35) 0%, rgba(30, 41, 59, 0.65) 50%, rgba(10, 12, 22, 0.95) 85%); }
+    .garden-vslot.bg-variant-gummy { background: radial-gradient(circle at center, rgba(255, 64, 129, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-galaxy { background: radial-gradient(circle at center, rgba(124, 77, 255, 0.32) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-holo, .garden-vslot.bg-variant-holofoil { background: radial-gradient(circle at center, rgba(0, 230, 118, 0.28) 0%, rgba(15, 18, 32, 0.95) 75%); }
     .garden-vslot.bg-variant-cube { background: radial-gradient(circle at center, rgba(170, 0, 255, 0.32) 0%, rgba(15, 18, 32, 0.95) 75%); }
@@ -1163,7 +1163,7 @@
 
   <script>
     const S4_VARIANTS_FALLBACK = ["Normal", "Gold", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat", "Quack"];
-    const S5_VARIANTS_FALLBACK = ["Normal", "Fortune", "Cursed"];
+    const S5_VARIANTS_FALLBACK = ["Normal", "Fortune", "Cursed", "Gold"];
 
     const SPIRIT_SLUGS = {
       // S3 & S4
@@ -1222,7 +1222,13 @@
       "map": "map",
 	  "Exmarks": "map",
 	  "Wayfinder": "compass",
-      "kelper": "kelper"
+      "kelper": "kelper",
+      "mini miku": "miku",
+      "miku": "miku",
+      "squiplash": "squiplash",
+      "sir oscar the second": "oscar",
+      "oscar": "oscar",
+      "zee": "zee"
     };
 
     const VARIANT_SLUGS = {
@@ -1248,8 +1254,8 @@
     const VARIANT_DESCRIPTIONS = {
       "Normal": "Standard Sprite Variant",
       "Gold": "Gain 3x bonus XP from eliminations",
-      "Fortune": "Increases gold/resource collection and chest rewards",
-      "Cursed": "High risk, high reward variant effect",
+      "Fortune": "Reveals nearby Chests.",
+      "Cursed": "Increases chance of rare Sprite variants, water damages you.",
       "Gummy": "Gain 20% more Sprite Dust upon Extraction",
       "Galaxy": "Gain 30% more Ammo whenever picked up in the world",
       "Holofoil": "5% chance for your squad to find rare Sprite Variants from looting chests",
@@ -1268,8 +1274,8 @@
     const VARIANT_GRADIENTS = {
       "normal": "radial-gradient(circle at center, rgba(148, 163, 184, 0.35) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "gold": "radial-gradient(circle at center, rgba(255, 179, 0, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
-	  "fortune": "radial-gradient(circle at center, rgba(239, 68, 68, 0.45) 0%, rgba(245, 158, 11, 0.22) 50%, rgba(14, 18, 30, 0.95) 85%)",	  
-	  "cursed": "radial-gradient(circle at center, rgba(5, 150, 105, 0.38) 0%, rgba(51, 65, 85, 0.55) 50%, rgba(10, 12, 20, 0.95) 85%)", 
+      "fortune": "radial-gradient(circle at center, rgba(239, 68, 68, 0.45) 0%, rgba(245, 158, 11, 0.22) 50%, rgba(14, 18, 30, 0.95) 85%)",
+      "cursed": "radial-gradient(circle at center, rgba(5, 150, 105, 0.38) 0%, rgba(51, 65, 85, 0.55) 50%, rgba(10, 12, 20, 0.95) 85%)",
       "gummy": "radial-gradient(circle at center, rgba(255, 64, 129, 0.35) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "galaxy": "radial-gradient(circle at center, rgba(124, 77, 255, 0.40) 0%, rgba(14, 18, 30, 0.95) 80%)",
       "holo": "radial-gradient(circle at center, rgba(0, 230, 118, 0.35) 0%, rgba(14, 18, 30, 0.95) 80%)",
@@ -1287,7 +1293,7 @@
       "normal": "#94A3B8",
       "gold": "#FFB300",
       "fortune": "#EF4444",
-	  "cursed": "#059669",
+      "cursed": "#059669",
       "gummy": "#FF4081",
       "galaxy": "#7C4DFF",
       "holo": "#00E676",

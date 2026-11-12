@@ -2,7 +2,7 @@
 
 const S3_VARIANTS = ["Normal", "Gold", "Gummy", "Galaxy", "Holofoil", "Cube", "Gem", "Quack"];
 const S4_VARIANTS = ["Normal", "Gold", "Cheat Master", "Hacker", "Bounty Hunter", "Trick or Treat", "Quack"];
-const S5_VARIANTS = ["Normal", "Fortune", "Cursed"];
+const S5_VARIANTS = ["Normal", "Fortune", "Cursed", "Gold"];
 
 const SPIRITS_DATA = {
   "S3": [
@@ -1041,22 +1041,24 @@ const SPIRITS_DATA = {
       "desc_level": "Gain Slap at max level!",
       "levels": {},
       "variants": {
-        "Normal": { "name": "Baarry O'Fish", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Baarry O'Fish", "status": "Available S5", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Baarry O'Fish", "status": "Available S5", "cost": "", "rarity": "" }
+        "Normal": { "name": "Baarry O'Fish", "status": "Available S5", "cost": "100", "rarity": "Rare" },
+        "Fortune": { "name": "Fortune Baarry O'Fish", "status": "Available S5", "cost": "1500", "rarity": "Rare" },
+        "Cursed": { "name": "Cursed Baarry O'Fish", "status": "Available S5", "cost": "1500", "rarity": "Rare" },
+        "Gold": { "name": "Gold Baarry O'Fish", "status": "Available S5", "cost": "1500", "rarity": "Rare" }
       }
     },
     {
       "id": "compass",
       "name": "Wayfinder",
       "rarity": "Rare",
-      "desc_sprite": "Reveals nearby treasure chests, treasure maps, and wanted posters",
-      "desc_level": "",
+      "desc_sprite": "Reveals Sprites nearby and grants more items when opening Buried Chests. ",
+      "desc_level": "Sprite detection radius increases with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": { "name": "Compass", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Compass", "status": "Available S5", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Compass", "status": "Available S5", "cost": "", "rarity": "" }
+        "Normal": { "name": "Compass", "status": "Available S5", "cost": "100", "rarity": "Rare" },
+        "Fortune": { "name": "Fortune Compass", "status": "Available S5", "cost": "1500", "rarity": "Rare" },
+        "Cursed": { "name": "Cursed Compass", "status": "Available S5", "cost": "1500", "rarity": "Rare" },
+        "Gold": { "name": "Gold Compass", "status": "Available S5", "cost": "1500", "rarity": "Rare" }
       }
     },
     {
@@ -1067,9 +1069,10 @@ const SPIRITS_DATA = {
       "desc_level": "Reload faster and higher chance of ammo refunds with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": { "name": "Re-Pete", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Re-Pete", "status": "Available S5", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Re-Pete", "status": "Available S5", "cost": "", "rarity": "" }
+        "Normal": { "name": "Re-Pete", "status": "Available S5", "cost": "100", "rarity": "Rare" },
+        "Fortune": { "name": "Fortune Re-Pete", "status": "Available S5", "cost": "1500", "rarity": "Rare" },
+        "Cursed": { "name": "Cursed Re-Pete", "status": "Available S5", "cost": "1500", "rarity": "Rare" },
+        "Gold": { "name": "Gold Re-Pete", "status": "Available S5", "cost": "1500", "rarity": "Rare" }
       }
     },
     {
@@ -1080,9 +1083,10 @@ const SPIRITS_DATA = {
       "desc_level": "Effect radius increases with each level up!",
       "levels": {},
       "variants": {
-        "Normal": { "name": "Halfpeel'd", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Halfpeel'd", "status": "Available S5", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Halfpeel'd", "status": "Available S5", "cost": "", "rarity": "" }
+        "Normal": { "name": "Halfpeel'd", "status": "Available S5", "cost": "1250", "rarity": "Rare" },
+        "Fortune": { "name": "Fortune Halfpeel'd", "status": "Available S5", "cost": "1500", "rarity": "Rare" },
+        "Cursed": { "name": "Cursed Halfpeel'd", "status": "Available S5", "cost": "1500", "rarity": "Rare" },
+        "Gold": { "name": "Gold Halfpeel'd", "status": "Available S5", "cost": "1500", "rarity": "Rare" }
       }
     },
     {
@@ -1093,22 +1097,24 @@ const SPIRITS_DATA = {
       "desc_level": "Increased chance of spawning an extra loot item with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": { "name": "Chester", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Chester", "status": "Available S5", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Chester", "status": "Available S5", "cost": "", "rarity": "" }
+        "Normal": { "name": "Chester", "status": "Available S5", "cost": "1500", "rarity": "Epic" },
+        "Fortune": { "name": "Fortune Chester", "status": "Available S5", "cost": "1800", "rarity": "Epic" },
+        "Cursed": { "name": "Cursed Chester", "status": "Available S5", "cost": "1800", "rarity": "Epic" },
+        "Gold": { "name": "Gold Chester", "status": "Available S5", "cost": "1800", "rarity": "Epic" }
       }
     },
     {
       "id": "map",
       "name": "Exmarks",
       "rarity": "Epic",
-      "desc_sprite": "Spawns a Treasure Map on Sprite Mastery.",
-      "desc_level": "",
+      "desc_sprite": "Reveals Treasure Maps and Wanted Posters.",
+      "desc_level": "Spawns a Treasure Map at Max Level!",
       "levels": {},
       "variants": {
-        "Normal": { "name": "Treasure Map", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Treasure Map", "status": "Available S5", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Treasure Map", "status": "Available S5", "cost": "", "rarity": "" }
+        "Normal": { "name": "Treasure Map", "status": "Available S5", "cost": "1500", "rarity": "Epic" },
+        "Fortune": { "name": "Fortune Treasure Map", "status": "Available S5", "cost": "1800", "rarity": "Epic" },
+        "Cursed": { "name": "Cursed Treasure Map", "status": "Available S5", "cost": "1800", "rarity": "Epic" },
+        "Gold": { "name": "Gold Treasure Map", "status": "Available S5", "cost": "1800", "rarity": "Epic" }
       }
     },
     {
@@ -1119,35 +1125,38 @@ const SPIRITS_DATA = {
       "desc_level": "Increased amount of health with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": { "name": "Kelper", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Kelper", "status": "Available S5", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Kelper", "status": "Available S5", "cost": "", "rarity": "" }
+        "Normal": { "name": "Kelper", "status": "Available S5", "cost": "1500", "rarity": "Epic" },
+        "Fortune": { "name": "Fortune Kelper", "status": "Available S5", "cost": "1800", "rarity": "Epic" },
+        "Cursed": { "name": "Cursed Kelper", "status": "Available S5", "cost": "1800", "rarity": "Epic" },
+        "Gold": { "name": "Gold Kelper", "status": "Available S5", "cost": "1800", "rarity": "Epic" }
       }
     },
     {
       "id": "squibbly",
       "name": "Lil' Squibbly",
       "rarity": "Epic",
-      "desc_sprite": "Jumping into a fishing hole fishes it and gives some bonus loot.",
-      "desc_level": "Get more loot as you level up.",
+      "desc_sprite": "Fish fishing spots by jumping into them and gain bonus loot.",
+      "desc_level": "Earn more and better items as you level up!",
       "levels": {},
       "variants": {
-        "Normal": { "name": "Lil' Squibbly", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Lil' Squibbly", "status": "Available S5", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Lil' Squibbly", "status": "Available S5", "cost": "", "rarity": "" }
+        "Normal": { "name": "Lil' Squibbly", "status": "Available S5", "cost": "1500", "rarity": "Epic" },
+        "Fortune": { "name": "Fortune Lil' Squibbly", "status": "Available S5", "cost": "1800", "rarity": "Epic" },
+        "Cursed": { "name": "Cursed Lil' Squibbly", "status": "Available S5", "cost": "1800", "rarity": "Epic" },
+        "Gold": { "name": "Gold Lil' Squibbly", "status": "Available S5", "cost": "1800", "rarity": "Epic" }
       }
     },
     {
       "id": "flacko",
       "name": "Lil' Flacko",
       "rarity": "Legendary",
-      "desc_sprite": "Creates a small shockwave on landing, knocking back enemies.",
+      "desc_sprite": "Creates a small shockwave on landing, knocking back enemies, also nullifies fall damage.",
       "desc_level": "Increased knockback strength with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": { "name": "Lil' Flacko", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Lil' Flacko", "status": "Available S5", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Lil' Flacko", "status": "Available S5", "cost": "", "rarity": "" }
+        "Normal": { "name": "Lil' Flacko", "status": "Available S5", "cost": "1750", "rarity": "Legendary" },
+        "Fortune": { "name": "Fortune Lil' Flacko", "status": "Available S5", "cost": "2100", "rarity": "Legendary" },
+        "Cursed": { "name": "Cursed Lil' Flacko", "status": "Available S5", "cost": "2100", "rarity": "Legendary" },
+        "Gold": { "name": "Gold Lil' Flacko", "status": "Available S5", "cost": "2100", "rarity": "Legendary" }
       }
     },
     {
@@ -1158,12 +1167,13 @@ const SPIRITS_DATA = {
       "desc_level": "Decreased cooldown with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": { "name": "Lil' Uzi Vert Jr.", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Lil' Uzi Vert Jr.", "status": "Available S5", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Lil' Uzi Vert Jr.", "status": "Available S5", "cost": "", "rarity": "" }
+        "Normal": { "name": "Lil' Uzi Vert Jr.", "status": "Available S5", "cost": "1750", "rarity": "Legendary" },
+        "Fortune": { "name": "Fortune Lil' Uzi Vert Jr.", "status": "Available S5", "cost": "2100", "rarity": "Legendary" },
+        "Cursed": { "name": "Cursed Lil' Uzi Vert Jr.", "status": "Available S5", "cost": "2100", "rarity": "Legendary" },
+        "Gold": { "name": "Gold Lil' Uzi Vert Jr.", "status": "Available S5", "cost": "2100", "rarity": "Legendary" }
       }
     },
-    {	
+    {
       "id": "snail",
       "name": "Transponder Snail",
       "rarity": "Legendary",
@@ -1171,35 +1181,94 @@ const SPIRITS_DATA = {
       "desc_level": "Increased amount of resources received at each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": { "name": "Transponder Snail", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Transponder Snail", "status": "Not Exist", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Transponder Snail", "status": "Not Exist", "cost": "", "rarity": "" }
+        "Normal": { "name": "Transponder Snail", "status": "Available S5", "cost": "1750", "rarity": "Legendary" },
+        "Fortune": { "name": "Fortune Transponder Snail", "status": "Not Exist", "cost": "-", "rarity": "Legendary" },
+        "Cursed": { "name": "Cursed Transponder Snail", "status": "Not Exist", "cost": "-", "rarity": "Legendary" },
+        "Gold": { "name": "Gold Transponder Snail", "status": "Not Exist", "cost": "-", "rarity": "Legendary" }
       }
     },
-    {		
+    {
       "id": "plundarrgh",
       "name": "Plundarrgh",
       "rarity": "Mythic",
       "desc_sprite": "Opening Chest grants increased pickaxe speed and movement speed.",
-      "desc_level": "",
+      "desc_level": "Increased duration with each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": { "name": "Plundarrgh", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Plundarrgh", "status": "Available S5", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Plundarrgh", "status": "Available S5", "cost": "", "rarity": "" }
-	  }
+        "Normal": { "name": "Plundarrgh", "status": "Available S5", "cost": "2000", "rarity": "Mythic" },
+        "Fortune": { "name": "Fortune Plundarrgh", "status": "Available S5", "cost": "2500", "rarity": "Mythic" },
+        "Cursed": { "name": "Cursed Plundarrgh", "status": "Available S5", "cost": "2500", "rarity": "Mythic" },
+        "Gold": { "name": "Gold Plundarrgh", "status": "Available S5", "cost": "2500", "rarity": "Mythic" }
+      }
     },
     {
-	  "id": "dreams",
+      "id": "dreams",
       "name": "Sweet Dreams",
       "rarity": "Mythic",
       "desc_sprite": "Grants a random item at each level, exploding with Mythic loot at Max Level.",
       "desc_level": "Loot value increases at each Level Up!",
       "levels": {},
       "variants": {
-        "Normal": { "name": "Sweet Dreams", "status": "Available S5", "cost": "", "rarity": "" },
-        "Fortune": { "name": "Fortune Sweet Dreams", "status": "Not Exist", "cost": "", "rarity": "" },
-        "Cursed": { "name": "Cursed Sweet Dreams", "status": "Not Exist", "cost": "", "rarity": "" }	
+        "Normal": { "name": "Sweet Dreams", "status": "Available S5", "cost": "2000", "rarity": "Mythic" },
+        "Fortune": { "name": "Fortune Sweet Dreams", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Cursed": { "name": "Cursed Sweet Dreams", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Gold": { "name": "Gold Sweet Dreams", "status": "Not Exist", "cost": "-", "rarity": "Mythic" }
+      }
+    },
+    {
+      "id": "squiplash",
+      "name": "Squiplash",
+      "rarity": "Epic",
+      "desc_sprite": "Deploys a Healing Smoke Bomb at low health.",
+      "desc_level": "Decreased cooldown and increased duration and healing with each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Squiplash", "status": "Available S5", "cost": "1500", "rarity": "Epic" },
+        "Fortune": { "name": "Fortune Squiplash", "status": "Available S5", "cost": "1800", "rarity": "Epic" },
+        "Cursed": { "name": "Cursed Squiplash", "status": "Available S5", "cost": "1800", "rarity": "Epic" },
+        "Gold": { "name": "Gold Squiplash", "status": "Available S5", "cost": "1800", "rarity": "Epic" }
+      }
+    },
+    {
+      "id": "oscar",
+      "name": "Sir Oscar the Second",
+      "rarity": "Legendary",
+      "desc_sprite": "Grants increased Pickaxe damage, also gives a temporary speed boost when your Shield breaks.",
+      "desc_level": "Increased Pickaxe damage and speed boost with each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Sir Oscar the Second", "status": "Available S5", "cost": "1750", "rarity": "Legendary" },
+        "Fortune": { "name": "Fortune Sir Oscar the Second", "status": "Available S5", "cost": "2100", "rarity": "Legendary" },
+        "Cursed": { "name": "Cursed Sir Oscar the Second", "status": "Available S5", "cost": "2100", "rarity": "Legendary" },
+        "Gold": { "name": "Gold Sir Oscar the Second", "status": "Available S5", "cost": "2100", "rarity": "Legendary" }
+      }
+    },
+    {
+      "id": "miku",
+      "name": "Mini Miku",
+      "rarity": "Mythic",
+      "desc_sprite": "Grants a Friendship Bubble when emoting with other players.",
+      "desc_level": "Decreased cooldown with each Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Mini Miku", "status": "Available S5", "cost": "2000", "rarity": "Mythic" },
+        "Fortune": { "name": "Fortune Mini Miku", "status": "Available S5", "cost": "2500", "rarity": "Mythic" },
+        "Cursed": { "name": "Cursed Mini Miku", "status": "Available S5", "cost": "2500", "rarity": "Mythic" },
+        "Gold": { "name": "Gold Mini Miku", "status": "Available S5", "cost": "2500", "rarity": "Mythic" }
+      }
+    },
+    {
+      "id": "zee",
+      "name": "Zee",
+      "rarity": "Mythic",
+      "desc_sprite": "Grants regenerating Zero Point dash charges.",
+      "desc_level": "Max charges increase and recharge time decrease with Level Up!",
+      "levels": {},
+      "variants": {
+        "Normal": { "name": "Zee", "status": "Available S5", "cost": "2000", "rarity": "Mythic" },
+        "Fortune": { "name": "Fortune Zee", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Cursed": { "name": "Cursed Zee", "status": "Not Exist", "cost": "-", "rarity": "Mythic" },
+        "Gold": { "name": "Gold Zee", "status": "Not Exist", "cost": "-", "rarity": "Mythic" }
       }
     }
   ]
